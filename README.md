@@ -1,8 +1,93 @@
 # AWS Certified Cloud Practitioner (ACCP) Exam Note
 
 ### Table of contents
-
-
+ - [Amazon S3](#amazon-s3)
+ - [Six advantages of Amzon Cloud (Benefits):](#six-advantages-of-amzon-cloud-benefits)
+ - [Amazon EBS volumes types](#amazon-ebs-volumes-types)
+ - [Amazon load balancers:](#amazon-load-balancers)
+ - [AWS Security Groups](#aws-security-groups)
+ - [AWS Internet Gateway](#aws-internet-gateway)
+ - [AWS Scalability](#aws-scalability)
+ - [The core concepts of Amazon SNS](#the-core-concepts-of-amazon-sns)
+ - [Amazon Simple Queue Service (SQS)](#amazon-simple-queue-service-sqs)
+ - [AWS Inspector](#aws-inspector)
+ - [AWS Trusted Advisor](#aws-trusted-advisor)
+ - [AWS Personal Health Dashboard](#aws-personal-health-dashboard)
+ - [AWS TCO Calculator](#aws-tco-calculator)
+ - [AWS EBS](#aws-ebs)
+ - [Amazon SageMaker](#amazon-sagemaker)
+ - [Amazon Kinesis](#amazon-kinesis)
+ - [Cloud Computing](#cloud-computing)
+ - [AWS CloudFormation](#aws-cloudformation)
+ - [AWS Elastic Beanstalk](#aws-elastic-beanstalk)
+ - [Amazon Simple Notification Service (SNS)](#amazon-simple-notification-service-sns)
+ - [AWS Lambda](#aws-lambda)
+ - [AWS Well-Architected Framework](#aws-well-architected-framework)
+ - [AWS WAF](#aws-waf)
+ - [Amazon Kinesis](#amazon-kinesis)
+ - [AWS AD Connector](#aws-ad-connector)
+ - [AWS Simple AD](#aws-simple-ad)
+ - [Amazon Elastic Container Service for Kubernetes (EKS)](#amazon-elastic-container-service-for-kubernetes-eks)
+ - [Amazon Elastic Container Service (ECS)](#amazon-elastic-container-service-ecs)
+ - [Virtual Private Gateway](#virtual-private-gateway)
+ - [VPC peering connection](#vpc-peering-connection)
+ - [AWS support plans](#aws-support-plans)
+ - [Amazon IAM](#amazon-iam)
+ - [Popular HTTTP code](#popular-htttp-code)
+ - [AWS CloudTrail](#aws-cloudtrail)
+ - [Amazon DynamoDB](#amazon-dynamodb)
+ - [AWS Database SQL type](#aws-database-sql-type)
+ - [AWS Device Farm](#aws-device-farm)
+ - [AWS Config](#aws-config)
+ - [AWS Shared Responsibility Model](#aws-shared-responsibility-model)
+ - [Amazon RDS](#amazon-rds)
+ - [AWS Auto Scaling Group](#aws-auto-scaling-group)
+ - [AWS CloudHSM](#aws-cloudhsm)
+ - [AWS Auto Scaling](#aws-auto-scaling)
+ - [AWS Glacier](#aws-glacier)
+ - [AWS Storage Gateway Volume Gateway](#aws-storage-gateway-volume-gateway)
+ - [AWS Step Functions](#aws-step-functions)
+ - [Amazon Simple Workflow Service (SWF)](#amazon-simple-workflow-service-swf)
+ - [Amazon Security Token Service (STS)](#amazon-security-token-service-sts)
+ - [Amazon Simple Queue Service (SQS)](#amazon-simple-queue-service-sqs)
+ - [AWS Server Migration Service (SMS)](#aws-server-migration-service-sms)
+ - [Amazon DevPay](#amazon-devpay)
+ - [Amazon Elasticsearch Service](#amazon-elasticsearch-service)
+ - [Amazon Athena](#amazon-athena)
+ - [Amazon QuickSight](#amazon-quicksight)
+ - [Amazon CodeStar](#amazon-codestar)
+ - [Amazon Cloud9](#amazon-cloud9)
+ - [Amazon CodeDeploy](#amazon-codedeploy)
+ - [Amazon Route 53](#amazon-route-53)
+ - [Amazon CloudFront](#amazon-cloudfront)
+ - [Amazon Lightsail](#amazon-lightsail)
+ - [Amazon EC2](#amazon-ec2)
+ - [AWS pricing policies](#aws-pricing-policies)
+ - [AWS Cost Explorer](#aws-cost-explorer)
+ - [Amazon Elastic Transcoder](#amazon-elastic-transcoder)
+ - [AWS Organization](#aws-organization)
+ - [AWS Glue](#aws-glue)
+ - [AWS Artifact](#aws-artifact)
+ - [AWS WAF](#aws-waf)
+ - [AWS Service Catalog](#aws-service-catalog)
+ - [AWS Managed Services](#aws-managed-services)
+ - [Amazon Machine Image (AMI)](#amazon-machine-image-ami)
+ - [Five design principles for performance sfficiency in the cloud:](#five-design-principles-for-performance-sfficiency-in-the-cloud)
+ - [Five design principles for cost optimization in the cloud:](#five-design-principles-for-cost-optimization-in-the-cloud)
+ - [Five design principles for reliability in the cloud:](#five-design-principles-for-reliability-in-the-cloud)
+ - [Six design principles for security in the cloud:](#six-design-principles-for-security-in-the-cloud)
+ - [Five pillars of the AWS Well-Architected Framework](#five-pillars-of-the-aws-well-architected-framework)
+ - [Amazon S3 Transfer Acceleration](#amazon-s3-transfer-acceleration)
+ - [Amazon Neptune](#amazon-neptune)
+ - [Amazon Elasicsearch](#amazon-elasicsearch)
+ - [AWS Direct Connect](#aws-direct-connect)
+ - [AWS Snowball](#aws-snowball)
+ - [Amazon Comprehend](#amazon-comprehend)
+ - [Amazon Sagemaker](#amazon-sagemaker)
+ - [Amazon Resource Names (ARNs)](#amazon-resource-names-arns)
+ - [Amazon ELB](#amazon-elb)
+ - [AWS IoT Core](#aws-iot-core)
+ - [Note](#note)
 
 
 
@@ -29,7 +114,7 @@ copying of objects across buckets in different AWS Regions.
 	- Read after write consistency for PUTS of new objects
 	- Eventual consistency for overwrite PUTS and DELETES (takes time to propagate)
 - "MFA delete" adds a layer of additional security to prevent accidental deletion.
-- Amazon S3 objects consist of:
+- Amazon S3 **objects** consist of:
 	- Key
 	- Value
 	- Version ID
@@ -71,8 +156,8 @@ Scaling:
 - You can create **inbound** and **outbound** rules in a security group
 
 ### AWS Internet Gateway
-- Do not have allow/deny rules
-- It attached at the VPC level
+- Do not have **allow/deny** rules
+- It attached at the **VPC level**
 
 ### AWS Scalability
 AWS Scaling vertically: increasing the instance size/CPU/RAM/DISK,...
@@ -233,7 +318,7 @@ that needs to be sent
 - Both Business and Enterprise offer < 1-hour response time for the failure of a production system.
 - Only business and enterprise plans provide support via email, chat and phone
 - Enterprise plan comes with a Technical Account manager(TAM)
-- Developer plan provides email support by cloud support associates team whereas business and enterprise provide email support bu the cloud support engineers team.
+- Developer plan provides **email support** by **cloud support associates** team whereas business and enterprise provide **email support** by the **cloud support engineers** team.
 - With the **Developer** plan you can open **unlimited** cases
 
 ### Amazon IAM
@@ -293,7 +378,7 @@ that needs to be sent
 - It is an app testing service that lets you test and interact with your Android, iOS, and web apps on many devices at once, or reproduce issues on a device in real time
 
 ### AWS Config
--  allows you to automate the evaluation of recorded configurations against desired configuration.
+-  allows you to **automate the evaluation of recorded** configurations against desired configuration.
 -  enables you to assess, audit, and evaluate the configurations of your AWS resources.
 -  It continuously monitors and records your AWS resource configurations and allows you to automate the evaluation of recorded configurations against desired configurations
 
@@ -369,9 +454,8 @@ that needs to be sent
 
 ### AWS Storage Gateway Volume Gateway
 - The volume gateway represents the family of gateways that support block-based volumes, previously referred to as gateway-cached and gateway-stored modes. it allows you to use block-based volumes on-premise that are then asynchronously backed up to Amazon S3.
-	- Stored Volumes mode:  the entire dataset is stored on-site and is asynchronously 			backed up to S3 (E?S point-in-time snapshots). Snapshots are incremental and 				compressed
-	- Cached Volume mode: the entire dataset is stored on S3 and a cache of the most 		frequently accessed data is cached on-site.
-	- 
+	- **Stored Volumes mode**:  the *entire dataset is stored on-site* and is **asynchronously** backed up to S3 (EBS point-in-time snapshots). Snapshots are incremental and compressed
+	- **Cached Volume mode**: the *entire dataset is stored on S3* and a cache of the 			most frequently accessed data is cached on-site.
 
 ### AWS Step Functions
 - lets you **coordinate** *multiple AWS services* into **serverless** workflows so you can build and update apps quickly.
@@ -526,6 +610,7 @@ that needs to be sent
 	- Community AMIs
 	- AWS Marketplace AMIs
 	- My AMIs
+- It stores the information that defines an EC2 instance such as the template for the root volume, launch permissions and block device mappings
 
 ### Five design principles for performance sfficiency in the cloud:
 1. Democratize advanced technologies
@@ -595,7 +680,7 @@ that needs to be sent
 - It is a fully-managed platform that enables developers and data scientists to quickly and easily build, train, and deploy machine learning models at any scale
 
 ### Amazon Resource Names (ARNs)
-- It is used to uniquely identify AWS resources
+- It is used to **uniquely identify AWS resources**
 
 ### Amazon ELB
 - A **listener** is a process that checks for connection requests, using the protocol and port that you configure.
@@ -609,24 +694,7 @@ that needs to be sent
 	- Elasticity
 
 ### AWS IoT Core
-- It lets connected devices easily and securely interact with cloud applications and other devices.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+- It lets **connected devices** *easily* and *securely* interact with cloud applications and other devices.
 
 
 ***
@@ -653,7 +721,7 @@ that needs to be sent
 - These are valid use cases for using AWS services to implement **real-time auditing**:
 	- Use Amazon Inspector to monitor for compliance
 	- Use AWS Lambda to scan log files
-- The options available in the VPC Wizard are:
+- The options available in the **VPC Wizard** are:
 	- VPC with a Single Public Subnet
 	- VPC with Public and Private Subnets
 	- VPC with Public and Private Subnets and Hardware VPN Access
@@ -661,8 +729,8 @@ that needs to be sent
 - Only the **Memcached** and **Redis** database engines can be used with **ElastiCache**
 - **AWS Migration Hub** provides a single location to track the progress of application migrations across multiple AWS and partner solutions.
 - Amazon **CloudWatch**:
-	- **Basic** monitoring: collects metrics every 5 minutes
-	- **Detailed** monitoring: collects metrics every 1 minute
+	- **Basic** monitoring: collects metrics **every 5 minutes**
+	- **Detailed** monitoring: collects metrics **every 1 minute**
 - Your payment model in cloud is operational (**OPEX**)
 - "**AWS Concierge**" is available to support customers on an **Enterprise** support plan.
 - You use a **key pair** to decrypt the Administrator password through the console or using the CLI (For Amazon EC2 **Windows** instance)
