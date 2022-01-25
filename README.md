@@ -24,9 +24,9 @@ Also you can download [the official exam guide](https://d1.awsstatic.com/trainin
 * * *
 ### Table of contents
  - [Amazon S3](#amazon-s3)
- - [Six advantages of Amzon Cloud (Benefits):](#six-advantages-of-amzon-cloud-benefits)
+ - [Six advantages of Amzon Cloud (Benefits)](#six-advantages-of-amzon-cloud-benefits)
  - [Amazon EBS volumes types](#amazon-ebs-volumes-types)
- - [Amazon load balancers:](#amazon-load-balancers)
+ - [Amazon load balancers](#amazon-load-balancers)
  - [AWS Security Groups](#aws-security-groups)
  - [AWS Internet Gateway](#aws-internet-gateway)
  - [AWS Scalability](#aws-scalability)
@@ -93,10 +93,10 @@ Also you can download [the official exam guide](https://d1.awsstatic.com/trainin
  - [AWS Service Catalog](#aws-service-catalog)
  - [AWS Managed Services](#aws-managed-services)
  - [Amazon Machine Image (AMI)](#amazon-machine-image-ami)
- - [Five design principles for performance sfficiency in the cloud:](#five-design-principles-for-performance-sfficiency-in-the-cloud)
- - [Five design principles for cost optimization in the cloud:](#five-design-principles-for-cost-optimization-in-the-cloud)
- - [Five design principles for reliability in the cloud:](#five-design-principles-for-reliability-in-the-cloud)
- - [Six design principles for security in the cloud:](#six-design-principles-for-security-in-the-cloud)
+ - [Five design principles for performance sfficiency in the cloud](#five-design-principles-for-performance-sfficiency-in-the-cloud)
+ - [Five design principles for cost optimization in the cloud](#five-design-principles-for-cost-optimization-in-the-cloud)
+ - [Five design principles for reliability in the cloud](#five-design-principles-for-reliability-in-the-cloud)
+ - [Six design principles for security in the cloud](#six-design-principles-for-security-in-the-cloud)
  - [Five pillars of the AWS Well-Architected Framework](#five-pillars-of-the-aws-well-architected-framework)
  - [Amazon S3 Transfer Acceleration](#amazon-s3-transfer-acceleration)
  - [Amazon Neptune](#amazon-neptune)
@@ -144,7 +144,7 @@ copying of objects across buckets in different AWS Regions.
 - **Object lifecycle management** can be used with objects so that they are stored cost effectively throughout their lifecycle. Objects can be transitioned to another storage class or expired. It enables you to **set rules** to **automatically transfer** objects between different storage classes at defined time intervals.
 - **Standard-IA** and **One Zone-IA** both have a minimum storage duration charge of **30** days
 	
-### Six advantages of Amzon Cloud (Benefits):
+### Six advantages of Amzon Cloud (Benefits)
 - Trade capital expense for variable expense.
 - Benefit from massive economies of scale.
 - Stop guessing about capacity.
@@ -166,7 +166,7 @@ Scaling:
 - Dynamic scaling
 - Step scaling
 
-### Amazon load balancers:
+### Amazon load balancers
 - NLBs process traffic at the TCP level (layer 4)
 - ALBs process traffic at the HTTP, HTTPS level (layer 7)
 - CLBs process traffic at the TCP, SSL, HTTP and HTTPS levels (layer 4 & 7).
@@ -635,28 +635,28 @@ that needs to be sent
 	- My AMIs
 - It stores the information that defines an EC2 instance such as the template for the root volume, launch permissions and block device mappings
 
-### Five design principles for performance sfficiency in the cloud:
+### Five design principles for performance sfficiency in the cloud
 1. Democratize advanced technologies
 2. Go global in minutes
 3. Use serverless architectures
 4. Experiment more often
 5. Mechanical sympathy
 
-### Five design principles for cost optimization in the cloud:
+### Five design principles for cost optimization in the cloud
 1. Adopt a consumption model
 2. Measure overall efficiency
 3. Stop spending money on data center operations
 4. Analyze and attribute expenditure
 5. Use managed services to reduce cost of ownership
 
-### Five design principles for reliability in the cloud:
+### Five design principles for reliability in the cloud
 1. Test recovery procedures
 2. Automatically recover from failure
 3. Scale horizontally to increase aggregate system availability
 4. Stop guessing capacity
 5. Manage change in automation
 
-### Six design principles for security in the cloud:
+### Six design principles for security in the cloud
 1. Implement a strong identity foundation
 2. Enable traceability
 3. Apply security at all layers
