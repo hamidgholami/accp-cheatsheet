@@ -1,5 +1,24 @@
 # AWS Certified Cloud Practitioner (ACCP) Exam Note
+This is my notes regarding ACCP exam which is completed gradually when I was studing the exam objectives.
 
+[The AWS Certified Cloud Practitioner](https://aws.amazon.com/certification/certified-cloud-practitioner/) (*CLF-C01*) exam is intended for individuals who can effectively demonstrate an overall knowledge of the AWS Cloud independent of a specific job role.
+
+You can find every updated information in following link which is the official and reputable information.
+
+https://aws.amazon.com/certification/certified-cloud-practitioner/
+
+The following table lists the main content domains and their
+weightings. Also you can download [the official exam guide](https://d1.awsstatic.com/training-and-certification/docs-cloud-practitioner/AWS-Certified-Cloud-Practitioner_Exam-Guide.pdf).
+
+| Domain                            | % of Exam |
+|:-----------------------------------|:-----------:|
+| Domain 1: Cloud Concepts          | 26%       |
+| Domain 2: Security and Compliance | 25%       |
+| Domain 3: Technology              | 33%       |
+| Domain 4: Billing and Pricing     | 16%       |
+| **Total**                             | **100%**      |
+
+* * *
 ### Table of contents
  - [Amazon S3](#amazon-s3)
  - [Six advantages of Amzon Cloud (Benefits):](#six-advantages-of-amzon-cloud-benefits)
@@ -49,7 +68,6 @@
  - [AWS Step Functions](#aws-step-functions)
  - [Amazon Simple Workflow Service (SWF)](#amazon-simple-workflow-service-swf)
  - [Amazon Security Token Service (STS)](#amazon-security-token-service-sts)
- - [Amazon Simple Queue Service (SQS)](#amazon-simple-queue-service-sqs)
  - [AWS Server Migration Service (SMS)](#aws-server-migration-service-sms)
  - [Amazon DevPay](#amazon-devpay)
  - [Amazon Elasticsearch Service](#amazon-elasticsearch-service)
@@ -106,7 +124,7 @@ copying of objects across buckets in different AWS Regions.
 	- S3 Standard -> 99.99% SLA -> for data that is accessed less frequently, but
 	requires rapid access when needed
 	- S3 Standard-IA -> 99.9% SLA -> offers the high durability, high throughput, and low 		latency of S3 Standard
-	- S3 One Zone-IA -> 99% SLA ->  the most cost-effective Amazon S3 storage tier for 		data that is not often accessed but requires high durability. It stores data in a **single** AZ
+	- S3 One Zone-IA -> 99% SLA ->  *the most cost-effective* Amazon S3 storage tier for 		data that is not often accessed but requires high durability. It stores data in a **single** AZ
 	- Glacier -> No SLA
 - Multipart upload can be used to speed up uploads to S3
 - S3 Copy -> up to 5GB in size in a single atomic operation
@@ -174,6 +192,7 @@ that needs to be sent
 - is a fully managed message queuing service that enables you to decouple and scale microservices, distributed systems, and serverless applications.
 - Use case: Decoupling application components to ensure that there is no dependency on the availability of a single component.
 - It can be used to ensure the **persistence** of **in-flight** *transactions independently* of any single application component.
+- It is a message queue used for decoupling application components
 
 ### AWS Inspector
 - Inspector is an automated security assessment service that helps improve the security and compliance of applications deployed on AWS.
@@ -469,9 +488,6 @@ that needs to be sent
 ### Amazon Security Token Service (STS)
 - Is used for requesting temporary credentials.
 
-### Amazon Simple Queue Service (SQS)
-- Is a message queue used for decoupling application components
-
 ### AWS Server Migration Service (SMS)
 - Is an agentless service which makes it easier and faster for you migrate on-premises workloads to AWS.
 - You can migrarte Virtual Machines from VMware vSphere and Windows Hyper-V to AWS with this sevice.
@@ -532,7 +548,7 @@ that needs to be sent
 	- geo-proximity
 	- multi-value
 	- traffic flow
-- It supports below origins:
+- It supports below **origins**:
 	- S3 Bucket
 	- EC2 instance
 	- Elastic Load Balancer
