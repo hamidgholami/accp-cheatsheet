@@ -110,6 +110,12 @@ Also you can download [the official exam guide](https://d1.awsstatic.com/trainin
  - [AWS IoT Core](#aws-iot-core)
  - [AWS Fargate](#aws-fargate)
  - [Amazon Detective](#amazon-detective)
+ - [Amazon Global Accelerator](#amazon-global-accelerator)
+ - [AWS Data Sync](#aws-data-sync)
+ - [AWS CodePipeline ](#aws-codepipeline)
+ - [Amazon GuardDuty](#amazon-guardduty)
+ - [Amazon Macie](#amazon-macie)
+ - [AWS X-Ray](#aws-x-ray)
  - [Note](#note)
 
 
