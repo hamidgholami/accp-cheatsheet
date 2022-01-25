@@ -1,7 +1,7 @@
 # AWS Certified Cloud Practitioner (ACCP) Exam Note
 This is my notes regarding ACCP exam which is completed gradually when I was studing the exam objectives.
 
-[The AWS Certified Cloud Practitioner](https://aws.amazon.com/certification/certified-cloud-practitioner/) (*CLF-C01*) exam is intended for individuals who can effectively demonstrate an overall knowledge of the AWS Cloud independent of a specific job role.
+> [The AWS Certified Cloud Practitioner](https://aws.amazon.com/certification/certified-cloud-practitioner/) (*CLF-C01*) exam is intended for individuals who can effectively demonstrate an overall knowledge of the AWS Cloud independent of a specific job role.
 
 You can find every updated information in following link which is the official and reputable information.
 
@@ -9,6 +9,7 @@ https://aws.amazon.com/certification/certified-cloud-practitioner/
 
 The following table lists the main content domains and their
 weightings. Also you can download [the official exam guide](https://d1.awsstatic.com/training-and-certification/docs-cloud-practitioner/AWS-Certified-Cloud-Practitioner_Exam-Guide.pdf).
+<center>
 
 | Domain                            | % of Exam |
 |:-----------------------------------|:-----------:|
@@ -17,6 +18,7 @@ weightings. Also you can download [the official exam guide](https://d1.awsstatic
 | Domain 3: Technology              | 33%       |
 | Domain 4: Billing and Pricing     | 16%       |
 | **Total**                             | **100%**      |
+</center>
 
 * * *
 ### Table of contents
