@@ -109,6 +109,7 @@ Also you can download [the official exam guide](https://d1.awsstatic.com/trainin
  - [Amazon ELB](#amazon-elb)
  - [AWS IoT Core](#aws-iot-core)
  - [AWS Fargate](#aws-fargate)
+ - [Amazon Detective](#amazon-detective)
  - [Note](#note)
 
 
@@ -132,6 +133,7 @@ copying of objects across buckets in different AWS Regions.
 	- Glacier -> No SLA
 - Multipart upload can be used to speed up uploads to S3
 - S3 Copy -> up to 5GB in size in a single atomic operation
+- S3 Intelligent-Tiering is an appropriate Amazon S3 storage class for "data with unknown/changing access pattern" 
 - **Data consistency** models available are:
 	- Read after write consistency for PUTS of new objects
 	- Eventual consistency for overwrite PUTS and DELETES (takes time to propagate)
@@ -213,6 +215,7 @@ that needs to be sent
 	- Fault tolerance
 - It can be used to display current usage and limits.It offers a Service Limits check (in the Performance category) that displays your usage and limits for some aspects of some services
 - It can be used to provide **real time guidance** on provisioning resources following *AWS best practices*.
+- It can be used to check service limits for resources launched within AWS Infrastructure.
 
 ### AWS Personal Health Dashboard
 - provides alerts and remediation guidance when AWS is experiencing events that may impact you.
@@ -404,7 +407,9 @@ that needs to be sent
 ### AWS Config
 -  allows you to **automate the evaluation of recorded** configurations against desired configuration.
 -  enables you to assess, audit, and evaluate the configurations of your AWS resources.
--  It continuously monitors and records your AWS resource configurations and allows you to automate the evaluation of recorded configurations against desired configurations
+-  It continuously monitors and records your AWS resource configurations and allows you to automate the evaluation of recorded configurations against desired configurations.
+-  It can be used to **keep track** of configuration changes on AWS resources, keeping multiple date-stamped versions in a reviewable history.
+-  It can be used to retrive configuration changes made to AWS resources causing operational issues.
 
 ### AWS Shared Responsibility Model
 - Customers are responsible for networking traffic protection.
@@ -720,7 +725,31 @@ that needs to be sent
 - It lets **connected devices** *easily* and *securely* interact with cloud applications and other devices.
 
 ### AWS Fargate
+- Fargate removes the need to provision and manage servers.
+- Amazon ECS is a container orchestration service used to provision and manage container clusters.
 
+### Amazon Detective
+- It uses machine learning and graph theory capability collected log data to help you conduct faster and efficient security invedtigations.
+
+### Amazon Global Accelerator
+- You are asked to improve the performance of the application for local and global users. As part of this initiative, you must monitor the application endpoint health and route traffic to the most appropriate endpoint. For aiming this we should use amazon global accelerator.
+
+### AWS Data Sync
+- It is a simple and fast way to move huge amounts of data (hundreds of terabytes) between on-premise storage to S3, EFS, FSx.
+
+### AWS CodePipeline
+- AWS CodePipeline is a continuous delivery service you can use to model, visualize, and automate the steps required to release your software. You can quickly model and configure the different stages of a software release process. CodePipeline automates the steps required to release your software changes continuously.
+- To orchestrate and automate the various phases involved in the release of application updates in-line with a predefined release model.
+
+### Amazon GuardDuty
+- Amazon GuardDuty is a threat detection service that continuously monitors your AWS accounts and workloads for malicious activity and delivers detailed security findings for visibility and remediation.
+- For implementing a threat detection service that continuously monitors malicious activities and unauthorized behaviors protect aws account, workloads and data stored in Amazon S3 we use this service.
+
+### Amazon Macie
+- It can be used to detect users' personal credit card numbers from data stored in Amazon S3.
+
+### AWS X-Ray
+- It is a service that helps developers analyze and debug distributed applications.
 
 ***
 ### Note
