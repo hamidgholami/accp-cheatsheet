@@ -3,13 +3,13 @@ This is my notes regarding ACCP exam which is completed gradually when I was stu
 
 > [The AWS Certified Cloud Practitioner](https://aws.amazon.com/certification/certified-cloud-practitioner/) (*CLF-C01*) exam is intended for individuals who can effectively demonstrate an overall knowledge of the AWS Cloud independent of a specific job role.
 
-You can find every updated information in following link which is the official and reputable information.
+You can find every updated information in this [link](https://aws.amazon.com/certification/certified-cloud-practitioner/) which is the official and reputable information.
 
-https://aws.amazon.com/certification/certified-cloud-practitioner/
 
-The following table lists the main content domains and their
-weightings. Also you can download [the official exam guide](https://d1.awsstatic.com/training-and-certification/docs-cloud-practitioner/AWS-Certified-Cloud-Practitioner_Exam-Guide.pdf).
-<center>
+The following table lists the main content domains and their weightings.
+Also you can download [the official exam guide](https://d1.awsstatic.com/training-and-certification/docs-cloud-practitioner/AWS-Certified-Cloud-Practitioner_Exam-Guide.pdf).
+
+<div align="center">
 
 | Domain                            | % of Exam |
 |:-----------------------------------|:-----------:|
@@ -18,7 +18,8 @@ weightings. Also you can download [the official exam guide](https://d1.awsstatic
 | Domain 3: Technology              | 33%       |
 | Domain 4: Billing and Pricing     | 16%       |
 | **Total**                             | **100%**      |
-</center>
+
+</div>
 
 * * *
 ### Table of contents
@@ -260,6 +261,7 @@ that needs to be sent
 ### AWS CloudFormation
 - provides a common language for you to describe and provision all the infrastructure resources in your cloud environment.
 - It's free of charge.
+- **Change sets** allow you to preview how proposed changes to a stack might impact your running resources
 
 ### AWS Elastic Beanstalk
 -  the fastest and simplest way to get web applications up and running on AWS.
@@ -463,6 +465,8 @@ that needs to be sent
 	- scheduled
 	- dynamic
 	- step scaling
+- vertical scaling -> scaling-up
+- horizontal scaling -> scaling-out
 
 ### AWS Glacier
 - Data access option retrieves data:
@@ -714,6 +718,8 @@ that needs to be sent
 ### AWS IoT Core
 - It lets **connected devices** *easily* and *securely* interact with cloud applications and other devices.
 
+### AWS Fargate
+
 
 ***
 ### Note
@@ -763,4 +769,9 @@ that needs to be sent
 	- A **Cluster**: It's a logical grouping on intances within a single AZ. Cluster placement groups are recommended for applications that benefit from low network latency, high network throughput, or both, and if the majority of the network traffic is between the instances in the group
 	- A **spread**:  that are each placed on **distinct** underlying hardware. Spread placement groups are recommended for applications that have *a small number of critical instances* that should be kept separate from each other
 - With "**EC2**, **Auto Scaling** and **E**lastic **L**oad **B**alancing" combination of AWS services could be used to deploy a **stateless** web application that can automatically and elastically scale.
-- With the AWS cloud you get **fine-grained** billing and can **turn off resources** you are not using easily and not have to pay for them
+- With the AWS cloud you get **fine-grained** billing and can **turn off resources** you are not using easily and not have to pay for them.
+- To install a **PCI-complian**t workload on AWS:
+	-  Use an AWS service that is in scope for PCI compliance and apply PCI controls at 			the application layer.
+-  In IAM user access and secrert keys:
+	-  The customer is responsible for **rotating** keys.
+-  Which compute hosting model should be accounted for in the Total Cost of Ownership (TCO) when undertaking a cost analysis that allows physical isolation of a customer workload? **Dedicated Hosts**
