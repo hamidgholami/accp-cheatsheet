@@ -108,6 +108,7 @@ Also you can download [the official exam guide](https://d1.awsstatic.com/trainin
  - [Amazon Resource Names (ARNs)](#amazon-resource-names-arns)
  - [Amazon ELB](#amazon-elb)
  - [AWS IoT Core](#aws-iot-core)
+ - [AWS Fargate](#aws-fargate)
  - [Note](#note)
 
 
