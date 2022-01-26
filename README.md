@@ -806,5 +806,3 @@ that needs to be sent
 -  In IAM user access and secrert keys:
 	-  The customer is responsible for **rotating** keys.
 -  Which compute hosting model should be accounted for in the Total Cost of Ownership (TCO) when undertaking a cost analysis that allows physical isolation of a customer workload? **Dedicated Hosts**
-
-[![](https://img.shields.io/badge/back%20to%20top-%E2%86%A9-blue)](#shortcuts)
