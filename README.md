@@ -122,7 +122,7 @@ Also you can download [the official exam guide](https://d1.awsstatic.com/trainin
 
 ***
 ### Amazon S3
-- CRR (Cross-region replication): enables automatic, asynchronous
+- **CRR** (Cross-region replication): enables automatic, asynchronous
 copying of objects across buckets in different AWS Regions.
 - You cannot reserve capacity.
 - Bucket names rules:
@@ -132,18 +132,18 @@ copying of objects across buckets in different AWS Regions.
 	- Names cannot be formatted as an IP address.
 - IAM policies can be written to grant access to Amazon S3 buckets.
 - Amazon S3 storage tier:
-	- S3 Standard -> 99.99% SLA -> for data that is accessed less frequently, but
+	- **S3 Standard** -> 99.99% SLA -> for data that is accessed less frequently, but
 	requires rapid access when needed
-	- S3 Standard-IA -> 99.9% SLA -> offers the high durability, high throughput, and low 		latency of S3 Standard
-	- S3 One Zone-IA -> 99% SLA ->  *the most cost-effective* Amazon S3 storage tier for 		data that is not often accessed but requires high durability. It stores data in a **single** AZ
-	- Glacier -> No SLA
-- Multipart upload can be used to speed up uploads to S3
-- S3 Copy -> up to 5GB in size in a single atomic operation
-- S3 Intelligent-Tiering is an appropriate Amazon S3 storage class for "data with unknown/changing access pattern" 
+	- **S3 Standard-IA** -> 99.9% SLA -> offers the high durability, high throughput, and low 		latency of S3 Standard
+	- **S3 One Zone-IA** -> 99% SLA ->  *the most cost-effective* Amazon S3 storage tier for 		data that is not often accessed but requires high durability. It stores data in a **single** AZ
+	- **Glacier** -> No SLA
+- **Multipart upload** can be used to speed up uploads to S3
+- **S3 Copy** -> up to 5GB in size in a single atomic operation
+- **S3 Intelligent-Tiering** is an appropriate Amazon S3 storage class for "data with unknown/changing access pattern" 
 - **Data consistency** models available are:
 	- Read after write consistency for PUTS of new objects
 	- Eventual consistency for overwrite PUTS and DELETES (takes time to propagate)
-- "MFA delete" adds a layer of additional security to prevent accidental deletion.
+- "**MFA delete**" adds a layer of additional security to prevent accidental deletion.
 - Amazon S3 **objects** consist of:
 	- Key
 	- Value
@@ -166,14 +166,6 @@ copying of objects across buckets in different AWS Regions.
 - **Cold HDD(sc1)**:  cannot be used as a boot volume and is good for throughput oriented storage for infrequently accessed data.
 - **Throughput Optimized(st1)**: It is ideal for streaming workloads with fast throughput such as big data and data warehouses.
 
-
-Types of scaling policies in AWS Auto
-Scaling:
-- Simple scaling
-- Scheduled scaling
-- Dynamic scaling
-- Step scaling
-
 ### Amazon load balancers
 - NLBs process traffic at the TCP level (layer 4)
 - ALBs process traffic at the HTTP, HTTPS level (layer 7)
@@ -181,7 +173,7 @@ Scaling:
 - *Load balancing with session affinity* can be used for **horizontal scaling** of **stateful** components.
 
 ### AWS Security Groups
-- Only allow rules/ You cannot create deny rules
+- Only `allow` rules, You cannot create `deny` rules.
 - A security group is **stateful** but this is not a rule type
 - You can create **inbound** and **outbound** rules in a security group
 
@@ -190,8 +182,8 @@ Scaling:
 - It attached at the **VPC level**
 
 ### AWS Scalability
-AWS Scaling vertically: increasing the instance size/CPU/RAM/DISK,...
-AWS Scaling horizontally: adding more EC2 instances, AWS Lambda adding concurrently executing functions, Adding read replicas to an Amazon RDS database
+AWS Scaling **vertically**: increasing the instance size/CPU/RAM/DISK,...
+AWS Scaling **horizontally**: adding more EC2 instances, AWS Lambda adding concurrently executing functions, Adding read replicas to an Amazon RDS database
 
 ### The core concepts of Amazon SNS
 - **Topics**: how you label and group different endpoints that you
@@ -201,93 +193,87 @@ send messages to
 that needs to be sent
 
 ### Amazon Simple Queue Service (SQS)
-- is a fully managed message queuing service that enables you to decouple and scale microservices, distributed systems, and serverless applications.
-- Use case: Decoupling application components to ensure that there is no dependency on the availability of a single component.
+- is a fully managed message queuing service that enables you to *decouple* and *scale microservices*, *distributed systems*, and *serverless applications*.
+- **Use case**: *Decoupling application* components to ensure that there is no dependency on the availability of a single component.
 - It can be used to ensure the **persistence** of **in-flight** *transactions independently* of any single application component.
-- It is a message queue used for decoupling application components
+- It is a message queue used for **decoupling** application components
 
 ### AWS Inspector
-- Inspector is an automated security assessment service that helps improve the security and compliance of applications deployed on AWS.
-- uses an agent installed in EC2 instances and assesses applications for vulnerabilities and deviations from best practices.
+- Inspector is an *automated security assessment* service that helps improve the security and compliance of applications deployed on AWS.
+- It uses an **agent** installed in EC2 instances and assesses applications for *vulnerabilities* and *deviations* from best practices.
 - Organization can assess applications for vulnerabilities and **deviations** *from best practice*.
 
 ### AWS Trusted Advisor
-- an online resource that helps to reduce cost, increase performance and improve security by optimizing your AWS environment.
-- Five categories of Trusted Advisor:
+- An **online resource** that helps to *reduce cost*, *increase performance* and *improve security* by **optimizing** your AWS environment.
+- Five *categories* of Trusted Advisor:
 	- Cost optimization
 	- Security
 	- Performance
 	- Service limits
 	- Fault tolerance
-- It can be used to display current usage and limits.It offers a Service Limits check (in the Performance category) that displays your usage and limits for some aspects of some services
+- It can be used to **display current usage and limits**.It offers a Service Limits check (in the *Performance* category) that displays your usage and limits for some aspects of some services
 - It can be used to provide **real time guidance** on provisioning resources following *AWS best practices*.
-- It can be used to check service limits for resources launched within AWS Infrastructure.
+- It can be used to **check service limits** for resources launched within AWS Infrastructure.
 
 ### AWS Personal Health Dashboard
-- provides alerts and remediation guidance when AWS is experiencing events that may impact you.
+- It provides **alerts** and **remediation** *guidance* when AWS is experiencing events that may *impact* you.
 
 ### AWS TCO Calculator
-- can be used to compare the cost of running your applications in an on-premises or colocation environment to AWS.
-- "Compute Hardware" and "Data Center Security" should be included in a TCO analysis comparing on-premise to AWS Cloud.
+- It can be used to **compare** the *cost of running* your applications in an *on-premises* or colocation environment to *AWS*.
+- "**Compute Hardware**" and "**Data Center Security**" should be included in a TCO analysis comparing on-premise to AWS Cloud.
 
 ### AWS EBS
 - EBS Volume type
-	- Provisioned IOPS SSD: supports up to 50 IOPS per Gi? with up to 32,000 IOPS per volume.
-	- General Purpose SSD: supports 3 IOPS per Gi? and can burst up to 3000 IOPS (volumes > 334G?), and a maximum of 10,000 per volume.
+	- **Provisioned IOPS SSD**: supports **up to 50 IOPS** *per GiB* with **up to 32,000 IOPS** *per volume*.
+	- **General Purpose SSD**: supports 3 IOPS per GiB and can burst up to 3000 IOPS (volumes > 334GB), and a maximum of **10,000** *per volume*.
 	- Throughput Optimized HDD:
 	- Cold HDD:
-- The **easiest** way to store a backup of an EBS volume on Amazon S3: Create a snapshot of the volume.
-- Amazon EBD snapshots are stored on S3.
-- EBS volumes must be in the same AZ as the instances they are attached to
-- You can use Amazon Data Lifecycle Manager (**Amazon DLM**) to automate the creation, retention, and deletion of snapshots taken to back up your Amazon EBS volumes.
-- The Fundamental charges for EBS volumes are:
-	- the amount of data provisioned (not consumed) per month.
-	- amount you provision in IOPS
-- The **root** EBS volumes are **deleted** on termination bu default.
-- Extra **non-root** volumes are **not deleted** on termination by default.
-- All you can do with an access key once it has been generated is to:
-	- make active
-	- make inactive
-	- delete
-- Both non-root and root if launched from an encrypted AMI
+- The **easiest** way to store a backup of an EBS volume on Amazon S3: Create a **snapshot** of the volume.
+- Amazon EBS snapshots are stored on *S3*.
+- EBS volumes must be **in the same AZ** as the instances they are attached to
+- You can use *Amazon Data Lifecycle Manager* (**Amazon DLM**) to automate the creation, retention, and deletion of snapshots taken to back up your Amazon EBS volumes.
+- The Fundamental *charges* for EBS volumes are:
+	- the amount of data **provisioned** (**not** *consumed*) *per* <u>month</u>.
+	- amount you provision in **IOPS**
+- The **root** EBS volumes are **deleted** on termination by <u>default</u>.
+- Extra **non-root** volumes are **not deleted** on termination by <u>default</u>.
+- Both non-root and root if launched from an **encrypted** AMI.
 
 ### Amazon SageMaker
-- that enables developers and data scientists to quickly and easily build, train, and deploy machine learning models at any scale. 
-
-
+- That enables developers and data scientists to quickly and easily **build**, **train**, and **deploy** <u>machine learning models</u> at any scale. 
 
 ### Amazon Kinesis
-- There are four types of Kinesis services:
+- There are four **types** of Kinesis services:
 	- Kinesis Video Streams
 	- Kinesis Data Streams
 	- Kinesis Data Firehose
 	- Kinesis Data Analytics
 
 ### Cloud Computing
-- Cloud computing is the on-demand delivery of compute power.
-- With cloud computing you get to benefit from massive economies of scale.
-- With cloud computing you can increase your speed and agility.
+- Cloud computing is the **on-demand** delivery of compute power.
+- With cloud computing you get to <u>benefit from massive economies of scale</u>.
+- With cloud computing you can <u>increase your speed and agility</u>.
 
 ### AWS CloudFormation
-- provides a common language for you to describe and provision all the infrastructure resources in your cloud environment.
+- It provides a **common language** for you to <u>describe</u> and <u>provision</u> all the infrastructure resources in your cloud environment.
 - It's free of charge.
 - **Change sets** allow you to preview how proposed changes to a stack might impact your running resources
 
 ### AWS Elastic Beanstalk
--  the fastest and simplest way to get web applications up and running on AWS.
--  It is more of a PaaS service and is focused on web applications not infrastructure.
+-  The **fastest** and **simplest** way to get web applications up and running on AWS.
+-  It is more of a **PaaS** service and is focused on <u>web applications</u> not infrastructure.
 
 ### Amazon Simple Notification Service (SNS)
-- a web service that makes it easy to set up, operate, and send notifications from the cloud.
-- SNS supports notifications over multiple transports including HTTP/HTTPS, Email/Email-JSON, SQS and SMS.
-- It is used for building and integrating **loosely-coupled**, distributed applications
+- It is a web service that makes it easy to **set up**, **operate**, and **send notifications** <u>from the cloud</u>.
+- SNS supports notifications over multiple transports including *HTTP/HTTPS*, *Email/Email-JSON*, *SQS* and *SMS*.
+- It is used for building and *integrating* **loosely-coupled**, *distributed applications*
 
 ### AWS Lambda
-- Lambda functions can be invoked in response to events.
-	- Invoke a function in response to resource lifecycle events, such as with Amazon S3. (Lambda & S3)
-	- Respond to incoming HTTP requests. (Lambda & API Gateway)
-	- Consume events from a queue. (Lambda & SQS)
-	- Run a function on a schedule. (Lambda & CloudWatch)
+- Lambda functions can be invoked in response to **events**.
+	- Invoke a function in response to resource lifecycle events, such as with Amazon **S3**. (*Lambda & S3*)
+	- Respond to incoming **HTTP requests**. (*Lambda & API Gateway*)
+	- Consume events *from* a **queue**. (*Lambda & SQS*)
+	- Run a function on a **schedule**. (*Lambda & CloudWatch*)
 
 ### AWS Well-Architected Framework
 - Operation excellence
@@ -297,7 +283,7 @@ that needs to be sent
 - Cost optimization
 
 ### AWS WAF
-- create custom rules that block common attack patterns, such as:
+- create custom rules that block <u>common attack patterns</u>, such as:
 	- SQL injection.
 	- Cross-site scripting.
 	- Rules that are designed for your specific application
@@ -372,6 +358,10 @@ that needs to be sent
 	- Use Temporary Security Credentials (IAM Roles) Instead of Long-Term Access Keys
 	- Manage IAM User Access Keys Properly
 - You can enable single sign-on (**SSO**) to your AWS accounts by using **federation** and AWS Identity and Access Management (IAM).
+-  All you can do with an access key once it has been generated is to:
+	- make active
+	- make inactive
+	- delete
 
 ### Popular HTTTP code
 - A HTTP 200 codes: successful
@@ -479,6 +469,11 @@ that needs to be sent
 	- step scaling
 - vertical scaling -> scaling-up
 - horizontal scaling -> scaling-out
+- Types of scaling policies in AWS Auto Scaling
+	- Simple scaling
+	- Scheduled scaling
+	- Dynamic scaling
+	- Step scaling
 
 ### AWS Glacier
 - Data access option retrieves data:
