@@ -93,7 +93,7 @@ Also you can download [the official exam guide](https://d1.awsstatic.com/trainin
  - [AWS Service Catalog](#aws-service-catalog)
  - [AWS Managed Services](#aws-managed-services)
  - [Amazon Machine Image (AMI)](#amazon-machine-image-ami)
- - [Five design principles for performance sfficiency in the cloud](#five-design-principles-for-performance-sfficiency-in-the-cloud)
+ - [Five design principles for performance efficiency in the cloud](#five-design-principles-for-performance-efficiency-in-the-cloud)
  - [Five design principles for cost optimization in the cloud](#five-design-principles-for-cost-optimization-in-the-cloud)
  - [Five design principles for reliability in the cloud](#five-design-principles-for-reliability-in-the-cloud)
  - [Six design principles for security in the cloud](#six-design-principles-for-security-in-the-cloud)
@@ -104,7 +104,6 @@ Also you can download [the official exam guide](https://d1.awsstatic.com/trainin
  - [AWS Direct Connect](#aws-direct-connect)
  - [AWS Snowball](#aws-snowball)
  - [Amazon Comprehend](#amazon-comprehend)
- - [Amazon Sagemaker](#amazon-sagemaker)
  - [Amazon Resource Names (ARNs)](#amazon-resource-names-arns)
  - [Amazon ELB](#amazon-elb)
  - [AWS IoT Core](#aws-iot-core)
@@ -611,32 +610,32 @@ that needs to be sent
 - Volume pricing discounts applied **across multiple accounts**.
 
 ### AWS Glue
-- Is a fully managed extract, transform, and load (ETL) service that makes it easy for customers to prepare and load their data for analytics.
+- Is a fully managed **extract**, **transform**, and **load** (**ETL**) service that makes it easy for customers to prepare and load their <ins>data for analytics</ins>.
 
 ### AWS Artifact
-- is a self-service audit artifact retrieval portal that provides our customers with on-demand access to AWS’ compliance documentation and AWS agreements.
-- You can use AWS Artifact Reports to download AWS security and compliance documents, such as AWS ISO certifications, Payment Card Industry (PCI), and System and Organization Control (SOC) reports.
-- It is online, self-service portal that AWS provides to enable customers to view reports and, such as PCI reports, and accept agreements.
-- It is your **go-to**, central resource for compliance-related information that matters to you
+- It is a self-service audit artifact retrieval **portal** that provides our customers with on-demand access to AWS’ compliance **documentation** and AWS **agreements**.
+- You can use **AWS Artifact Reports** to download AWS security and compliance documents, such as <ins>AWS ISO certifications</ins>, <ins>Payment Card Industry (PCI)</ins>, and <ins>System and Organization Control (SOC) reports</ins>.
+- It is **online**, self-service portal that AWS provides to enable customers to *view reports* and, such as *PCI reports*, and *accept agreements*.
+- It is your **go-to**, central resource for compliance-related information that matters to you.
 
 ### AWS WAF
--  Is a web application firewall that protects against common exploits that could compromise application availability, compromise security or consume excessive resources.
+-  Is a **web application firewall** that protects against **common exploits** that could compromise application availability, compromise security or consume excessive resources.
 
 ### AWS Service Catalog
-- It can be used to create and manage a selection of AWS services that are approved for use on AWS.
-- These IT services can include everything from virtual machine images, servers, software, and databases to complete multi-tier application architectures.
+- It can be used to <ins>create and manage a selection of AWS services</ins> that are approved for use on AWS.
+- These IT services **can include everything** from virtual machine images, servers, software, and databases to complete multi-tier application architectures.
 
 ### AWS Managed Services
-- It manages the daily operations of your AWS infrastructure in alignment with ITIL processes and provides a baseline integration with IT Service Management (ITSM) tools such as the ServiceNow platform.
+- It manages the **daily operations** of your AWS infrastructure in alignment with **ITIL** processes and provides a **baseline integration** with IT Service Management (**ITSM**) tools such as the ServiceNow platform.
 
 ### Amazon Machine Image (AMI)
 - It contains three catagories:
 	- Community AMIs
 	- AWS Marketplace AMIs
 	- My AMIs
-- It stores the information that defines an EC2 instance such as the template for the root volume, launch permissions and block device mappings
+- It stores the **information** that defines an **EC2 instance** such as the template for the *root volume*, *launch permissions* and *block device mappings*.
 
-### Five design principles for performance sfficiency in the cloud
+### Five design principles for performance efficiency in the cloud
 1. Democratize advanced technologies
 2. Go global in minutes
 3. Use serverless architectures
@@ -673,13 +672,13 @@ that needs to be sent
 5. cost optimization
 
 ### Amazon S3 Transfer Acceleration
-- It enables fast, easy, and secure transfers of files *over long distances* between your client and your Amazon S3 bucket.
+- It enables fast, easy, and secure **transfers** of files **over long distances** between your client and your Amazon S3 bucket.
 
 ### Amazon Neptune
-- Amazon Neptune is a fast, reliable, fully-managed graph database service that makes it easy to build and run applications that work with highly connected datasets.
+- Amazon Neptune is a fast, reliable, fully-managed **graph database** service that makes it easy to build and run applications that work with highly connected datasets.
 
 ### Amazon Elasicsearch
-- It is a fully managed Amazon search service based on open source software
+- It is a fully managed Amazon search service b**ased on open source** software
 
 ### AWS Direct Connect
 - Benefits:
@@ -687,21 +686,18 @@ that needs to be sent
 	- Increase reliability (predictable performance)
 	- Increase bandwidth (predictable bandwidth)
 	- Decrease latency
-- It uses private network connections (It's NOT based on internet connection)
-- it is available in 1Gbps and 10 Gbps speeds.
-- when connecting to AWS over Direct Connect:
-	- You can connect to all AZs within the ?PC of the local region
-	- You can connect to public services in remote regions
+- It uses <ins>private network connections</ins> (It's **NOT** based on internet connection)
+- It is available in **1Gbps** and **10Gbps** speeds.
+- When connecting to AWS over Direct Connect:
+	- You can connect to all AZs **within the VPC** of the **local region**.
+	- You can connect to public services in **remote regions**.
 - You can use **AWS Direct Connect Gateway** for connecting a company from their on-premises network to VPCs in **multiple regions** using **private connections**
 
 ### AWS Snowball
-- It is a petabyte-scale data transport solution that uses devices designed to be secure to transfer large amounts of data into and out of the AWS Cloud.
+- It is a **petabyte-scale** <ins>data transport</ins> solution that uses devices designed to be secure to transfer large amounts of data **into and out of** the AWS Cloud.
 
 ### Amazon Comprehend
-- Amazon Comprehend is a natural language processing (**NLP**) service that uses machine learning to find insights and relationships in text
-
-### Amazon Sagemaker
-- It is a fully-managed platform that enables developers and data scientists to quickly and easily build, train, and deploy machine learning models at any scale
+- Amazon Comprehend is a natural language processing (**NLP**) service that uses **machine learning** to find insights and relationships in **text**.
 
 ### Amazon Resource Names (ARNs)
 - It is used to **uniquely identify AWS resources**
@@ -713,7 +709,7 @@ that needs to be sent
 - There are two types of **rule condition**:
 	- host
 	- path
-- The primary benefits of using AWS ELB:
+- The primary **benefits** of using AWS ELB:
 	- High availability
 	- Elasticity
 
@@ -721,53 +717,53 @@ that needs to be sent
 - It lets **connected devices** *easily* and *securely* interact with cloud applications and other devices.
 
 ### AWS Fargate
-- Fargate removes the need to provision and manage servers.
+- Fargate <ins>removes the need to provision and manage servers</ins>.
 - Amazon ECS is a container orchestration service used to provision and manage container clusters.
 - It's **Serverless** offering (**no** EC2 instances)
 
 ### Amazon Detective
-- It uses machine learning and graph theory capability collected log data to help you conduct faster and efficient security invedtigations.
+- It uses **machine learning** and **graph theory** capability collected log data to help you conduct faster and efficient security invedtigations.
 
 ### Amazon Global Accelerator
-- You are asked to improve the performance of the application for local and global users. As part of this initiative, you must monitor the application endpoint health and route traffic to the most appropriate endpoint. For aiming this we should use amazon global accelerator.
+- You are asked to **improve the performance** of the application for <ins>local and global users</ins>. As part of this initiative, you must **monitor** the **application endpoint health** and **route traffic** to the most appropriate endpoint. For aiming this we should use amazon global accelerator.
 
 ### AWS Data Sync
-- It is a simple and fast way to move huge amounts of data (hundreds of terabytes) between on-premise storage to S3, EFS, FSx.
+- It is a simple and fast way to **move huge amounts** of data (hundreds of terabytes) between **on-premise** storage to **S3**, **EFS**, **FSx**.
 
 ### AWS CodePipeline
-- AWS CodePipeline is a continuous delivery service you can use to model, visualize, and automate the steps required to release your software. You can quickly model and configure the different stages of a software release process. CodePipeline automates the steps required to release your software changes continuously.
-- To orchestrate and automate the various phases involved in the release of application updates in-line with a predefined release model.
+- AWS CodePipeline is a **continuous delivery service** you can use to **model**, **visualize**, and **automate the steps** required to release your software. You can quickly model and configure the different stages of a software release process. CodePipeline automates the steps required to release your software changes continuously.
+- To orchestrate and **automate** the **various phases** involved in the release of application updates in-line with a predefined release model.
 
 ### Amazon GuardDuty
-- Amazon GuardDuty is a threat detection service that continuously monitors your AWS accounts and workloads for malicious activity and delivers detailed security findings for visibility and remediation.
-- For implementing a threat detection service that continuously monitors malicious activities and unauthorized behaviors protect aws account, workloads and data stored in Amazon S3 we use this service.
+- Amazon GuardDuty is a **threat detection** service that **continuously monitors** your **AWS accounts** and **workloads** for malicious activity and delivers detailed security findings for visibility and remediation.
+- For implementing a threat detection service that continuously monitors malicious activities and **unauthorized behaviors** protect AWS account, workloads and data stored in Amazon S3 we use this service.
 
 ### Amazon Macie
-- It can be used to detect users' personal credit card numbers from data stored in Amazon S3.
+- It can be used to **detect users' personal credit card numbers** from data stored in Amazon **S3**.
 
 ### AWS X-Ray
-- It is a service that helps developers analyze and debug distributed applications.
+- It is a service that helps developers **analyze** and **debug** distributed applications.
 
 ***
 ### Note
 - **Loose Coupling**: A desirable attribute of an IT system is that it can be broken into smaller, loosly coupled components.
 - Amazon VPC is a **free of charge** service.
 - Network ACLs operate at the **subnet** level NOT AZ level. It provides a firewall/security layer at the subnet level
-- Network ACLs are stateless so you must create rules in both directions to allow traffic through.
-- Bootstarping and Infrastructure as code are two echniques for using automated, repeatable processes that are fast and avoid human error.
+- Network ACLs are **stateless** so you must create rules in both directions to allow traffic through.
+- **Bootstarping** and **Infrastructure as code** are two echniques for using automated, repeatable processes that are fast and avoid human error.
 - **Golden Image Instances**: A golden image is a snapshot of a particular state for that resource. (e.g. EC2 instances, RDS instances, EBS volumes)
 - "**Direct Connect**" and "**VPN CloudHub**" are two ways of connecting to an *Amazon VPC* from an *on-premise* data center.
-- If you have multiple VPN connections, you can provide secure communication between sites using the AWS VPN CloudHub.
-- Health Insurance Portability and Accountability Act of 1996 (**HIPAA**) is used for secure AWS environment to process, maintain and store protected health information.
-- "File Gateway" and "Gateway Virtual Tape Library" are types of AWS storage gateway
-- "virtual gateway" on the VPC side and a customer gateway on the on-premise network side are need to connect VPC with a VPN connection (Those are parts of Amazon Managed VPN connection).
-- AWS Managed VPN uses internet connection
+- If you have **multiple VPN connections**, you can provide secure communication **between sites** using the **AWS VPN CloudHub**.
+- Health Insurance Portability and Accountability Act of 1996 (**HIPAA**) is used for **secure AWS environment** to process, maintain and store protected health information.
+- "**File Gateway**" and "**Gateway Virtual Tape Library**" are types of <ins>AWS storage gateway</ins>.
+- "**virtual gateway**" on the <ins>VPC side</ins> and a **customer gateway** on <ins>the on-premise network side</ins> are need to connect VPC with a VPN connection (Those are <ins>parts of Amazon Managed VPN connection</ins>).
+- *AWS Managed VPN* uses **internet connection**
 - **Resource groups** make it easy to group resources using the tags that are assigned to them. You can group resources that share one or more tags
-- "**PCI DSS**" is an information security standard applies to entities that store, process or transmit credit **cardholder data**.
+- "**PCI DSS**" is an **information security standard** applies to entities that store, process or transmit credit **cardholder data**.
 - With the public cloud the consumer organization typically incurs **OPEX costs for usage**
-- You cannot detach a primary network interface (eth0) from an instance. You can create and attach additional network interfaces.[elastic network interface(**ENI**)]
-- **NAT instances** are managed by **you** and they must be scaled manually and do not privide HA. They can be used as **bastion** hosts and can be assigned to security groups
-- **NAT Gateway** are managed for you by **AWS**. They can **scale automatically** and they sre not associated with any security groups. They are highly available in each AZ.
+- You **cannot detach** a primary network interface (**eth0**) from an instance. You can create and attach **additional** network interfaces.[elastic network interface(**ENI**)]
+- **NAT instances** are managed by **you** and they must be **scaled manually** and <ins>do not privide HA</ins>. They can be used as **bastion** hosts and can be *assigned to security groups*.
+- **NAT Gateway** are managed for you by **AWS**. They can **scale automatically** and they are **not** *associated with any security groups*. They are highly available in **each AZ**.
 - You can use **DynamoDB** and **SWF** for create a "stateless" application
 - These are valid use cases for using AWS services to implement **real-time auditing**:
 	- Use Amazon Inspector to monitor for compliance
@@ -778,7 +774,7 @@ that needs to be sent
 	- VPC with Public and Private Subnets and Hardware VPN Access
 	- VPC with a Private Subnet Only and Hardware VPN Access
 - Only the **Memcached** and **Redis** database engines can be used with **ElastiCache**
-- **AWS Migration Hub** provides a single location to track the progress of application migrations across multiple AWS and partner solutions.
+- **AWS Migration Hub** provides a **single location** to <ins>track the progress of application migrations</ins> across multiple AWS and partner solutions.
 - Amazon **CloudWatch**:
 	- **Basic** monitoring: collects metrics **every 5 minutes**
 	- **Detailed** monitoring: collects metrics **every 1 minute**
@@ -787,17 +783,17 @@ that needs to be sent
 - You use a **key pair** to decrypt the Administrator password through the console or using the CLI (For Amazon EC2 **Windows** instance)
 - An **RTMP** distribution (It is a type of Amazon CloudFront distribution) is used to distribute streaming media files using **Adobe Flash** Media Server’s RTMP protocol.
 - The **public cloud** is offered under a purely **pay as you go** model, and allows companies to completely **avoid** *CAPEX costs*.
-- SQL stands for Structured Query Language.
+- **SQL** stands for *Structured Query Language*.
 - AWS **Lambda** and Amazon **API Gateway** are both **app-facing** components of the AWS Serverless infrastructure.
 - Amazon **DynamoDB** and **EFS** are *database and storage* services of the serverless infrastructure
 - The *EC2 container registry* (**ECR**) is a managed AWS Docker registry service for storing, managing and deploying Docker images.
 - **Amazon Aurora Multi-Master** can scale out **write** performance for their Amazon Aurora database across *multiple* availability zones.
 - **Placement groups** are a logical grouping of instances in one of the following configurations:
-	- A **Cluster**: It's a logical grouping on intances within a single AZ. Cluster placement groups are recommended for applications that benefit from low network latency, high network throughput, or both, and if the majority of the network traffic is between the instances in the group
-	- A **spread**:  that are each placed on **distinct** underlying hardware. Spread placement groups are recommended for applications that have *a small number of critical instances* that should be kept separate from each other
+	- A **Cluster**: It's a logical grouping on intances **within a single AZ**. Cluster placement groups are recommended for **applications** that benefit from **low network latency**, **high network throughput**, or both, and if the majority of the network traffic is between the instances in the group
+	- A **spread**:  that are each placed on **distinct** underlying hardware. Spread placement groups are recommended for **applications** that have **a small number of critical instances** that should be kept separate from each other
 - With "**EC2**, **Auto Scaling** and **E**lastic **L**oad **B**alancing" combination of AWS services could be used to deploy a **stateless** web application that can automatically and elastically scale.
 - With the AWS cloud you get **fine-grained** billing and can **turn off resources** you are not using easily and not have to pay for them.
-- To install a **PCI-complian**t workload on AWS:
+- To install a **PCI-compliant** workload on AWS:
 	-  Use an AWS service that is in scope for PCI compliance and apply PCI controls at 			the application layer.
 -  In IAM user access and secrert keys:
 	-  The customer is responsible for **rotating** keys.
