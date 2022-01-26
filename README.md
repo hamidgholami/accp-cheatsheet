@@ -233,14 +233,14 @@ that needs to be sent
 - EBS volumes must be **in the same AZ** as the instances they are attached to
 - You can use *Amazon Data Lifecycle Manager* (**Amazon DLM**) to automate the creation, retention, and deletion of snapshots taken to back up your Amazon EBS volumes.
 - The Fundamental *charges* for EBS volumes are:
-	- the amount of data **provisioned** (**not** *consumed*) *per* <u>month</u>.
+	- the amount of data **provisioned** (**not** *consumed*) *per* <ins>month</ins>.
 	- amount you provision in **IOPS**
-- The **root** EBS volumes are **deleted** on termination by <u>default</u>.
-- Extra **non-root** volumes are **not deleted** on termination by <u>default</u>.
+- The **root** EBS volumes are **deleted** on termination by <ins>default</ins>.
+- Extra **non-root** volumes are **not deleted** on termination by <ins>default</ins>.
 - Both non-root and root if launched from an **encrypted** AMI.
 
 ### Amazon SageMaker
-- That enables developers and data scientists to quickly and easily **build**, **train**, and **deploy** <u>machine learning models</u> at any scale. 
+- That enables developers and data scientists to quickly and easily **build**, **train**, and **deploy** <ins>machine learning models</ins> at any scale. 
 
 ### Amazon Kinesis
 - There are four **types** of Kinesis services:
@@ -251,20 +251,20 @@ that needs to be sent
 
 ### Cloud Computing
 - Cloud computing is the **on-demand** delivery of compute power.
-- With cloud computing you get to <u>benefit from massive economies of scale</u>.
-- With cloud computing you can <u>increase your speed and agility</u>.
+- With cloud computing you get to <ins>benefit from massive economies of scale</ins>.
+- With cloud computing you can <ins>increase your speed and agility</ins>.
 
 ### AWS CloudFormation
-- It provides a **common language** for you to <u>describe</u> and <u>provision</u> all the infrastructure resources in your cloud environment.
+- It provides a **common language** for you to <ins>describe</ins> and <ins>provision</ins> all the infrastructure resources in your cloud environment.
 - It's free of charge.
 - **Change sets** allow you to preview how proposed changes to a stack might impact your running resources
 
 ### AWS Elastic Beanstalk
 -  The **fastest** and **simplest** way to get web applications up and running on AWS.
--  It is more of a **PaaS** service and is focused on <u>web applications</u> not infrastructure.
+-  It is more of a **PaaS** service and is focused on <ins>web applications</ins> not infrastructure.
 
 ### Amazon Simple Notification Service (SNS)
-- It is a web service that makes it easy to **set up**, **operate**, and **send notifications** <u>from the cloud</u>.
+- It is a web service that makes it easy to **set up**, **operate**, and **send notifications** <ins>from the cloud</ins>.
 - SNS supports notifications over multiple transports including *HTTP/HTTPS*, *Email/Email-JSON*, *SQS* and *SMS*.
 - It is used for building and *integrating* **loosely-coupled**, *distributed applications*
 
@@ -283,7 +283,7 @@ that needs to be sent
 - Cost optimization
 
 ### AWS WAF
-- create custom rules that block <u>common attack patterns</u>, such as:
+- create custom rules that block <ins>common attack patterns</ins>, such as:
 	- SQL injection.
 	- Cross-site scripting.
 	- Rules that are designed for your specific application
