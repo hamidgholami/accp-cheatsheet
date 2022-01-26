@@ -1,7 +1,15 @@
 # AWS Certified Cloud Practitioner (ACCP) Exam Note
+
+[![Twitter Follow](https://img.shields.io/twitter/follow/045_hamid?style=social&logo=twitter)](https://twitter.com/045_hamid)
+[![GitHub Follow](https://img.shields.io/github/followers/hamidgholami?style=social&logo=github)](https://github.com/hamidgholami)
+[![Linkedin Badge](https://img.shields.io/badge/-Hamid_Gholami-blue?style=social&logo=Linkedin&link=https://www.linkedin.com/in/hamid-gholami/)](https://www.linkedin.com/in/hamid-gholami/)
+
+
 This is my notes regarding ACCP exam which is completed gradually when I was studing the exam objectives.
 
-> [The AWS Certified Cloud Practitioner](https://aws.amazon.com/certification/certified-cloud-practitioner/) (*CLF-C01*) exam is intended for individuals<br>who can effectively demonstrate an overall knowledge of the AWS Cloud<br>independent of a specific job role.
+> Who should take this exam?<br>
+>
+>[The AWS Certified Cloud Practitioner](https://aws.amazon.com/certification/certified-cloud-practitioner/) (*CLF-C01*) exam is intended for individuals<br>who can effectively demonstrate an overall knowledge of the AWS Cloud<br>independent of a specific job role.
 
 You can find every updated information in this [link](https://aws.amazon.com/certification/certified-cloud-practitioner/) which is the official and reputable information.
 
@@ -798,3 +806,5 @@ that needs to be sent
 -  In IAM user access and secrert keys:
 	-  The customer is responsible for **rotating** keys.
 -  Which compute hosting model should be accounted for in the Total Cost of Ownership (TCO) when undertaking a cost analysis that allows physical isolation of a customer workload? **Dedicated Hosts**
+
+[![](https://img.shields.io/badge/back%20to%20top-%E2%86%A9-blue)](#shortcuts)
