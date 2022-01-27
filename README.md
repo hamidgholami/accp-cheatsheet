@@ -3,6 +3,7 @@
 [![Twitter Follow](https://img.shields.io/twitter/follow/045_hamid?label=045_hamid&style=plastic&logo=twitter&color=blue)](https://twitter.com/045_hamid)
 [![GitHub Follow](https://img.shields.io/github/followers/hamidgholami?label=hamidgholami&style=plastic&logo=github)](https://github.com/hamidgholami)
 [![Linkedin Badge](https://img.shields.io/badge/hamid--gholami-LinkedIn-blue?logo=linkedin)](https://www.linkedin.com/in/hamid-gholami/)
+[![Youtube Badge](https://img.shields.io/badge/-geekestan-red?style=plastic&&logo=youtube&message=geekestan&logoColor=white)](https://www.youtube.com/channel/UCBlOVqLEwcvFNG03KDAVTlw)
 
 
 This is my notes regarding ACCP exam which is completed gradually when I was studing the exam objectives.
@@ -805,4 +806,4 @@ that needs to be sent
 	-  Use an AWS service that is in scope for PCI compliance and apply PCI controls at 			the application layer.
 -  In IAM user access and secrert keys:
 	-  The customer is responsible for **rotating** keys.
--  Which compute hosting model should be accounted for in the Total Cost of Ownership (TCO) when undertaking a cost analysis that allows physical isolation of a customer workload? **Dedicated Hosts**
+-  Which compute hosting model should be accounted for in the Total Cost of Ownership (TCO) when undertaking a cost analysis that allows physical isolation of a customer workload? **Dedicated Hosts**.
