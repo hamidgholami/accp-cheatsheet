@@ -760,7 +760,7 @@ that needs to be sent
 - Amazon VPC is a **free of charge** service.
 - Network ACLs operate at the **subnet** level NOT AZ level. It provides a firewall/security layer at the subnet level
 - Network ACLs are **stateless** so you must create rules in both directions to allow traffic through.
-- **Bootstarping** and **Infrastructure as code** are two echniques for using automated, repeatable processes that are fast and avoid human error.
+- **Bootstrapping** and **Infrastructure as code** are two echniques for using automated, repeatable processes that are fast and avoid human error.
 - **Golden Image Instances**: A golden image is a snapshot of a particular state for that resource. (e.g. EC2 instances, RDS instances, EBS volumes)
 - "**Direct Connect**" and "**VPN CloudHub**" are two ways of connecting to an *Amazon VPC* from an *on-premise* data center.
 - If you have **multiple VPN connections**, you can provide secure communication **between sites** using the **AWS VPN CloudHub**.
