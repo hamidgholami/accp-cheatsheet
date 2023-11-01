@@ -35,6 +35,7 @@ Also you can download [the official exam guide](https://d1.awsstatic.com/trainin
 ### Table of contents
  - [Amazon S3](#amazon-s3)
  - [Six advantages of Amzon Cloud (Benefits)](#six-advantages-of-amzon-cloud-benefits)
+ - [AWS Compute Optimizer](#aws-compute-optimizer)
  - [Amazon EBS volumes types](#amazon-ebs-volumes-types)
  - [Amazon load balancers](#amazon-load-balancers)
  - [AWS Security Groups](#aws-security-groups)
@@ -168,6 +169,13 @@ copying of objects across buckets in different AWS Regions.
 - Increase speed and agility.
 - Stop spending money running and maintaining data centres.
 - Go global in minutes.
+
+### AWS Compute Optimizer
+It helps avoid overprovisioning and underprovisioning, based on your utilization data, four types of AWS resources:
+- Amazon Elastic Compute Cloud (EC2) instance types.
+- Amazon Elastic Block Store (EBS) volumes.
+- Amazon Elastic Container Service (ECS) services on AWS Fargate.
+- AWS Lambda functions.
 
 ### Amazon EBS volumes types
 - **General purpose(gp2)**(SSD): provides a good balance of price to performance, is suitable for most workloads and can be used as a system boot volume.
