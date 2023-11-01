@@ -127,6 +127,7 @@ Also you can download [the official exam guide](https://d1.awsstatic.com/trainin
  - [Amazon GuardDuty](#amazon-guardduty)
  - [Amazon Macie](#amazon-macie)
  - [AWS X-Ray](#aws-x-ray)
+ - [AWS OpsWorks](#aws-opsworks)
  - [Note](#note)
 
 
@@ -766,6 +767,9 @@ that needs to be sent
 
 ### AWS X-Ray
 - It is a service that helps developers **analyze** and **debug** distributed applications.
+
+### AWS OpsWorks
+- It is a service that allows you to host your own Puppet Enterprise infrastructure.
 
 ***
 ### Note
