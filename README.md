@@ -96,6 +96,7 @@ Also you can download [the official exam guide](https://d1.awsstatic.com/trainin
  - [Amazon EC2](#amazon-ec2)
  - [AWS pricing policies](#aws-pricing-policies)
  - [AWS Cost Explorer](#aws-cost-explorer)
+ - [AWS Cost Anomaly Detection](#aws-cost-anomaly-detection)
  - [Amazon Elastic Transcoder](#amazon-elastic-transcoder)
  - [AWS Organization](#aws-organization)
  - [AWS Glue](#aws-glue)
@@ -612,6 +613,10 @@ that needs to be sent
 
 ### AWS Cost Explorer
 -  It is a free tool that allows you to **view charts** of your costs. You can view cost data for the **past 13 months** and **forecast** how much you are likely to spend over the **next three months**. Cost Explorer can be used to **discover patterns** in how much you spend on AWS resources over time and to **identify cost problem** area.
+
+### AWS Cost Anomaly Detection
+- Reduce cost surprises and enhance control without slowing innovation.
+- Send alerts when anomalous spending is detected.
 
 ### Amazon Elastic Transcoder
 - It **converts video and audio files** from their source format into versions that will **playback** on devices like smartphones, tablets and PC
