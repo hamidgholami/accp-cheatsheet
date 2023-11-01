@@ -414,7 +414,7 @@ that needs to be sent
 -  It enables you to **assess**, **audit**, and **evaluate** the <ins>**configurations of your AWS resources**</ins>.
 -  It continuously **monitors** and **records** your <ins>AWS resource configurations</ins> and allows you to automate the evaluation of recorded configurations against desired configurations.
 -  It can be used to **keep track** of configuration changes on AWS resources, *keeping multiple date-stamped* versions in a reviewable history.
--  It can be used to **retrive configuration** changes made to AWS resources causing *operational issues*.
+-  It can be used to **retrieve configuration** changes made to AWS resources causing *operational issues*.
 
 ### AWS Shared Responsibility Model
 - Customers are responsible for *networking traffic protection*.
