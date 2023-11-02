@@ -41,7 +41,7 @@ Also you can download [the official exam guide](https://d1.awsstatic.com/trainin
  - [AWS Security Groups](#aws-security-groups)
  - [AWS Internet Gateway](#aws-internet-gateway)
  - [AWS Scalability](#aws-scalability)
- - [The core concepts of Amazon SNS](#the-core-concepts-of-amazon-sns)
+ - [Amazon Simple Notification Service (SNS)](#amazon-simple-notification-service-sns)
  - [Amazon Simple Queue Service (SQS)](#amazon-simple-queue-service-sqs)
  - [AWS Inspector](#aws-inspector)
  - [AWS Trusted Advisor](#aws-trusted-advisor)
@@ -203,8 +203,8 @@ It helps avoid overprovisioning and underprovisioning, based on your utilization
 AWS Scaling **vertically**: increasing the instance size/CPU/RAM/DISK,...
 AWS Scaling **horizontally**: adding more EC2 instances, AWS Lambda adding concurrently executing functions, Adding read replicas to an Amazon RDS database
 
-### The core concepts of Amazon SNS
-- **Topics**: how you label and group different endpoints that yousend messages to
+### Amazon Simple Notification Service (SNS)
+- **Topics**: how you label and group different endpoints that you send messages to
 - **Subscriptions**: the endpoints that a topic sends messages to
 - **Publisher**: the person/alarm/event that gives SNS the message that needs to be sent
 
