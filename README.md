@@ -387,7 +387,7 @@ AWS Scaling **horizontally**: adding more EC2 instances, AWS Lambda adding concu
 
 ### AWS CloudTrail
 - It is a web service that **records activity** made on your account and delivers <ins>log files</ins> to an **Amazon S3 bucket**.
-- logging and saves a history of API calls for your AWS account.
+- Logging and saves a history of API calls for your AWS account.
 - It is for **auditing**.
 - It records account activity and service events from most AWS services and logs the following records:
 	- The identity of the API caller.
