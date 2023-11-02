@@ -53,7 +53,6 @@ Also you can download [the official exam guide](https://d1.awsstatic.com/trainin
  - [Cloud Computing](#cloud-computing)
  - [AWS CloudFormation](#aws-cloudformation)
  - [AWS Elastic Beanstalk](#aws-elastic-beanstalk)
- - [Amazon Simple Notification Service (SNS)](#amazon-simple-notification-service-sns)
  - [AWS Lambda](#aws-lambda)
  - [AWS Well-Architected Framework](#aws-well-architected-framework)
  - [AWS WAF](#aws-waf)
@@ -208,8 +207,12 @@ AWS Scaling **horizontally**: adding more EC2 instances, AWS Lambda adding concu
 - **Subscriptions**: the endpoints that a topic sends messages to
 - **Publisher**: the person/alarm/event that gives SNS the message that needs to be sent
 
+- It is a web service that makes it easy to **set up**, **operate**, and **send notifications** <ins>from the cloud</ins>.
+- SNS supports notifications over multiple transports including *HTTP/HTTPS*, *Email/Email-JSON*, *SQS* and *SMS*.
+- It is used for building and *integrating* **loosely-coupled**, *distributed applications*.
+
 ### Amazon Simple Queue Service (SQS)
-- is a fully managed message queuing service that enables you to *decouple* and *scale microservices*, *distributed systems*, and *serverless applications*.
+- It is a fully managed message queuing service that enables you to *decouple* and *scale microservices*, *distributed systems*, and *serverless applications*.
 - **Use case**: *Decoupling application* components to ensure that there is no dependency on the availability of a single component.
 - It can be used to ensure the **persistence** of **in-flight** *transactions independently* of any single application component.
 - It is a message queue used for **decoupling** application components
@@ -278,11 +281,6 @@ AWS Scaling **horizontally**: adding more EC2 instances, AWS Lambda adding concu
 ### AWS Elastic Beanstalk
 -  The **fastest** and **simplest** way to get web applications up and running on AWS.
 -  It is more of a **PaaS** service and is focused on <ins>web applications</ins> not infrastructure.
-
-### Amazon Simple Notification Service (SNS)
-- It is a web service that makes it easy to **set up**, **operate**, and **send notifications** <ins>from the cloud</ins>.
-- SNS supports notifications over multiple transports including *HTTP/HTTPS*, *Email/Email-JSON*, *SQS* and *SMS*.
-- It is used for building and *integrating* **loosely-coupled**, *distributed applications*.
 
 ### AWS Lambda
 - Lambda functions can be invoked in response to **events**.
