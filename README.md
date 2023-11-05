@@ -34,7 +34,7 @@ Also you can download [the official exam guide](https://d1.awsstatic.com/trainin
 * * *
 ### Table of contents
  - [Amazon S3](#amazon-s3)
- - [Six advantages of Amzon Cloud (Benefits)](#six-advantages-of-amzon-cloud-benefits)
+ - [Six advantages of Amazon Cloud (Benefits)](#six-advantages-of-amazon-cloud-benefits)
  - [AWS Compute Optimizer](#aws-compute-optimizer)
  - [Amazon EBS volumes types](#amazon-ebs-volumes-types)
  - [Amazon load balancers](#amazon-load-balancers)
@@ -162,7 +162,7 @@ copying of objects across buckets in different AWS Regions.
 - **Object lifecycle management** can be used with objects so that they are stored cost effectively throughout their lifecycle. Objects can be transitioned to another storage class or expired. It enables you to **set rules** to **automatically transfer** objects between different storage classes at defined time intervals.
 - **Standard-IA** and **One Zone-IA** both have a minimum storage duration charge of **30** days
 	
-### Six advantages of Amzon Cloud (Benefits)
+### Six advantages of Amazon Cloud (Benefits)
 - Trade capital expense for variable expense.
 - Benefit from massive economies of scale.
 - Stop guessing about capacity.
