@@ -35,12 +35,13 @@ Also you can download [the official exam guide](https://d1.awsstatic.com/trainin
 ### Table of contents
  - [Amazon S3](#amazon-s3)
  - [Six advantages of Amzon Cloud (Benefits)](#six-advantages-of-amzon-cloud-benefits)
+ - [AWS Compute Optimizer](#aws-compute-optimizer)
  - [Amazon EBS volumes types](#amazon-ebs-volumes-types)
  - [Amazon load balancers](#amazon-load-balancers)
  - [AWS Security Groups](#aws-security-groups)
  - [AWS Internet Gateway](#aws-internet-gateway)
  - [AWS Scalability](#aws-scalability)
- - [The core concepts of Amazon SNS](#the-core-concepts-of-amazon-sns)
+ - [Amazon Simple Notification Service (SNS)](#amazon-simple-notification-service-sns)
  - [Amazon Simple Queue Service (SQS)](#amazon-simple-queue-service-sqs)
  - [AWS Inspector](#aws-inspector)
  - [AWS Trusted Advisor](#aws-trusted-advisor)
@@ -52,7 +53,6 @@ Also you can download [the official exam guide](https://d1.awsstatic.com/trainin
  - [Cloud Computing](#cloud-computing)
  - [AWS CloudFormation](#aws-cloudformation)
  - [AWS Elastic Beanstalk](#aws-elastic-beanstalk)
- - [Amazon Simple Notification Service (SNS)](#amazon-simple-notification-service-sns)
  - [AWS Lambda](#aws-lambda)
  - [AWS Well-Architected Framework](#aws-well-architected-framework)
  - [AWS WAF](#aws-waf)
@@ -95,6 +95,7 @@ Also you can download [the official exam guide](https://d1.awsstatic.com/trainin
  - [Amazon EC2](#amazon-ec2)
  - [AWS pricing policies](#aws-pricing-policies)
  - [AWS Cost Explorer](#aws-cost-explorer)
+ - [AWS Cost Anomaly Detection](#aws-cost-anomaly-detection)
  - [Amazon Elastic Transcoder](#amazon-elastic-transcoder)
  - [AWS Organization](#aws-organization)
  - [AWS Glue](#aws-glue)
@@ -125,6 +126,7 @@ Also you can download [the official exam guide](https://d1.awsstatic.com/trainin
  - [Amazon GuardDuty](#amazon-guardduty)
  - [Amazon Macie](#amazon-macie)
  - [AWS X-Ray](#aws-x-ray)
+ - [AWS OpsWorks](#aws-opsworks)
  - [Note](#note)
 
 
@@ -141,10 +143,9 @@ copying of objects across buckets in different AWS Regions.
 	- Names cannot be formatted as an IP address.
 - IAM policies can be written to grant access to Amazon S3 buckets.
 - Amazon S3 storage tier:
-	- **S3 Standard** -> 99.99% SLA -> for data that is accessed less frequently, but
-	requires rapid access when needed
-	- **S3 Standard-IA** -> 99.9% SLA -> offers the high durability, high throughput, and low 		latency of S3 Standard
-	- **S3 One Zone-IA** -> 99% SLA ->  *the most cost-effective* Amazon S3 storage tier for 		data that is not often accessed but requires high durability. It stores data in a **single** AZ
+	- **S3 Standard** -> 99.99% SLA -> for data that is accessed less frequently, butrequires rapid access when needed
+	- **S3 Standard-IA** -> 99.9% SLA -> offers the high durability, high throughput, and low latency of S3 Standard
+	- **S3 One Zone-IA** -> 99% SLA ->  *the most cost-effective* Amazon S3 storage tier for data that is not often accessed but requires high durability. It stores data in a **single** AZ
 	- **Glacier** -> No SLA
 - **Multipart upload** can be used to speed up uploads to S3
 - **S3 Copy** -> up to 5GB in size in a single atomic operation
@@ -169,10 +170,17 @@ copying of objects across buckets in different AWS Regions.
 - Stop spending money running and maintaining data centres.
 - Go global in minutes.
 
+### AWS Compute Optimizer
+It helps avoid overprovisioning and underprovisioning, based on your utilization data, four types of AWS resources:
+- Amazon Elastic Compute Cloud (EC2) instance types.
+- Amazon Elastic Block Store (EBS) volumes.
+- Amazon Elastic Container Service (ECS) services on AWS Fargate.
+- AWS Lambda functions.
+
 ### Amazon EBS volumes types
 - **General purpose(gp2)**(SSD): provides a good balance of price to performance, is suitable for most workloads and can be used as a system boot volume.
 - **Provisioned IOPS(io1)**(SSD): is a high-performance volume type that is more expensive and should be used for apps that require the higher performance.
-- **Cold HDD(sc1)**:  cannot be used as a boot volume and is good for throughput oriented storage for infrequently accessed data.
+- **Cold HDD(sc1)**: cannot be used as a boot volume and is good for throughput oriented storage for infrequently accessed data.
 - **Throughput Optimized(st1)**: It is ideal for streaming workloads with fast throughput such as big data and data warehouses.
 
 ### Amazon load balancers
@@ -194,15 +202,17 @@ copying of objects across buckets in different AWS Regions.
 AWS Scaling **vertically**: increasing the instance size/CPU/RAM/DISK,...
 AWS Scaling **horizontally**: adding more EC2 instances, AWS Lambda adding concurrently executing functions, Adding read replicas to an Amazon RDS database
 
-### The core concepts of Amazon SNS
-- **Topics**: how you label and group different endpoints that you
-send messages to
+### Amazon Simple Notification Service (SNS)
+- **Topics**: how you label and group different endpoints that you send messages to
 - **Subscriptions**: the endpoints that a topic sends messages to
-- **Publisher**: the person/alarm/event that gives SNS the message
-that needs to be sent
+- **Publisher**: the person/alarm/event that gives SNS the message that needs to be sent
+
+- It is a web service that makes it easy to **set up**, **operate**, and **send notifications** <ins>from the cloud</ins>.
+- SNS supports notifications over multiple transports including *HTTP/HTTPS*, *Email/Email-JSON*, *SQS* and *SMS*.
+- It is used for building and *integrating* **loosely-coupled**, *distributed applications*.
 
 ### Amazon Simple Queue Service (SQS)
-- is a fully managed message queuing service that enables you to *decouple* and *scale microservices*, *distributed systems*, and *serverless applications*.
+- It is a fully managed message queuing service that enables you to *decouple* and *scale microservices*, *distributed systems*, and *serverless applications*.
 - **Use case**: *Decoupling application* components to ensure that there is no dependency on the availability of a single component.
 - It can be used to ensure the **persistence** of **in-flight** *transactions independently* of any single application component.
 - It is a message queue used for **decoupling** application components
@@ -239,7 +249,7 @@ that needs to be sent
 	- Cold HDD:
 - The **easiest** way to store a backup of an EBS volume on Amazon S3: Create a **snapshot** of the volume.
 - Amazon EBS snapshots are stored on *S3*.
-- EBS volumes must be **in the same AZ** as the instances they are attached to
+- EBS volumes must be **in the same AZ** as the instances they are attached to.
 - You can use *Amazon Data Lifecycle Manager* (**Amazon DLM**) to automate the creation, retention, and deletion of snapshots taken to back up your Amazon EBS volumes.
 - The Fundamental *charges* for EBS volumes are:
 	- the amount of data **provisioned** (**not** *consumed*) *per* <ins>month</ins>.
@@ -266,16 +276,11 @@ that needs to be sent
 ### AWS CloudFormation
 - It provides a **common language** for you to <ins>describe</ins> and <ins>provision</ins> all the infrastructure resources in your cloud environment.
 - It's free of charge.
-- **Change sets** allow you to preview how proposed changes to a stack might impact your running resources
+- **Change sets** allow you to preview how proposed changes to a stack might impact your running resources.
 
 ### AWS Elastic Beanstalk
 -  The **fastest** and **simplest** way to get web applications up and running on AWS.
 -  It is more of a **PaaS** service and is focused on <ins>web applications</ins> not infrastructure.
-
-### Amazon Simple Notification Service (SNS)
-- It is a web service that makes it easy to **set up**, **operate**, and **send notifications** <ins>from the cloud</ins>.
-- SNS supports notifications over multiple transports including *HTTP/HTTPS*, *Email/Email-JSON*, *SQS* and *SMS*.
-- It is used for building and *integrating* **loosely-coupled**, *distributed applications*
 
 ### AWS Lambda
 - Lambda functions can be invoked in response to **events**.
@@ -352,9 +357,9 @@ that needs to be sent
 ### Amazon IAM
 - you **cannot** use IAM to create **local user accounts** on any system.
 - You are also not charged for what you use, <ins>IAM is free to use</ins>.
-- You can share access to your AWS account
-- Identity federation
-- PCI DSS complince
+- You can share access to your AWS account.
+- Identity federation.
+- PCI DSS complince.
 - AWS recommended **best practices**:
 	- Create individual IAM users
 	- Grant lease privilage
@@ -380,7 +385,7 @@ that needs to be sent
 
 ### AWS CloudTrail
 - It is a web service that **records activity** made on your account and delivers <ins>log files</ins> to an **Amazon S3 bucket**.
-- logging and saves a history of API calls for your AWS account.
+- Logging and saves a history of API calls for your AWS account.
 - It is for **auditing**.
 - It records account activity and service events from most AWS services and logs the following records:
 	- The identity of the API caller.
@@ -393,8 +398,8 @@ that needs to be sent
 - It's a fully managed **NoSQL** database service. (schema-less)
 - You can scale the DB at any time **without incurring downtime**.
 - DaynamoDB pricing models:
-	- **On-demand capacity mode**: charges you for the data reads and writes your 				application
-	- **Provisioned capacity mode**: you specify the number of reads and writes per 			second that you expect
+	- **On-demand capacity mode**: charges you for the data reads and writes your application
+	- **Provisioned capacity mode**: you specify the number of reads and writes per second that you expect
 - Availability model:
 	- **Data is synchronously** replicated across **3** facilities in a region
 - Best practices for storing **large items** and attributes in DynamoDB:
@@ -414,7 +419,7 @@ that needs to be sent
 -  It enables you to **assess**, **audit**, and **evaluate** the <ins>**configurations of your AWS resources**</ins>.
 -  It continuously **monitors** and **records** your <ins>AWS resource configurations</ins> and allows you to automate the evaluation of recorded configurations against desired configurations.
 -  It can be used to **keep track** of configuration changes on AWS resources, *keeping multiple date-stamped* versions in a reviewable history.
--  It can be used to **retrive configuration** changes made to AWS resources causing *operational issues*.
+-  It can be used to **retrieve configuration** changes made to AWS resources causing *operational issues*.
 
 ### AWS Shared Responsibility Model
 - Customers are responsible for *networking traffic protection*.
@@ -491,7 +496,7 @@ that needs to be sent
 ### AWS Storage Gateway Volume Gateway
 - The volume gateway represents the family of gateways that *support* **block-based volumes**, previously referred to as gateway-cached and gateway-stored modes. it allows you to <ins>use block-based volumes on-premise</ins> that are then **asynchronously** backed up to Amazon **S3**.
 	- **Stored Volumes mode**:  the *entire dataset is stored on-site* and is **asynchronously** backed up to S3 (EBS point-in-time snapshots). Snapshots are incremental and compressed
-	- **Cached Volume mode**: the *entire dataset is stored on S3* and a cache of the 			*most frequently accessed* data is cached on-site.
+	- **Cached Volume mode**: the *entire dataset is stored on S3* and a cache of the *most frequently accessed* data is cached on-site.
 
 ### AWS Step Functions
 - It lets you **coordinate** *multiple AWS services* into **serverless** workflows so you can build and update apps quickly.
@@ -583,7 +588,7 @@ that needs to be sent
 - EC2 pricing model:
 	- **On-Demand**: It is the **most economical** option that will ensure **no interruptions**.
 	- **Spot**: They are good for **short term requirements** as they can be very economical. However, you may find that the instance is terminated if the spot market price moves.
-	- **Dedicated Instance**: They are EC2 instances that run on hardware dedicated to a 		single customer.
+	- **Dedicated Instance**: They are EC2 instances that run on hardware dedicated to a single customer.
 	- **Reserved**: They are good for **long-term**, static requirements as you must lock-in for **1 or 3 years** in return for a decent discount.
 - It offers SLAs of **95%** for *each region*.
 - EC2 **benefits** over using non-cloud servers:
@@ -591,11 +596,11 @@ that needs to be sent
 	- Inexpensive
 - Types of Reserved Instance(RI):
 	- **Standard RIs**: These provide the **most significant discount** (up to 75% off On-Demand) and are best suited for **steady-state** usage.
-	- **Convertible RIs**: These provide a discount (up to 54% off On-Demand) and the 		<ins>capability to change</ins> the attributes of the RI as long as the exchange results in the creation of Reserved Instances of equal or greater value. Like Standard RIs, Convertible RIs are best suited for steady-state usage.
-	- **Scheduled RIs**: These are available to launch within the time windows you 				reserve. This option allows you to match your capacity reservation to a predictable 		recurring schedule that only requires a **fraction of a day, a week, or a month**.
+	- **Convertible RIs**: These provide a discount (up to 54% off On-Demand) and the <ins>capability to change</ins> the attributes of the RI as long as the exchange results in the creation of Reserved Instances of equal or greater value. Like Standard RIs, Convertible RIs are best suited for steady-state usage.
+	- **Scheduled RIs**: These are available to launch within the time windows you reserve. This option allows you to match your capacity reservation to a predictable recurring schedule that only requires a **fraction of a day, a week, or a month**.
 	- Payment options for reserverd instances include All Upfront, Partial Upfront, and NoUpfront.
-- With EC2 you are billed either by the **second**, for some Linux instances or by **hour**
-- with "**Inter-Region VPC Peering**" a company can connect their EC2 instances in <ins>*one region*</ins> with EC2 instances in <ins>*another region*</ins> using **private IP** addresses
+- With EC2 you are billed either by the **second**, for some Linux instances or by **hour**.
+- with "**Inter-Region VPC Peering**" a company can connect their EC2 instances in <ins>*one region*</ins> with EC2 instances in <ins>*another region*</ins> using **private IP** addresses.
 
 ### AWS pricing policies
 - pay-as-you-go
@@ -605,8 +610,12 @@ that needs to be sent
 ### AWS Cost Explorer
 -  It is a free tool that allows you to **view charts** of your costs. You can view cost data for the **past 13 months** and **forecast** how much you are likely to spend over the **next three months**. Cost Explorer can be used to **discover patterns** in how much you spend on AWS resources over time and to **identify cost problem** area.
 
+### AWS Cost Anomaly Detection
+- Reduce cost surprises and enhance control without slowing innovation.
+- Send alerts when anomalous spending is detected.
+
 ### Amazon Elastic Transcoder
-- It **converts video and audio files** from their source format into versions that will **playback** on devices like smartphones, tablets and PC
+- It **converts video and audio files** from their source format into versions that will **playback** on devices like smartphones, tablets and PC.
 
 ### AWS Organization
 - **One bill provided** per AWS organization
@@ -688,7 +697,7 @@ that needs to be sent
 - Amazon Neptune is a fast, reliable, fully-managed **graph database** service that makes it easy to build and run applications that work with highly connected datasets.
 
 ### Amazon Elasicsearch
-- It is a fully managed Amazon search service b**ased on open source** software
+- It is a fully managed Amazon search service b**ased on open source** software.
 
 ### AWS Direct Connect
 - Benefits:
@@ -710,7 +719,7 @@ that needs to be sent
 - Amazon Comprehend is a natural language processing (**NLP**) service that uses **machine learning** to find insights and relationships in **text**.
 
 ### Amazon Resource Names (ARNs)
-- It is used to **uniquely identify AWS resources**
+- It is used to **uniquely identify AWS resources**.
 
 ### Amazon ELB
 - A **listener** is a process that checks for connection requests, using the protocol and port that you configure.
@@ -753,6 +762,9 @@ that needs to be sent
 
 ### AWS X-Ray
 - It is a service that helps developers **analyze** and **debug** distributed applications.
+
+### AWS OpsWorks
+- It is a service that allows you to host your own Puppet Enterprise infrastructure.
 
 ***
 ### Note
@@ -804,7 +816,7 @@ that needs to be sent
 - With "**EC2**, **Auto Scaling** and **E**lastic **L**oad **B**alancing" combination of AWS services could be used to deploy a **stateless** web application that can automatically and elastically scale.
 - With the AWS cloud you get **fine-grained** billing and can **turn off resources** you are not using easily and not have to pay for them.
 - To install a **PCI-compliant** workload on AWS:
-	-  Use an AWS service that is in scope for PCI compliance and apply PCI controls at 			the application layer.
+	-  Use an AWS service that is in scope for PCI compliance and apply PCI controls at the application layer.
 -  In IAM user access and secrert keys:
 	-  The customer is responsible for **rotating** keys.
 -  Which compute hosting model should be accounted for in the Total Cost of Ownership (TCO) when undertaking a cost analysis that allows physical isolation of a customer workload? **Dedicated Hosts**.
