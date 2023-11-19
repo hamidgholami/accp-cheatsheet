@@ -797,6 +797,7 @@ AWS Scaling **horizontally**: adding more EC2 instances, AWS Lambda adding concu
 	- VPC
 	- Security Groups
 	- Resource Identifiers
+ 	- EFS	
 	- ECS
 	- ECR
 	- Amazon GuardDuty
