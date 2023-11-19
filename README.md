@@ -34,10 +34,11 @@ Also you can download [the official exam guide](https://d1.awsstatic.com/trainin
 * * *
 ### Table of contents
  - [Amazon S3](#amazon-s3)
- - [Six advantages of Amzon Cloud (Benefits)](#six-advantages-of-amzon-cloud-benefits)
+ - [Six advantages of Amazon Cloud (Benefits)](#six-advantages-of-amazon-cloud-benefits)
  - [AWS Compute Optimizer](#aws-compute-optimizer)
  - [Amazon EBS volumes types](#amazon-ebs-volumes-types)
  - [Amazon load balancers](#amazon-load-balancers)
+ - [AWS Network ACL](#aws-network-acl)
  - [AWS Security Groups](#aws-security-groups)
  - [AWS Internet Gateway](#aws-internet-gateway)
  - [AWS Scalability](#aws-scalability)
@@ -127,9 +128,8 @@ Also you can download [the official exam guide](https://d1.awsstatic.com/trainin
  - [Amazon Macie](#amazon-macie)
  - [AWS X-Ray](#aws-x-ray)
  - [AWS OpsWorks](#aws-opsworks)
- - [Note](#note)
-
-
+ - [Geographical Services](#geographical-services)
+ - [Notes](#notes)
 
 ***
 ### Amazon S3
@@ -162,7 +162,7 @@ copying of objects across buckets in different AWS Regions.
 - **Object lifecycle management** can be used with objects so that they are stored cost effectively throughout their lifecycle. Objects can be transitioned to another storage class or expired. It enables you to **set rules** to **automatically transfer** objects between different storage classes at defined time intervals.
 - **Standard-IA** and **One Zone-IA** both have a minimum storage duration charge of **30** days
 	
-### Six advantages of Amzon Cloud (Benefits)
+### Six advantages of Amazon Cloud (Benefits)
 - Trade capital expense for variable expense.
 - Benefit from massive economies of scale.
 - Stop guessing about capacity.
@@ -189,10 +189,20 @@ It helps avoid overprovisioning and underprovisioning, based on your utilization
 - CLBs process traffic at the TCP, SSL, HTTP and HTTPS levels (layer 4 & 7).
 - *Load balancing with session affinity* can be used for **horizontal scaling** of **stateful** components.
 
+### AWS Network ACL
+- Stateless
+- By default: all in - all out
+- It operates on VPC subnet level
+- Not used in S3
+
 ### AWS Security Groups
-- Only `allow` rules, You cannot create `deny` rules.
-- A security group is **stateful** but this is not a rule type
-- You can create **inbound** and **outbound** rules in a security group
+- Stateful firewalls
+- By default: none in - all out
+- Only `allow` rules, it is not possible to have `deny` rules
+- It allows access through specific port
+- It is possible to have **inbound** and **outbound** rules in a security group
+- It operates on instance level, not on VPC subnet level
+- Not used in S3
 
 ### AWS Internet Gateway
 - Do not have **allow/deny** rules
@@ -585,6 +595,13 @@ AWS Scaling **horizontally**: adding more EC2 instances, AWS Lambda adding concu
 	- **Load balancing**
 
 ### Amazon EC2
+- Types:
+	- **General Purpose**: instances provide a balance of compute, memory and networking resources, and can be used for diverse workloads; these are ideal for applications that use resources in equal proportions such as web servers and code repositories.
+	- **Compute Optimized**: instances are ideal for compute bound applications that benefit from high performance processors; these are well suited for batch processing workloads, media transcoding, high performance web servers, high performance computing (HPC), scientific modeling, dedicated gaming servers and ad server engines, machine learning inference and other compute intensive applications.
+	- **Memory Optimized**: instances are designed to deliver fast performance for workloads that process large data sets in memory.
+	- **Accelerated Computing**: instances use hardware accelerators, or co-processors, to perform functions, such as floating point number calculations, graphics processing, or data pattern matching, more efficiently than is possible in software running on CPUs.
+	- **Storage Optimized**: instances are designed for workloads that require high, sequential read and write access to very large data sets on local storage; these are optimized to deliver tens of thousands of low-latency, random I/O operations per second (IOPS) to applications.
+	- **High Performance Computing**: instances are built to offer the best price performance for running HPC workloads at scale on AWS; these are ideal for applications that benefit from high-performance processors such as large, complex simulations and deep learning workloads.
 - EC2 pricing model:
 	- **On-Demand**: It is the **most economical** option that will ensure **no interruptions**.
 	- **Spot**: They are good for **short term requirements** as they can be very economical. However, you may find that the instance is terminated if the spot market price moves.
@@ -766,8 +783,38 @@ AWS Scaling **horizontally**: adding more EC2 instances, AWS Lambda adding concu
 ### AWS OpsWorks
 - It is a service that allows you to host your own Puppet Enterprise infrastructure.
 
+### Geographical Services
+- Global level
+	- AWS Route 53
+	- AWS Cloud Front
+	- AWS Direct Connect Gateway
+	- AWS Global Accelerator
+	- S3 (but data Regional)
+	- IAM
+	- WAF
+	- AWS SNS
+- Regional level
+	- VPC
+	- Security Groups
+	- Resource Identifiers
+	- ECS
+	- ECR
+	- Amazon GuardDuty
+	- Amazon Detective
+	- Amazon Inspector
+	- Amazon Macie
+	- AWS Security Hub
+	- AWS Migration Hub
+	- AWS Config
+- Availability Zone level
+	- Subnet
+	- Elastic Load Balancer
+	- EC2 Instances
+	- EBS Volumes
+	- Cluster Placement Groups
+
 ***
-### Note
+### Notes
 - **Loose Coupling**: A desirable attribute of an IT system is that it can be broken into smaller, loosly coupled components.
 - Amazon VPC is a **free of charge** service.
 - Network ACLs operate at the **subnet** level NOT AZ level. It provides a firewall/security layer at the subnet level
