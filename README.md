@@ -66,6 +66,7 @@ Also you can download [the official exam guide](https://d1.awsstatic.com/trainin
  - [AWS support plans](#aws-support-plans)
  - [Amazon IAM](#amazon-iam)
  - [Amazon Cognito](#amazon-cognito)
+ - [AWS Organizations](#aws-organizations)
  - [Popular HTTTP code](#popular-htttp-code)
  - [AWS CloudTrail](#aws-cloudtrail)
  - [Amazon DynamoDB](#amazon-dynamodb)
@@ -98,7 +99,6 @@ Also you can download [the official exam guide](https://d1.awsstatic.com/trainin
  - [AWS Cost Explorer](#aws-cost-explorer)
  - [AWS Cost Anomaly Detection](#aws-cost-anomaly-detection)
  - [Amazon Elastic Transcoder](#amazon-elastic-transcoder)
- - [AWS Organization](#aws-organization)
  - [AWS Glue](#aws-glue)
  - [AWS Artifact](#aws-artifact)
  - [AWS WAF](#aws-waf)
@@ -371,8 +371,6 @@ AWS Scaling **horizontally**: adding more EC2 instances, AWS Lambda adding concu
 - AWS recommended **best practices**:
 	- Create individual IAM users
 	- Least privilege principle: granting only the permissions that are needed to perform specific tasks
- 	- Culture strong passwords
-  	- Multi-factor authentication
 - IAM **supported authentication** methods include:
 	- Console passwords
 	- Access keys
@@ -391,6 +389,17 @@ AWS Scaling **horizontally**: adding more EC2 instances, AWS Lambda adding concu
 ### Amazon Cognito
 - Amazon Cognito Identity Pool provides temporary AWS credentials for users who are guests (unauthenticated) and for users who have been authenticated and received a token. An identity pool is a store of user identity data specific to your account.
 - Amazon Cognito User Pool is a user directory in Amazon Cognito. It doesn't enable access to unauthenticated identities. You have to use an Identity Pool instead.
+
+### AWS Organizations
+- **One bill provided** per AWS organization
+- Best practices:
+	-  Always enable **multi-factor** authentication (MFA) on the root account
+	-  Always use a **strong and complex password** on the root account
+	-  The **Paying account** should be used for **billing purposes only**. Do not deploy resources into the Paying account
+-  With below options organizations can **reduce their cost**:
+	-  "Create an AWS Organization configuration linking the accounts"
+	-  "Setup consolidated billing between the accounts"
+- Volume pricing discounts applied **across multiple accounts**.
 
 ### Popular HTTTP code
 - A HTTP 200 codes: successful
@@ -638,17 +647,6 @@ AWS Scaling **horizontally**: adding more EC2 instances, AWS Lambda adding concu
 
 ### Amazon Elastic Transcoder
 - It **converts video and audio files** from their source format into versions that will **playback** on devices like smartphones, tablets and PC.
-
-### AWS Organization
-- **One bill provided** per AWS organization
-- Best practices:
-	-  Always enable **multi-factor** authentication (MFA) on the root account
-	-  Always use a **strong and complex password** on the root account
-	-  The **Paying account** should be used for **billing purposes only**. Do not deploy resources into the Paying account
--  With below options organizations can **reduce their cost**:
-	-  "Create an AWS Organization configuration linking the accounts"
-	-  "Setup consolidated billing between the accounts"
-- Volume pricing discounts applied **across multiple accounts**.
 
 ### AWS Glue
 - Is a fully managed **extract**, **transform**, and **load** (**ETL**) service that makes it easy for customers to prepare and load their <ins>data for analytics</ins>.
