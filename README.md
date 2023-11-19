@@ -205,8 +205,8 @@ It helps avoid overprovisioning and underprovisioning, based on your utilization
 - Not used in S3
 
 ### AWS Internet Gateway
-- Do not have **allow/deny** rules
-- It attached at the **VPC level**
+- Do not have `allow` or `deny` rules
+- It operates on VPC level
 
 ### AWS Scalability
 AWS Scaling **vertically**: increasing the instance size/CPU/RAM/DISK,...
