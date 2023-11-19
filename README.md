@@ -585,6 +585,13 @@ AWS Scaling **horizontally**: adding more EC2 instances, AWS Lambda adding concu
 	- **Load balancing**
 
 ### Amazon EC2
+- Types:
+	- **General Purpose**: instances provide a balance of compute, memory and networking resources, and can be used for diverse workloads; these are ideal for applications that use resources in equal proportions such as web servers and code repositories.
+	- **Compute Optimized**: instances are ideal for compute bound applications that benefit from high performance processors; these are well suited for batch processing workloads, media transcoding, high performance web servers, high performance computing (HPC), scientific modeling, dedicated gaming servers and ad server engines, machine learning inference and other compute intensive applications.
+	- **Memory Optimized**: instances are designed to deliver fast performance for workloads that process large data sets in memory.
+	- **Accelerated Computing**: instances use hardware accelerators, or co-processors, to perform functions, such as floating point number calculations, graphics processing, or data pattern matching, more efficiently than is possible in software running on CPUs.
+	- **Storage Optimized**: instances are designed for workloads that require high, sequential read and write access to very large data sets on local storage; these are optimized to deliver tens of thousands of low-latency, random I/O operations per second (IOPS) to applications.
+	- **High Performance Computing**: instances are built to offer the best price performance for running HPC workloads at scale on AWS; these are ideal for applications that benefit from high-performance processors such as large, complex simulations and deep learning workloads.
 - EC2 pricing model:
 	- **On-Demand**: It is the **most economical** option that will ensure **no interruptions**.
 	- **Spot**: They are good for **short term requirements** as they can be very economical. However, you may find that the instance is terminated if the spot market price moves.
