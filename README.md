@@ -47,6 +47,7 @@ Also you can download [the official exam guide](https://d1.awsstatic.com/trainin
  - [AWS Inspector](#aws-inspector)
  - [AWS Trusted Advisor](#aws-trusted-advisor)
  - [AWS Personal Health Dashboard](#aws-personal-health-dashboard)
+ - [AWS X-Ray](#aws-x-ray)
  - [AWS TCO Calculator](#aws-tco-calculator)
  - [AWS EBS](#aws-ebs)
  - [Amazon SageMaker](#amazon-sagemaker)
@@ -127,7 +128,6 @@ Also you can download [the official exam guide](https://d1.awsstatic.com/trainin
  - [AWS CodePipeline ](#aws-codepipeline)
  - [Amazon GuardDuty](#amazon-guardduty)
  - [Amazon Macie](#amazon-macie)
- - [AWS X-Ray](#aws-x-ray)
  - [AWS OpsWorks](#aws-opsworks)
  - [Geographical Services](#geographical-services)
  - [Notes](#notes)
@@ -247,6 +247,10 @@ AWS Scaling **horizontally**: adding more EC2 instances, AWS Lambda adding concu
 
 ### AWS Personal Health Dashboard
 - It provides **alerts** and **remediation** *guidance* when AWS is experiencing events that may *impact* you.
+
+### AWS X-Ray
+- It is a service that helps developers **analyze** and **debug** distributed applications.
+- It understand how your application and its underlying services are performing to identify and troubleshoot the root cause of performance issues and errors.
 
 ### AWS TCO Calculator
 - It can be used to **compare** the *cost of running* your applications in an *on-premises* or colocation environment to *AWS*.
@@ -785,9 +789,6 @@ AWS Scaling **horizontally**: adding more EC2 instances, AWS Lambda adding concu
 
 ### Amazon Macie
 - It can be used to **detect users' personal credit card numbers** from data stored in Amazon **S3**.
-
-### AWS X-Ray
-- It is a service that helps developers **analyze** and **debug** distributed applications.
 
 ### AWS OpsWorks
 - It is a service that allows you to host your own Puppet Enterprise infrastructure.
