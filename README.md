@@ -129,7 +129,7 @@ Also you can download [the official exam guide](https://d1.awsstatic.com/trainin
  - [AWS X-Ray](#aws-x-ray)
  - [AWS OpsWorks](#aws-opsworks)
  - [Geographical Services](#geographical-services)
- - [Note](#note)
+ - [Notes](#notes)
 
 ***
 ### Amazon S3
@@ -814,7 +814,7 @@ AWS Scaling **horizontally**: adding more EC2 instances, AWS Lambda adding concu
 	- Cluster Placement Groups
 
 ***
-### Note
+### Notes
 - **Loose Coupling**: A desirable attribute of an IT system is that it can be broken into smaller, loosly coupled components.
 - Amazon VPC is a **free of charge** service.
 - Network ACLs operate at the **subnet** level NOT AZ level. It provides a firewall/security layer at the subnet level
