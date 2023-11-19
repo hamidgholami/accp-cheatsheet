@@ -57,7 +57,6 @@ Also you can download [the official exam guide](https://d1.awsstatic.com/trainin
  - [AWS Lambda](#aws-lambda)
  - [AWS Well-Architected Framework](#aws-well-architected-framework)
  - [AWS WAF](#aws-waf)
- - [Amazon Kinesis](#amazon-kinesis)
  - [AWS AD Connector](#aws-ad-connector)
  - [AWS Simple AD](#aws-simple-ad)
  - [Amazon Elastic Container Service for Kubernetes (EKS)](#amazon-elastic-container-service-for-kubernetes-eks)
@@ -277,6 +276,12 @@ AWS Scaling **horizontally**: adding more EC2 instances, AWS Lambda adding concu
 	- Kinesis Data Streams
 	- Kinesis Data Firehose
 	- Kinesis Data Analytics
+- It enables you to build custom applications that process or analyze **streaming data** for specialized needs.
+- **Producers** continually push data to Kinesis data Streams and **Consumers** process the data in *real time*.
+- Consumers can <ins>store their results</ins> using an AWS service such as:
+	- Amazon DynamoDB
+	- Amazon Redshift
+	- Amazon S3
 
 ### Cloud Computing
 - Cloud computing is the **on-demand** delivery of compute power.
@@ -311,14 +316,6 @@ AWS Scaling **horizontally**: adding more EC2 instances, AWS Lambda adding concu
 	- SQL injection.
 	- Cross-site scripting.
 	- Rules that are designed for your specific application
-
-### Amazon Kinesis
-- It enables you to build custom applications that process or analyze **streaming data** for specialized needs.
-- **Producers** continually push data to Kinesis data Streams and **Consumers** process the data in *real time*.
-- Consumers can <ins>store their results</ins> using an AWS service such as:
-	- Amazon DynamoDB
-	- Amazon Redshift
-	- Amazon S3
 
 ### AWS AD Connector
 - A directory gateway for **redirecting** <ins>directory requests</ins> to your on-premise Active Directory.
