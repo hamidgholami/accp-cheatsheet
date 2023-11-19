@@ -38,6 +38,7 @@ Also you can download [the official exam guide](https://d1.awsstatic.com/trainin
  - [AWS Compute Optimizer](#aws-compute-optimizer)
  - [Amazon EBS volumes types](#amazon-ebs-volumes-types)
  - [Amazon load balancers](#amazon-load-balancers)
+ - [AWS Network ACL](#aws-network-acl)
  - [AWS Security Groups](#aws-security-groups)
  - [AWS Internet Gateway](#aws-internet-gateway)
  - [AWS Scalability](#aws-scalability)
@@ -189,10 +190,20 @@ It helps avoid overprovisioning and underprovisioning, based on your utilization
 - CLBs process traffic at the TCP, SSL, HTTP and HTTPS levels (layer 4 & 7).
 - *Load balancing with session affinity* can be used for **horizontal scaling** of **stateful** components.
 
+### AWS Network ACL
+- Stateless
+- By default: all in - all out
+- It operates on VPC subnet level
+- Not used in S3
+
 ### AWS Security Groups
-- Only `allow` rules, You cannot create `deny` rules.
-- A security group is **stateful** but this is not a rule type
-- You can create **inbound** and **outbound** rules in a security group
+- Stateful firewalls
+- By default: none in - all out
+- Only `allow` rules, it is not possible to have `deny` rules
+- It allows access through specific port
+- It is possible to have **inbound** and **outbound** rules in a security group
+- It operates on instance level, not on VPC subnet level
+- Not used in S3
 
 ### AWS Internet Gateway
 - Do not have **allow/deny** rules
