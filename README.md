@@ -379,10 +379,11 @@ AWS Scaling **horizontally**: adding more EC2 instances, AWS Lambda adding concu
 	- Use **Temporary Security Credentials** (IAM Roles) Instead of Long-Term Access Keys
 	- Manage IAM User Access Keys Properly
 - You can enable single sign-on (**SSO**) to your AWS accounts by using **federation** and AWS Identity and Access Management (IAM).
--  All you can do with an **access key** once it has been generated is to:
+- All you can do with an **access key** once it has been generated is to:
 	- make active
 	- make inactive
 	- delete
+- IAM Policy Simulator evaluates the policies that you choose and determines the effective permissions for each of the actions that you specify.
 
 ### Popular HTTTP code
 - A HTTP 200 codes: successful
