@@ -102,6 +102,7 @@ Also you can download [the official exam guide](https://d1.awsstatic.com/trainin
  - [AWS Glue](#aws-glue)
  - [AWS Artifact](#aws-artifact)
  - [AWS WAF](#aws-waf)
+ - [AWS Shield](#aws-shield)
  - [AWS Service Catalog](#aws-service-catalog)
  - [AWS Managed Services](#aws-managed-services)
  - [Amazon Machine Image (AMI)](#amazon-machine-image-ami)
@@ -313,10 +314,15 @@ AWS Scaling **horizontally**: adding more EC2 instances, AWS Lambda adding concu
 - Cost optimization
 
 ### AWS WAF
-- create custom rules that block <ins>common attack patterns</ins>, such as:
+- AWS Web Application Firewall creates custom rules that block <ins>common attack patterns</ins>, such as:
 	- SQL injection.
 	- Cross-site scripting.
 	- Rules that are designed for your specific application
+
+### AWS Shield
+- AWS Shield is a managed DDoS protection service, working with AWS WAF
+	- AWS Shield Standard: no costs, defense from common and frequent DDoS attacks
+	- AWS Shield Advanced: paid service, diagnostics and ability to detect and mitigate DDoS attacks
 
 ### AWS AD Connector
 - A directory gateway for **redirecting** <ins>directory requests</ins> to your on-premise Active Directory.
