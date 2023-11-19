@@ -128,9 +128,8 @@ Also you can download [the official exam guide](https://d1.awsstatic.com/trainin
  - [Amazon Macie](#amazon-macie)
  - [AWS X-Ray](#aws-x-ray)
  - [AWS OpsWorks](#aws-opsworks)
+ - [Geographical Services](#geographical-services)
  - [Note](#note)
-
-
 
 ***
 ### Amazon S3
@@ -783,6 +782,36 @@ AWS Scaling **horizontally**: adding more EC2 instances, AWS Lambda adding concu
 
 ### AWS OpsWorks
 - It is a service that allows you to host your own Puppet Enterprise infrastructure.
+
+### Geographical Services
+- Global level
+	- AWS Route 53
+	- AWS Cloud Front
+	- AWS Direct Connect Gateway
+	- AWS Global Accelerator
+	- S3 (but data Regional)
+	- IAM
+	- WAF
+	- AWS SNS
+- Regional level
+	- VPC
+	- Security Groups
+	- Resource Identifiers
+	- ECS
+	- ECR
+	- Amazon GuardDuty
+	- Amazon Detective
+	- Amazon Inspector
+	- Amazon Macie
+	- AWS Security Hub
+	- AWS Migration Hub
+	- AWS Config
+- Availability Zone level
+	- Subnet
+	- Elastic Load Balancer
+	- EC2 Instances
+	- EBS Volumes
+	- Cluster Placement Groups
 
 ***
 ### Note
