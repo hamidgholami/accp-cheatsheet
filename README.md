@@ -65,6 +65,7 @@ Also you can download [the official exam guide](https://d1.awsstatic.com/trainin
  - [VPC peering connection](#vpc-peering-connection)
  - [AWS support plans](#aws-support-plans)
  - [Amazon IAM](#amazon-iam)
+ - [Amazon Cognito](#amazon-cognito)
  - [Popular HTTTP code](#popular-htttp-code)
  - [AWS CloudTrail](#aws-cloudtrail)
  - [Amazon DynamoDB](#amazon-dynamodb)
@@ -362,28 +363,34 @@ AWS Scaling **horizontally**: adding more EC2 instances, AWS Lambda adding concu
 - With the **Developer** plan you can open **unlimited** cases.
 
 ### Amazon IAM
-- you **cannot** use IAM to create **local user accounts** on any system.
+- You **cannot** use IAM to create **local user accounts** on any system.
 - You are also not charged for what you use, <ins>IAM is free to use</ins>.
 - You can share access to your AWS account.
 - Identity federation.
 - PCI DSS complince.
 - AWS recommended **best practices**:
 	- Create individual IAM users
-	- Grant lease privilage
+	- Least privilege principle: granting only the permissions that are needed to perform specific tasks
+ 	- Culture strong passwords
+  	- Multi-factor authentication
 - IAM **supported authentication** methods include:
-	- console passwords
-	- access keys
-	- server certificates
+	- Console passwords
+	- Access keys
+	- Server certificates
 - Best practice to ensure the security of AWS account
 	- **Don’t generate** an access key for the **root account** user
 	- Use **Temporary Security Credentials** (IAM Roles) Instead of Long-Term Access Keys
 	- Manage IAM User Access Keys Properly
 - You can enable single sign-on (**SSO**) to your AWS accounts by using **federation** and AWS Identity and Access Management (IAM).
 - All you can do with an **access key** once it has been generated is to:
-	- make active
-	- make inactive
-	- delete
+	- Make active
+	- Make inactive
+	- Delete
 - IAM Policy Simulator evaluates the policies that you choose and determines the effective permissions for each of the actions that you specify.
+
+### Amazon Cognito
+- Amazon Cognito Identity Pool provides temporary AWS credentials for users who are guests (unauthenticated) and for users who have been authenticated and received a token. An identity pool is a store of user identity data specific to your account.
+- Amazon Cognito User Pool is a user directory in Amazon Cognito. It doesn't enable access to unauthenticated identities. You have to use an Identity Pool instead.
 
 ### Popular HTTTP code
 - A HTTP 200 codes: successful
