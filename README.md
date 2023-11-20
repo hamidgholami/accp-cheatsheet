@@ -47,6 +47,7 @@ Also you can download [the official exam guide](https://d1.awsstatic.com/trainin
  - [AWS Inspector](#aws-inspector)
  - [AWS Trusted Advisor](#aws-trusted-advisor)
  - [AWS Personal Health Dashboard](#aws-personal-health-dashboard)
+ - [AWS X-Ray](#aws-x-ray)
  - [AWS TCO Calculator](#aws-tco-calculator)
  - [AWS EBS](#aws-ebs)
  - [Amazon SageMaker](#amazon-sagemaker)
@@ -57,7 +58,6 @@ Also you can download [the official exam guide](https://d1.awsstatic.com/trainin
  - [AWS Lambda](#aws-lambda)
  - [AWS Well-Architected Framework](#aws-well-architected-framework)
  - [AWS WAF](#aws-waf)
- - [Amazon Kinesis](#amazon-kinesis)
  - [AWS AD Connector](#aws-ad-connector)
  - [AWS Simple AD](#aws-simple-ad)
  - [Amazon Elastic Container Service for Kubernetes (EKS)](#amazon-elastic-container-service-for-kubernetes-eks)
@@ -66,6 +66,8 @@ Also you can download [the official exam guide](https://d1.awsstatic.com/trainin
  - [VPC peering connection](#vpc-peering-connection)
  - [AWS support plans](#aws-support-plans)
  - [Amazon IAM](#amazon-iam)
+ - [Amazon Cognito](#amazon-cognito)
+ - [AWS Organizations](#aws-organizations)
  - [Popular HTTTP code](#popular-htttp-code)
  - [AWS CloudTrail](#aws-cloudtrail)
  - [Amazon DynamoDB](#amazon-dynamodb)
@@ -98,10 +100,10 @@ Also you can download [the official exam guide](https://d1.awsstatic.com/trainin
  - [AWS Cost Explorer](#aws-cost-explorer)
  - [AWS Cost Anomaly Detection](#aws-cost-anomaly-detection)
  - [Amazon Elastic Transcoder](#amazon-elastic-transcoder)
- - [AWS Organization](#aws-organization)
  - [AWS Glue](#aws-glue)
  - [AWS Artifact](#aws-artifact)
  - [AWS WAF](#aws-waf)
+ - [AWS Shield](#aws-shield)
  - [AWS Service Catalog](#aws-service-catalog)
  - [AWS Managed Services](#aws-managed-services)
  - [Amazon Machine Image (AMI)](#amazon-machine-image-ami)
@@ -126,7 +128,6 @@ Also you can download [the official exam guide](https://d1.awsstatic.com/trainin
  - [AWS CodePipeline ](#aws-codepipeline)
  - [Amazon GuardDuty](#amazon-guardduty)
  - [Amazon Macie](#amazon-macie)
- - [AWS X-Ray](#aws-x-ray)
  - [AWS OpsWorks](#aws-opsworks)
  - [Geographical Services](#geographical-services)
  - [Notes](#notes)
@@ -205,8 +206,8 @@ It helps avoid overprovisioning and underprovisioning, based on your utilization
 - Not used in S3
 
 ### AWS Internet Gateway
-- Do not have **allow/deny** rules
-- It attached at the **VPC level**
+- Do not have `allow` or `deny` rules
+- It operates on VPC level
 
 ### AWS Scalability
 AWS Scaling **vertically**: increasing the instance size/CPU/RAM/DISK,...
@@ -247,6 +248,10 @@ AWS Scaling **horizontally**: adding more EC2 instances, AWS Lambda adding concu
 ### AWS Personal Health Dashboard
 - It provides **alerts** and **remediation** *guidance* when AWS is experiencing events that may *impact* you.
 
+### AWS X-Ray
+- It is a service that helps developers **analyze** and **debug** distributed applications.
+- It understand how your application and its underlying services are performing to identify and troubleshoot the root cause of performance issues and errors.
+
 ### AWS TCO Calculator
 - It can be used to **compare** the *cost of running* your applications in an *on-premises* or colocation environment to *AWS*.
 - "**Compute Hardware**" and "**Data Center Security**" should be included in a TCO analysis comparing on-premise to AWS Cloud.
@@ -277,6 +282,12 @@ AWS Scaling **horizontally**: adding more EC2 instances, AWS Lambda adding concu
 	- Kinesis Data Streams
 	- Kinesis Data Firehose
 	- Kinesis Data Analytics
+- It enables you to build custom applications that process or analyze **streaming data** for specialized needs.
+- **Producers** continually push data to Kinesis data Streams and **Consumers** process the data in *real time*.
+- Consumers can <ins>store their results</ins> using an AWS service such as:
+	- Amazon DynamoDB
+	- Amazon Redshift
+	- Amazon S3
 
 ### Cloud Computing
 - Cloud computing is the **on-demand** delivery of compute power.
@@ -307,18 +318,15 @@ AWS Scaling **horizontally**: adding more EC2 instances, AWS Lambda adding concu
 - Cost optimization
 
 ### AWS WAF
-- create custom rules that block <ins>common attack patterns</ins>, such as:
+- AWS Web Application Firewall creates custom rules that block <ins>common attack patterns</ins>, such as:
 	- SQL injection.
 	- Cross-site scripting.
 	- Rules that are designed for your specific application
 
-### Amazon Kinesis
-- It enables you to build custom applications that process or analyze **streaming data** for specialized needs.
-- **Producers** continually push data to Kinesis data Streams and **Consumers** process the data in *real time*.
-- Consumers can <ins>store their results</ins> using an AWS service such as:
-	- Amazon DynamoDB
-	- Amazon Redshift
-	- Amazon S3
+### AWS Shield
+- AWS Shield is a managed DDoS protection service, working with AWS WAF
+	- AWS Shield Standard: no costs, defense from common and frequent DDoS attacks
+	- AWS Shield Advanced: paid service, diagnostics and ability to detect and mitigate DDoS attacks
 
 ### AWS AD Connector
 - A directory gateway for **redirecting** <ins>directory requests</ins> to your on-premise Active Directory.
@@ -365,27 +373,43 @@ AWS Scaling **horizontally**: adding more EC2 instances, AWS Lambda adding concu
 - With the **Developer** plan you can open **unlimited** cases.
 
 ### Amazon IAM
-- you **cannot** use IAM to create **local user accounts** on any system.
+- You **cannot** use IAM to create **local user accounts** on any system.
 - You are also not charged for what you use, <ins>IAM is free to use</ins>.
 - You can share access to your AWS account.
 - Identity federation.
 - PCI DSS complince.
 - AWS recommended **best practices**:
 	- Create individual IAM users
-	- Grant lease privilage
+	- Least privilege principle: granting only the permissions that are needed to perform specific tasks
 - IAM **supported authentication** methods include:
-	- console passwords
-	- access keys
-	- server certificates
+	- Console passwords
+	- Access keys
+	- Server certificates
 - Best practice to ensure the security of AWS account
 	- **Don’t generate** an access key for the **root account** user
 	- Use **Temporary Security Credentials** (IAM Roles) Instead of Long-Term Access Keys
 	- Manage IAM User Access Keys Properly
 - You can enable single sign-on (**SSO**) to your AWS accounts by using **federation** and AWS Identity and Access Management (IAM).
--  All you can do with an **access key** once it has been generated is to:
-	- make active
-	- make inactive
-	- delete
+- All you can do with an **access key** once it has been generated is to:
+	- Make active
+	- Make inactive
+	- Delete
+- IAM Policy Simulator evaluates the policies that you choose and determines the effective permissions for each of the actions that you specify.
+
+### Amazon Cognito
+- Amazon Cognito Identity Pool provides temporary AWS credentials for users who are guests (unauthenticated) and for users who have been authenticated and received a token. An identity pool is a store of user identity data specific to your account.
+- Amazon Cognito User Pool is a user directory in Amazon Cognito. It doesn't enable access to unauthenticated identities. You have to use an Identity Pool instead.
+
+### AWS Organizations
+- **One bill provided** per AWS organization
+- Best practices:
+	-  Always enable **multi-factor** authentication (MFA) on the root account
+	-  Always use a **strong and complex password** on the root account
+	-  The **Paying account** should be used for **billing purposes only**. Do not deploy resources into the Paying account
+-  With below options organizations can **reduce their cost**:
+	-  "Create an AWS Organization configuration linking the accounts"
+	-  "Setup consolidated billing between the accounts"
+- Volume pricing discounts applied **across multiple accounts**.
 
 ### Popular HTTTP code
 - A HTTP 200 codes: successful
@@ -634,17 +658,6 @@ AWS Scaling **horizontally**: adding more EC2 instances, AWS Lambda adding concu
 ### Amazon Elastic Transcoder
 - It **converts video and audio files** from their source format into versions that will **playback** on devices like smartphones, tablets and PC.
 
-### AWS Organization
-- **One bill provided** per AWS organization
-- Best practices:
-	-  Always enable **multi-factor** authentication (MFA) on the root account
-	-  Always use a **strong and complex password** on the root account
-	-  The **Paying account** should be used for **billing purposes only**. Do not deploy resources into the Paying account
--  With below options organizations can **reduce their cost**:
-	-  "Create an AWS Organization configuration linking the accounts"
-	-  "Setup consolidated billing between the accounts"
-- Volume pricing discounts applied **across multiple accounts**.
-
 ### AWS Glue
 - Is a fully managed **extract**, **transform**, and **load** (**ETL**) service that makes it easy for customers to prepare and load their <ins>data for analytics</ins>.
 
@@ -777,9 +790,6 @@ AWS Scaling **horizontally**: adding more EC2 instances, AWS Lambda adding concu
 ### Amazon Macie
 - It can be used to **detect users' personal credit card numbers** from data stored in Amazon **S3**.
 
-### AWS X-Ray
-- It is a service that helps developers **analyze** and **debug** distributed applications.
-
 ### AWS OpsWorks
 - It is a service that allows you to host your own Puppet Enterprise infrastructure.
 
@@ -797,6 +807,7 @@ AWS Scaling **horizontally**: adding more EC2 instances, AWS Lambda adding concu
 	- VPC
 	- Security Groups
 	- Resource Identifiers
+ 	- EFS	
 	- ECS
 	- ECR
 	- Amazon GuardDuty
