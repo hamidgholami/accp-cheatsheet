@@ -17,7 +17,6 @@ You can find every updated information in this [link](https://aws.amazon.com/cer
 
 
 The following table lists the main content domains and their weightings.<br>
-Also you can download [the official exam guide](https://d1.awsstatic.com/training-and-certification/docs-cloud-practitioner/AWS-Certified-Cloud-Practitioner_Exam-Guide.pdf).
 
 <div align="center">
 
@@ -31,7 +30,12 @@ Also you can download [the official exam guide](https://d1.awsstatic.com/trainin
 
 </div>
 
+Also you can download [the official exam guide](https://d1.awsstatic.com/training-and-certification/docs-cloud-practitioner/AWS-Certified-Cloud-Practitioner_Exam-Guide.pdf).
+
+Another profitable resource is the [whitepaper Overview of Amazon Web Services](https://d0.awsstatic.com/whitepapers/aws-overview.pdf).
+
 * * *
+
 ### Table of contents
  - [Amazon S3](#amazon-s3)
  - [Six advantages of Amazon Cloud (Benefits)](#six-advantages-of-amazon-cloud-benefits)
