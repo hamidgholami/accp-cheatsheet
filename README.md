@@ -7,7 +7,7 @@
 [![Youtube Badge](https://img.shields.io/badge/-geekestan-red?style=plastic&&logo=youtube&message=geekestan&logoColor=white)](https://www.youtube.com/channel/UCBlOVqLEwcvFNG03KDAVTlw)
 -->
 
-This is my notes regarding ACCP exam which is completed gradually when I was studing the exam objectives.
+These are my notes regarding ACCP exam which is completed gradually when I was studing the exam objectives.
 
 > Who should take this exam?<br>
 >
@@ -17,7 +17,6 @@ You can find every updated information in this [link](https://aws.amazon.com/cer
 
 
 The following table lists the main content domains and their weightings.<br>
-Also you can download [the official exam guide](https://d1.awsstatic.com/training-and-certification/docs-cloud-practitioner/AWS-Certified-Cloud-Practitioner_Exam-Guide.pdf).
 
 <div align="center">
 
@@ -31,14 +30,20 @@ Also you can download [the official exam guide](https://d1.awsstatic.com/trainin
 
 </div>
 
+Also you can download [the official exam guide](https://d1.awsstatic.com/training-and-certification/docs-cloud-practitioner/AWS-Certified-Cloud-Practitioner_Exam-Guide.pdf).
+
+Another profitable resource is the [whitepaper Overview of Amazon Web Services](https://d0.awsstatic.com/whitepapers/aws-overview.pdf).
+
 * * *
+
 ### Table of contents
  - [Amazon S3](#amazon-s3)
  - [Six advantages of Amazon Cloud (Benefits)](#six-advantages-of-amazon-cloud-benefits)
  - [AWS Compute Optimizer](#aws-compute-optimizer)
  - [Amazon EBS volumes types](#amazon-ebs-volumes-types)
- - [Amazon load balancers](#amazon-load-balancers)
- - [AWS Network ACL](#aws-network-acl)
+ - [Amazon Elastic Load Balancer (ELB)](#amazon-elastic-load-balancer-elb)
+ - [Amazon Load Balancers](#amazon-load-balancers)
+ - [AWS Network Access Control List (ACL)](#aws-network-access-control-list-acl)
  - [AWS Security Groups](#aws-security-groups)
  - [AWS Internet Gateway](#aws-internet-gateway)
  - [AWS Scalability](#aws-scalability)
@@ -138,22 +143,22 @@ Also you can download [the official exam guide](https://d1.awsstatic.com/trainin
 copying of objects across buckets in different AWS Regions.
 - You cannot reserve capacity.
 - Bucket names rules:
-	- Names must be unique across all of AWS
-	- Names must be 3 to 63 characters in length
+	- Names must be unique across all of AWS.
+	- Names must be 3 to 63 characters in length.
 	- Names can only contain lowercase letters, numbers and hyphens.
 	- Names cannot be formatted as an IP address.
 - IAM policies can be written to grant access to Amazon S3 buckets.
 - Amazon S3 storage tier:
-	- **S3 Standard** -> 99.99% SLA -> for data that is accessed less frequently, butrequires rapid access when needed
-	- **S3 Standard-IA** -> 99.9% SLA -> offers the high durability, high throughput, and low latency of S3 Standard
-	- **S3 One Zone-IA** -> 99% SLA ->  *the most cost-effective* Amazon S3 storage tier for data that is not often accessed but requires high durability. It stores data in a **single** AZ
-	- **Glacier** -> No SLA
-- **Multipart upload** can be used to speed up uploads to S3
-- **S3 Copy** -> up to 5GB in size in a single atomic operation
-- **S3 Intelligent-Tiering** is an appropriate Amazon S3 storage class for "data with unknown/changing access pattern" 
+	- **S3 Standard** -> 99.99% SLA -> for data that is accessed less frequently, but requires rapid access when needed.
+	- **S3 Standard-IA** -> 99.9% SLA -> offers the high durability, high throughput, and low latency of S3 Standard.
+	- **S3 One Zone-IA** -> 99% SLA -> *the most cost-effective* Amazon S3 storage tier for data that is not often accessed but requires high durability and it stores data in a **single** AZ.
+	- **Glacier** -> No SLA.
+- **Multipart upload** can be used to speed up uploads to S3.
+- **S3 Copy** -> up to 5GB in size in a single atomic operation.
+- **S3 Intelligent-Tiering** is an appropriate Amazon S3 storage class for "data with unknown/changing access pattern".
 - **Data consistency** models available are:
-	- Read after write consistency for PUTS of new objects
-	- Eventual consistency for overwrite PUTS and DELETES (takes time to propagate)
+	- Read after write consistency for PUTS of new objects.
+	- Eventual consistency for overwrite PUTS and DELETES (it takes time to propagate).
 - "**MFA delete**" adds a layer of additional security to prevent accidental deletion.
 - Amazon S3 **objects** consist of:
 	- Key
@@ -179,18 +184,31 @@ It helps avoid overprovisioning and underprovisioning, based on your utilization
 - AWS Lambda functions.
 
 ### Amazon EBS volumes types
-- **General purpose(gp2)**(SSD): provides a good balance of price to performance, is suitable for most workloads and can be used as a system boot volume.
-- **Provisioned IOPS(io1)**(SSD): is a high-performance volume type that is more expensive and should be used for apps that require the higher performance.
-- **Cold HDD(sc1)**: cannot be used as a boot volume and is good for throughput oriented storage for infrequently accessed data.
-- **Throughput Optimized(st1)**: It is ideal for streaming workloads with fast throughput such as big data and data warehouses.
+- **General purpose (gp2)**(SSD): it provides a good balance of price to performance, is suitable for most workloads and can be used as a system boot volume.
+- **Provisioned IOPS (io1)**(SSD): it is a high-performance volume type that is more expensive and should be used for apps that require the higher performance.
+- **Cold HDD (sc1)**: it cannot be used as a boot volume and is good for throughput oriented storage for infrequently accessed data.
+- **Throughput Optimized (st1)**: it is ideal for streaming workloads with fast throughput such as big data and data warehouses.
 
-### Amazon load balancers
-- NLBs process traffic at the TCP level (layer 4)
-- ALBs process traffic at the HTTP, HTTPS level (layer 7)
-- CLBs process traffic at the TCP, SSL, HTTP and HTTPS levels (layer 4 & 7).
+### Amazon Elastic Load Balancer (ELB)
+- It distributes incoming application traffic across multiple targets, such as Amazon EC2 instances, in multiple Availability Zones.
+- It offers multiple types of load balancers that all feature the high availability, automatic scaling and robust security, necessary to make your applications fault-tolerant.
+- ELB Health Check gets first insights about potential issues.
+
+### Amazon Load Balancers
+- Application Load Balancers (ALB)
+	- process traffic at the HTTP, HTTPS level (layer 7)
+	- routes traffic to targets within Amazon VPC
+- Network Load Balancers (NLB)
+	- process traffic at the TCP, UDP, TLS level (layer 4)
+   	- capable of handling millions of requests per second while maintaining ultra-low latencies
+- Gateway Load Balancers (GLB)
+	- handle millions of requests per second, volatile traffic patterns, and introduces extremely low latency
+- Classic Load Balancers (CLB)
+	- process traffic at the TCP, SSL, HTTP and HTTPS levels (layer 4 & 7).
+
 - *Load balancing with session affinity* can be used for **horizontal scaling** of **stateful** components.
 
-### AWS Network ACL
+### AWS Network Access Control List (ACL)
 - Stateless
 - By default: all in - all out
 - It operates on VPC subnet level
@@ -202,16 +220,22 @@ It helps avoid overprovisioning and underprovisioning, based on your utilization
 - Only `allow` rules, it is not possible to have `deny` rules
 - It allows access through specific port
 - It is possible to have **inbound** and **outbound** rules in a security group
-- It operates on instance level, not on VPC subnet level
+- It operates on EC2 instance level
 - Not used in S3
 
 ### AWS Internet Gateway
 - Do not have `allow` or `deny` rules
+- It allows public traffic to access VPC resources
 - It operates on VPC level
 
 ### AWS Scalability
-AWS Scaling **vertically**: increasing the instance size/CPU/RAM/DISK,...
-AWS Scaling **horizontally**: adding more EC2 instances, AWS Lambda adding concurrently executing functions, Adding read replicas to an Amazon RDS database
+AWS Scaling **vertically**: 
+- increasing the instance size, CPU, RAM, DISK
+
+AWS Scaling **horizontally**:
+- adding more EC2 instances, AWS Lambda
+- adding concurrently executing functions
+- adding read replicas to an Amazon RDS database
 
 ### Amazon Simple Notification Service (SNS)
 - **Topics**: how you label and group different endpoints that you send messages to
@@ -231,7 +255,7 @@ AWS Scaling **horizontally**: adding more EC2 instances, AWS Lambda adding concu
 ### AWS Inspector
 - Inspector is an *automated security assessment* service that helps improve the security and compliance of applications deployed on AWS.
 - It uses an **agent** installed in EC2 instances and assesses applications for *vulnerabilities* and *deviations* from best practices.
-- Organization can assess applications for vulnerabilities and **deviations** *from best practice*.
+- Organization can assess applications for vulnerabilities and **deviations** *from best practices*.
 
 ### AWS Trusted Advisor
 - An **online resource** that helps to *reduce cost*, *increase performance* and *improve security* by **optimizing** your AWS environment.
@@ -715,10 +739,10 @@ AWS Scaling **horizontally**: adding more EC2 instances, AWS Lambda adding concu
 
 ### Five pillars of the AWS Well-Architected Framework
 1. Operational excellence
-2. security
-3. reliability
-4. performance efficiency
-5. cost optimization
+2. Security
+3. Reliability
+4. Performance efficiency
+5. Cost optimization
 
 ### Amazon S3 Transfer Acceleration
 - It enables fast, easy, and secure **transfers** of files **over long distances** between your client and your Amazon S3 bucket.
@@ -756,8 +780,8 @@ AWS Scaling **horizontally**: adding more EC2 instances, AWS Lambda adding concu
 - Each listener has a default **rule**.
 - Each rule **action** has a type.
 - There are two types of **rule condition**:
-	- host
-	- path
+	- Host
+	- Path
 - The primary **benefits** of using AWS ELB:
 	- High availability
 	- Elasticity
