@@ -715,10 +715,10 @@ AWS Scaling **horizontally**: adding more EC2 instances, AWS Lambda adding concu
 
 ### Five pillars of the AWS Well-Architected Framework
 1. Operational excellence
-2. security
-3. reliability
-4. performance efficiency
-5. cost optimization
+2. Security
+3. Reliability
+4. Performance efficiency
+5. Cost optimization
 
 ### Amazon S3 Transfer Acceleration
 - It enables fast, easy, and secure **transfers** of files **over long distances** between your client and your Amazon S3 bucket.
@@ -756,8 +756,8 @@ AWS Scaling **horizontally**: adding more EC2 instances, AWS Lambda adding concu
 - Each listener has a default **rule**.
 - Each rule **action** has a type.
 - There are two types of **rule condition**:
-	- host
-	- path
+	- Host
+	- Path
 - The primary **benefits** of using AWS ELB:
 	- High availability
 	- Elasticity
