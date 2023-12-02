@@ -255,7 +255,7 @@ AWS Scaling **horizontally**:
 ### AWS Inspector
 - Inspector is an *automated security assessment* service that helps improve the security and compliance of applications deployed on AWS.
 - It uses an **agent** installed in EC2 instances and assesses applications for *vulnerabilities* and *deviations* from best practices.
-- Organization can assess applications for vulnerabilities and **deviations** *from best practice*.
+- Organization can assess applications for vulnerabilities and **deviations** *from best practices*.
 
 ### AWS Trusted Advisor
 - An **online resource** that helps to *reduce cost*, *increase performance* and *improve security* by **optimizing** your AWS environment.
