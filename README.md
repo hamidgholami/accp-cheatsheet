@@ -39,7 +39,7 @@ Also you can download [the official exam guide](https://d1.awsstatic.com/trainin
  - [Amazon EBS volumes types](#amazon-ebs-volumes-types)
  - [Amazon Elastic Load Balancer (ELB)](#amazon-elastic-load-balancer-elb)
  - [Amazon Load Balancers](#amazon-load-balancers)
- - [AWS Network ACL](#aws-network-acl)
+ - [AWS Network Access Control List (ACL)](#aws-network-access-control-list-acl)
  - [AWS Security Groups](#aws-security-groups)
  - [AWS Internet Gateway](#aws-internet-gateway)
  - [AWS Scalability](#aws-scalability)
@@ -204,7 +204,7 @@ It helps avoid overprovisioning and underprovisioning, based on your utilization
 
 - *Load balancing with session affinity* can be used for **horizontal scaling** of **stateful** components.
 
-### AWS Network ACL
+### AWS Network Access Control List (ACL)
 - Stateless
 - By default: all in - all out
 - It operates on VPC subnet level
