@@ -216,7 +216,7 @@ It helps avoid overprovisioning and underprovisioning, based on your utilization
 - Only `allow` rules, it is not possible to have `deny` rules
 - It allows access through specific port
 - It is possible to have **inbound** and **outbound** rules in a security group
-- It operates on instance level, not on VPC subnet level
+- It operates on EC2 instance level
 - Not used in S3
 
 ### AWS Internet Gateway
