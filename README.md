@@ -138,22 +138,22 @@ Also you can download [the official exam guide](https://d1.awsstatic.com/trainin
 copying of objects across buckets in different AWS Regions.
 - You cannot reserve capacity.
 - Bucket names rules:
-	- Names must be unique across all of AWS
-	- Names must be 3 to 63 characters in length
+	- Names must be unique across all of AWS.
+	- Names must be 3 to 63 characters in length.
 	- Names can only contain lowercase letters, numbers and hyphens.
 	- Names cannot be formatted as an IP address.
 - IAM policies can be written to grant access to Amazon S3 buckets.
 - Amazon S3 storage tier:
-	- **S3 Standard** -> 99.99% SLA -> for data that is accessed less frequently, butrequires rapid access when needed
-	- **S3 Standard-IA** -> 99.9% SLA -> offers the high durability, high throughput, and low latency of S3 Standard
-	- **S3 One Zone-IA** -> 99% SLA ->  *the most cost-effective* Amazon S3 storage tier for data that is not often accessed but requires high durability. It stores data in a **single** AZ
-	- **Glacier** -> No SLA
-- **Multipart upload** can be used to speed up uploads to S3
-- **S3 Copy** -> up to 5GB in size in a single atomic operation
-- **S3 Intelligent-Tiering** is an appropriate Amazon S3 storage class for "data with unknown/changing access pattern" 
+	- **S3 Standard** -> 99.99% SLA -> for data that is accessed less frequently, but requires rapid access when needed.
+	- **S3 Standard-IA** -> 99.9% SLA -> offers the high durability, high throughput, and low latency of S3 Standard.
+	- **S3 One Zone-IA** -> 99% SLA -> *the most cost-effective* Amazon S3 storage tier for data that is not often accessed but requires high durability and it stores data in a **single** AZ.
+	- **Glacier** -> No SLA.
+- **Multipart upload** can be used to speed up uploads to S3.
+- **S3 Copy** -> up to 5GB in size in a single atomic operation.
+- **S3 Intelligent-Tiering** is an appropriate Amazon S3 storage class for "data with unknown/changing access pattern".
 - **Data consistency** models available are:
-	- Read after write consistency for PUTS of new objects
-	- Eventual consistency for overwrite PUTS and DELETES (takes time to propagate)
+	- Read after write consistency for PUTS of new objects.
+	- Eventual consistency for overwrite PUTS and DELETES (it takes time to propagate).
 - "**MFA delete**" adds a layer of additional security to prevent accidental deletion.
 - Amazon S3 **objects** consist of:
 	- Key
