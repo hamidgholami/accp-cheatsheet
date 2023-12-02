@@ -179,10 +179,10 @@ It helps avoid overprovisioning and underprovisioning, based on your utilization
 - AWS Lambda functions.
 
 ### Amazon EBS volumes types
-- **General purpose(gp2)**(SSD): provides a good balance of price to performance, is suitable for most workloads and can be used as a system boot volume.
-- **Provisioned IOPS(io1)**(SSD): is a high-performance volume type that is more expensive and should be used for apps that require the higher performance.
-- **Cold HDD(sc1)**: cannot be used as a boot volume and is good for throughput oriented storage for infrequently accessed data.
-- **Throughput Optimized(st1)**: It is ideal for streaming workloads with fast throughput such as big data and data warehouses.
+- **General purpose (gp2)**(SSD): it provides a good balance of price to performance, is suitable for most workloads and can be used as a system boot volume.
+- **Provisioned IOPS (io1)**(SSD): it is a high-performance volume type that is more expensive and should be used for apps that require the higher performance.
+- **Cold HDD (sc1) **: it cannot be used as a boot volume and is good for throughput oriented storage for infrequently accessed data.
+- **Throughput Optimized (st1)**: it is ideal for streaming workloads with fast throughput such as big data and data warehouses.
 
 ### Amazon load balancers
 - NLBs process traffic at the TCP level (layer 4)
