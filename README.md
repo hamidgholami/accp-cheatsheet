@@ -37,7 +37,8 @@ Also you can download [the official exam guide](https://d1.awsstatic.com/trainin
  - [Six advantages of Amazon Cloud (Benefits)](#six-advantages-of-amazon-cloud-benefits)
  - [AWS Compute Optimizer](#aws-compute-optimizer)
  - [Amazon EBS volumes types](#amazon-ebs-volumes-types)
- - [Amazon load balancers](#amazon-load-balancers)
+ - [Amazon Elastic Load Balancer (ELB)](#amazon-elastic-load-balancer-elb)
+ - [Amazon Load Balancers](#amazon-load-balancers)
  - [AWS Network ACL](#aws-network-acl)
  - [AWS Security Groups](#aws-security-groups)
  - [AWS Internet Gateway](#aws-internet-gateway)
@@ -184,10 +185,23 @@ It helps avoid overprovisioning and underprovisioning, based on your utilization
 - **Cold HDD (sc1)**: it cannot be used as a boot volume and is good for throughput oriented storage for infrequently accessed data.
 - **Throughput Optimized (st1)**: it is ideal for streaming workloads with fast throughput such as big data and data warehouses.
 
-### Amazon load balancers
-- NLBs process traffic at the TCP level (layer 4)
-- ALBs process traffic at the HTTP, HTTPS level (layer 7)
-- CLBs process traffic at the TCP, SSL, HTTP and HTTPS levels (layer 4 & 7).
+### Amazon Elastic Load Balancer (ELB)
+- It distributes incoming application traffic across multiple targets, such as Amazon EC2 instances, in multiple Availability Zones.
+- It offers multiple types of load balancers that all feature the high availability, automatic scaling and robust security, necessary to make your applications fault-tolerant.
+- ELB Health Check gets first insights about potential issues.
+
+### Amazon Load Balancers
+- Application Load Balancers (ALB)
+	- process traffic at the HTTP, HTTPS level (layer 7)
+	- routes traffic to targets within Amazon VPC
+- Network Load Balancers (NLB)
+	- process traffic at the TCP, UDP, TLS level (layer 4)
+   	- capable of handling millions of requests per second while maintaining ultra-low latencies
+- Gateway Load Balancers (GLB)
+	- handle millions of requests per second, volatile traffic patterns, and introduces extremely low latency
+- Classic Load Balancers (CLB)
+	- process traffic at the TCP, SSL, HTTP and HTTPS levels (layer 4 & 7).
+
 - *Load balancing with session affinity* can be used for **horizontal scaling** of **stateful** components.
 
 ### AWS Network ACL
