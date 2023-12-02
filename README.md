@@ -7,7 +7,7 @@
 [![Youtube Badge](https://img.shields.io/badge/-geekestan-red?style=plastic&&logo=youtube&message=geekestan&logoColor=white)](https://www.youtube.com/channel/UCBlOVqLEwcvFNG03KDAVTlw)
 -->
 
-This is my notes regarding ACCP exam which is completed gradually when I was studing the exam objectives.
+This are my notes regarding ACCP exam which is completed gradually when I was studing the exam objectives.
 
 > Who should take this exam?<br>
 >
