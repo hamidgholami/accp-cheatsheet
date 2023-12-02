@@ -221,6 +221,7 @@ It helps avoid overprovisioning and underprovisioning, based on your utilization
 
 ### AWS Internet Gateway
 - Do not have `allow` or `deny` rules
+- It allows public traffic to access VPC resources
 - It operates on VPC level
 
 ### AWS Scalability
