@@ -225,8 +225,13 @@ It helps avoid overprovisioning and underprovisioning, based on your utilization
 - It operates on VPC level
 
 ### AWS Scalability
-AWS Scaling **vertically**: increasing the instance size/CPU/RAM/DISK,...
-AWS Scaling **horizontally**: adding more EC2 instances, AWS Lambda adding concurrently executing functions, Adding read replicas to an Amazon RDS database
+AWS Scaling **vertically**: 
+- increasing the instance size, CPU, RAM, DISK
+
+AWS Scaling **horizontally**:
+- adding more EC2 instances, AWS Lambda
+- adding concurrently executing functions
+- adding read replicas to an Amazon RDS database
 
 ### Amazon Simple Notification Service (SNS)
 - **Topics**: how you label and group different endpoints that you send messages to
