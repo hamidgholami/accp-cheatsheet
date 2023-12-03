@@ -490,14 +490,23 @@ AWS Scaling **horizontally**:
 -  It can be used to **retrieve configuration** changes made to AWS resources causing *operational issues*.
 
 ### AWS Shared Responsibility Model
-- Customers are responsible for *networking traffic protection*.
-- AWS are responsible for networking **infrastructure**.
-- AWS are responsible for **compute infrastructure**.
-- Customers are responsible for *network and firewall configuration*.
-- **AWS** are responsible for **edge locations**.
-- **Shared Controls**: Apply to both the *infrastructure layer* and *customer layers*
-	- Patch Management: AWS -> Infra patches | Customer -> OS/Applications patches
-	- Configuration Management: AWS -> Configuration of its infra devices | Customer -> Configuration their OS, Apps, DBs.
+- AWS is responsible for:
+	- Software: Compute, storage, database, networking **infrastructures**.
+ 	- Hardware: Regions, Availability Zones, Edge Locations.
+  	- Infrastructure patches and configuration (shared responsibility)
+
+- Customers are responsible for
+	- *Networking traffic protection*.
+	- *Network and firewall configuration*.
+ 	- Data
+	- Platform, Applications, Identity and Access Management (IAM)
+	- Operating systems
+	- Client-side data encryption, server-side data encryption
+  	- OS / Applications / Database patches and configuration (shared responsibility)
+
+- Shared responsibilities:
+	- Patch Management.
+	- Configuration Management.
 
 ### Amazon RDS
 - Read replicas are used for **offloading read traffic** from the primary RDS database.
