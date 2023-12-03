@@ -54,7 +54,7 @@ Another profitable resource is the [whitepaper Overview of Amazon Web Services](
  - [AWS Personal Health Dashboard](#aws-personal-health-dashboard)
  - [AWS X-Ray](#aws-x-ray)
  - [AWS TCO Calculator](#aws-tco-calculator)
- - [AWS EBS](#aws-ebs)
+ - [Amazon Elastic Block Store (EBS)](#amazon-elastic-block-store-ebs)
  - [Amazon SageMaker](#amazon-sagemaker)
  - [Amazon Kinesis](#amazon-kinesis)
  - [Cloud Computing](#cloud-computing)
@@ -285,7 +285,7 @@ AWS Scaling **horizontally**:
 - It can be used to **compare** the *cost of running* your applications in an *on-premises* or colocation environment to *AWS*.
 - "**Compute Hardware**" and "**Data Center Security**" should be included in a TCO analysis comparing on-premise to AWS Cloud.
 
-### AWS EBS
+### Amazon Elastic Block Store (EBS)
 - EBS Volume type
 	- **Provisioned IOPS SSD**: supports **up to 50 IOPS** *per GiB* with **up to 32,000 IOPS** *per volume*.
 	- **General Purpose SSD**: supports 3 IOPS per GiB and can burst up to 3000 IOPS (volumes > 334GB), and a maximum of **10,000** *per volume*.
