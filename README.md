@@ -495,7 +495,7 @@ AWS Scaling **horizontally**:
  	- Hardware: Regions, Availability Zones, Edge Locations.
   	- Infrastructure patches and configuration (shared responsibility)
 
-- Customers are responsible for
+- Customers are responsible for:
 	- *Networking traffic protection*.
 	- *Network and firewall configuration*.
  	- Data
