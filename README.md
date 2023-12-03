@@ -635,23 +635,23 @@ AWS Scaling **horizontally**:
 
 ### Amazon CloudFront
 - It has a **global scope**.
-- It is a content delivery network (**CDN**) that allows you to store (cache) your content at “**edge locations**” located around the world.
+- It is a content delivery network (**CDN**) that allows you to store (cache) your content at "**edge locations**" located around the world.
 - This allows customers to access content **more quickly** and provides security against **DDoS attacks**.
 - It can be used for **data**, **videos**, **applications**, and **APIs**.
 - Routing policies:
-	- simple
-	- weighted
-	- latency based
-	- failover
-	- geo-location
-	- geo-proximity
-	- multi-value
-	- traffic flow
+	- Simple.
+	- Weighted
+	- Latency-based.
+	- Failover.
+	- Geolocation.
+	- Geoproximity.
+	- Multi-value.
+	- Traffic flow.
 - It supports below **origins**:
-	- S3 Bucket
-	- EC2 instance
-	- Elastic Load Balancer
-	- Route 53
+	- S3 Bucket.
+	- EC2 instance.
+	- Elastic Load Balancer.
+	- Route 53.
 
 ### Amazon Lightsail
 - It provides developers compute, storage, and networking capacity and capabilities to deploy and manage websites, web applications, and databases in the cloud. Also it provides **preconfigured VPS** that inclouds **everything required to deploy** or create a **DB**.
