@@ -602,11 +602,11 @@ AWS Scaling **horizontally**:
 - It allows you to search, explore, filter, aggregate and visualize your data in near real-time.
 
 ### Amazon Athena
-- For interactive analysis
-- analyze data directly in **S3** and **Glacier** using <ins>standard SQL queries</ins>
+- For interactive analysis.
+- Analyze data directly in **S3** and **Glacier** using <ins>standard SQL queries</ins>.
 
 ### Amazon QuickSight
-- For dashboards and visualizations
+- For dashboards and visualizations.
 
 ### Amazon CodeStar
 - It enables you to **quickly develop**, **build**, and **deploy** applications on AWS. AWS CodeStar provides a **unified user interface**, enabling you to easily manage your software development activities <ins>in one place</ins>.
