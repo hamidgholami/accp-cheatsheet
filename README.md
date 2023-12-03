@@ -120,7 +120,6 @@ Another profitable resource is the [whitepaper Overview of Amazon Web Services](
  - [Five pillars of the AWS Well-Architected Framework](#five-pillars-of-the-aws-well-architected-framework)
  - [Amazon S3 Transfer Acceleration](#amazon-s3-transfer-acceleration)
  - [Amazon Neptune](#amazon-neptune)
- - [Amazon Elasicsearch](#amazon-elasicsearch)
  - [AWS Direct Connect](#aws-direct-connect)
  - [AWS Snowball](#aws-snowball)
  - [Amazon Comprehend](#amazon-comprehend)
@@ -764,9 +763,6 @@ AWS Scaling **horizontally**:
 
 ### Amazon Neptune
 - Amazon Neptune is a fast, reliable, fully-managed **graph database** service that makes it easy to build and run applications that work with highly connected datasets.
-
-### Amazon Elasicsearch
-- It is a fully managed Amazon search service b**ased on open source** software.
 
 ### AWS Direct Connect
 - Benefits:
