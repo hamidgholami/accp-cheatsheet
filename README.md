@@ -84,8 +84,8 @@ Another profitable resource is the [whitepaper Overview of Amazon Web Services](
  - [AWS Shared Responsibility Model](#aws-shared-responsibility-model)
  - [Amazon RDS](#amazon-rds)
  - [AWS Auto Scaling Group](#aws-auto-scaling-group)
- - [AWS CloudHSM](#aws-cloudhsm)
  - [AWS Auto Scaling](#aws-auto-scaling)
+ - [AWS CloudHSM](#aws-cloudhsm)
  - [AWS Glacier](#aws-glacier)
  - [AWS Storage Gateway Volume Gateway](#aws-storage-gateway-volume-gateway)
  - [AWS Step Functions](#aws-step-functions)
@@ -546,12 +546,6 @@ AWS Scaling **horizontally**:
 	- **cyclic** (scheduled scaling).
 - **Scaling Plan** define the triggers and when instances should be provisioned / deprovisioned.
 
-### AWS CloudHSM
-- Is a **cloud-based hardware security module**(HSM) that allows you to easily <ins>add secure key storage</ins> and <ins>high performance crypto operations</ins> to your AWS applications.
-- CloudHSM has **no upfront costs** and provides the ability to *start* and *stop* HSMs **on-demand**, allowing you to provision cpacity when and where it is needed quickly and cost-effectively.
-- CloudHSM is a managed service that **automates** <ins>time-consuming administrative tasks</ins>, such as hardware provisioning, **software patching**, **high availability**, and **backups**.
-- It uses a highly secure *hardware storage device* to **store encryption keys**
-
 ### AWS Auto Scaling
 - The **scaling policies** include:
 	- simple
@@ -561,14 +555,20 @@ AWS Scaling **horizontally**:
 - vertical scaling -> scaling-up
 - horizontal scaling -> scaling-out
 
+### AWS CloudHSM
+- Is a **cloud-based hardware security module** (HSM) that allows you to easily <ins>add secure key storage</ins> and <ins>high performance crypto operations</ins> to your AWS applications.
+- CloudHSM has **no upfront costs** and provides the ability to *start* and *stop* HSMs **on-demand**, allowing you to provision cpacity when and where it is needed quickly and cost-effectively.
+- CloudHSM is a managed service that **automates** <ins>time-consuming administrative tasks</ins>, such as hardware provisioning, **software patching**, **high availability**, and **backups**.
+- It uses a highly secure *hardware storage device* to **store encryption keys**
+
 ### AWS Glacier
 - Data access option **retrieves** data:
 	- **Standard**: takes 3-5 hours
 	- **Expedited**: within 1-5 minutes
-- That is accessed though  S3
-- You *pay* for <ins>storage on a per GB/month</ins> basis, <ins>retrival requests</ins> and <ins>quantity</ins> (based on expedited, standard or bulk)
-- For **interacting** with AWS **Glacier** require that you use the **AWS CLI** or write code(Using **REST API**)
-- Only Amazon Glacier has **a minimum storage** duration charge of **90** days
+- That is accessed though  S3.
+- You *pay* for <ins>storage on a per GB/month</ins> basis, <ins>retrival requests</ins> and <ins>quantity</ins> (based on expedited, standard or bulk).
+- For **interacting** with AWS **Glacier** require that you use the **AWS CLI** or write code (using **REST API**).
+- Only Amazon Glacier has **a minimum storage** duration charge of **90** days.
 
 ### AWS Storage Gateway Volume Gateway
 - The volume gateway represents the family of gateways that *support* **block-based volumes**, previously referred to as gateway-cached and gateway-stored modes. it allows you to <ins>use block-based volumes on-premise</ins> that are then **asynchronously** backed up to Amazon **S3**.
