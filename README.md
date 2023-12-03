@@ -67,6 +67,7 @@ Another profitable resource is the [whitepaper Overview of Amazon Web Services](
  - [AWS Simple AD](#aws-simple-ad)
  - [Amazon Elastic Container Service for Kubernetes (EKS)](#amazon-elastic-container-service-for-kubernetes-eks)
  - [Amazon Elastic Container Service (ECS)](#amazon-elastic-container-service-ecs)
+ - [Amazon Elastic Container Registry (ECR)](#amazon-elastic-container-registry-ecr)
  - [Virtual Private Gateway](#virtual-private-gateway)
  - [VPC peering connection](#vpc-peering-connection)
  - [AWS support plans](#aws-support-plans)
@@ -367,6 +368,9 @@ AWS Scaling **horizontally**:
 
 ### Amazon Elastic Container Service (ECS)
 - It is used for running Docker containers on <ins>EC2 instances</ins>.
+
+### Amazon Elastic Container Registry (ECR)
+- It is container registry offering high-performance hosting, so you can reliably deploy application images and artifacts anywhere.
 
 ### Virtual Private Gateway
 - It's the VPN concentrator on the **Amazon side** of the <ins>VPN connection</ins>.
