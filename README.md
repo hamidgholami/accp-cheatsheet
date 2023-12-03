@@ -599,7 +599,7 @@ AWS Scaling **horizontally**:
 	- application monitoring
 	- log analytics
 	- clickstream analytics
-- It allows you to search, explore, filter, aggrigate and visualize your data in near real-time.
+- It allows you to search, explore, filter, aggregate and visualize your data in near real-time.
 
 ### Amazon Athena
 - For interactive analysis
