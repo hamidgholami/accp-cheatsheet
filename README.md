@@ -76,6 +76,7 @@ Another profitable resource is the [whitepaper Overview of Amazon Web Services](
  - [AWS Organizations](#aws-organizations)
  - [Popular HTTTP code](#popular-htttp-code)
  - [AWS CloudTrail](#aws-cloudtrail)
+ - [Amazon CloudWatch](#amazon-cloudwatch)
  - [Amazon DynamoDB](#amazon-dynamodb)
  - [AWS Database SQL type](#aws-database-sql-type)
  - [AWS Device Farm](#aws-device-farm)
@@ -455,6 +456,11 @@ AWS Scaling **horizontally**:
 	- The source IP address of the API caller.
 	- The request parameters.
 	- The response elements returned by the AWS service.
+
+### Amazon CloudWatch
+- It is a service that enables you to monitor and manage various metrics and configure alarm actions based on data from those metrics. If metrics are above or under a threshold, a CloudWatch Alert can be triggered
+- A repository for metrics and logs.
+- CloudWatch Dashboard is a single location that allows to access all resources metrics
 
 ### Amazon DynamoDB
 - It's a fully managed **NoSQL** database service. (schema-less)
