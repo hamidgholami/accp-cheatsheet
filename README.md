@@ -640,7 +640,7 @@ AWS Scaling **horizontally**:
 - It can be used for **data**, **videos**, **applications**, and **APIs**.
 - Routing policies:
 	- Simple.
-	- Weighted
+	- Weighted.
 	- Latency-based.
 	- Failover.
 	- Geolocation.
