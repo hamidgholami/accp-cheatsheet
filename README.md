@@ -374,12 +374,12 @@ AWS Scaling **horizontally**:
 
 ### Virtual Private Gateway
 - It's the VPN concentrator on the **Amazon side** of the <ins>VPN connection</ins>.
--  You create a virtual private gateway and *attach* it to the **VPC** from which you want to create the VPN connection.
--  <ins>NAT devices and firewalls</ins> are **not** required for an *AWS managed VPN*.
--  A **customer gateway** is a physical device or software application on **your side** of the VPN connection.
+- You create a virtual private gateway and *attach* it to the **VPC** from which you want to create the VPN connection.
+- <ins>NAT devices and firewalls</ins> are **not** required for an *AWS managed VPN*.
+- A **customer gateway** is a physical device or software application on **your side** of the VPN connection.
 
 ### VPC peering connection
-- if you have **more than one AWS account**, you can **peer** the VPCs across those accounts to create a <ins>file sharing network</ins>.
+- If you have **more than one AWS account**, you can **peer** the VPCs across those accounts to create a <ins>file sharing network</ins>.
 - You **cannot** peer *subnets*.
 - It is a way of <ins>allowing routing between VPCs</ins> in *different AWS accounts*.
 - It enables you to route traffic via **private IP addresses** between *two* peered VPCs.
