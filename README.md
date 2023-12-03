@@ -620,18 +620,18 @@ AWS Scaling **horizontally**:
 ### Amazon Route 53
 - It has a **global scope**.
 - Both **CNAME** records and **Alias** records can be used to <ins>map a domain name to a target domain name</ins>. However, only a **CNAME** record can be used to map to a target domain **external** to AWS.
-- You can transfer domains to Route 53 only if the Top Level Domain (**TLD**) is supported
-- Amazon **Route 53 health checks** monitor the health and performance of your web applications, web servers, and other resources
+- You can transfer domains to Route 53 only if the Top Level Domain (**TLD**) is supported.
+- Amazon **Route 53 health checks** monitors the health and performance of your web applications, web servers, and other resources.
 - It offers the following *functions*:
-	- Domain Name registry
-	- DNS resolution
-	- Health checking of resources
+	- Domain Name registry.
+	- DNS resolution.
+	- Health checking of resources.
 - **Routing policies** include:
-	- simple
-	- Weighted
-	- Latency-based
-	- Failover
-	- Geo-Location
+	- Simple.
+	- Weighted.
+	- Latency-based.
+	- Failover.
+	- Geolocation.
 
 ### Amazon CloudFront
 - It has a **global scope**.
