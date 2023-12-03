@@ -121,7 +121,7 @@ Another profitable resource is the [whitepaper Overview of Amazon Web Services](
  - [Amazon S3 Transfer Acceleration](#amazon-s3-transfer-acceleration)
  - [Amazon Neptune](#amazon-neptune)
  - [AWS Direct Connect](#aws-direct-connect)
- - [AWS Snowball](#aws-snowball)
+ - [AWS Snow family](#aws-snow-family)
  - [Amazon Comprehend](#amazon-comprehend)
  - [Amazon Resource Names (ARNs)](#amazon-resource-names-arns)
  - [Amazon ELB](#amazon-elb)
@@ -777,8 +777,12 @@ AWS Scaling **horizontally**:
 	- You can connect to public services in **remote regions**.
 - You can use **AWS Direct Connect Gateway** for connecting a company from their on-premises network to VPCs in **multiple regions** using **private connections**
 
-### AWS Snowball
-- It is a **petabyte-scale** <ins>data transport</ins> solution that uses devices designed to be secure to transfer large amounts of data **into and out of** the AWS Cloud.
+### AWS Snow family
+- AWS Snowcone is a small, rugged, and secure edge computing and data transfer device. It features 2 CPUs, 4 GB of memory, and up to 14 TB of usable storage.
+- AWS Snowball is a **petabyte-scale** <ins>data transport</ins> solution that uses devices designed to be secure to transfer large amounts of data **into and out of** the AWS Cloud.
+	- Snowball Edge Storage Optimized devices are well suited for large-scale data migrations and recurring transfer workflows.
+ 	- Snowball Edge Compute Optimized provides powerful computing resources for use cases such as machine learning, full motion video analysis, analytics, and local computing stacks.
+- AWS Snowmobile is an exabyte-scale data transfer service used to move large amounts of data to AWS, up to 100 petabytes of data, a 45-foot long ruggedized shipping container, pulled by a semi trailer truck.
 
 ### Amazon Comprehend
 - Amazon Comprehend is a natural language processing (**NLP**) service that uses **machine learning** to find insights and relationships in **text**.
