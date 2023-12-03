@@ -684,15 +684,15 @@ AWS Scaling **horizontally**:
 	- **Scheduled RIs**: These are available to launch within the time windows you reserve. This option allows you to match your capacity reservation to a predictable recurring schedule that only requires a **fraction of a day, a week, or a month**.
 	- Payment options for reserverd instances include All Upfront, Partial Upfront, and NoUpfront.
 - With EC2 you are billed either by the **second**, for some Linux instances or by **hour**.
-- with "**Inter-Region VPC Peering**" a company can connect their EC2 instances in <ins>*one region*</ins> with EC2 instances in <ins>*another region*</ins> using **private IP** addresses.
+- With "**Inter-Region VPC Peering**" a company can connect their EC2 instances in <ins>*one region*</ins> with EC2 instances in <ins>*another region*</ins> using **private IP** addresses.
 
 ### AWS pricing policies
-- pay-as-you-go
-- save when you reserve
-- pay less by using more
+- Pay-as-you-go
+- Save when you reserve
+- Pay less by using more
 
 ### AWS Cost Explorer
--  It is a free tool that allows you to **view charts** of your costs. You can view cost data for the **past 13 months** and **forecast** how much you are likely to spend over the **next three months**. Cost Explorer can be used to **discover patterns** in how much you spend on AWS resources over time and to **identify cost problem** area.
+-  It is a free tool that allows you to **view charts** of your costs. You can view cost data for the **past 13 months** and **forecast** how much you are likely to spend over the **next 3 months**. Cost Explorer can be used to **discover patterns** in how much you spend on AWS resources over time and to **identify cost problem** area.
 
 ### AWS Cost Anomaly Detection
 - Reduce cost surprises and enhance control without slowing innovation.
