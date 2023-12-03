@@ -269,7 +269,8 @@ AWS Scaling **horizontally**:
 	- Performance
 	- Service limits
 	- Fault tolerance
-- It can be used to **display current usage and limits**.It offers a Service Limits check (in the *Performance* category) that displays your usage and limits for some aspects of some services
+- It can be used to **display current usage and limits**.
+- It offers a Service Limits check (in the *Performance* category) that displays your usage and limits for some aspects of some services
 - It can be used to provide **real time guidance** on provisioning resources following *AWS best practices*.
 - It can be used to **check service limits** for resources launched within AWS Infrastructure.
 
