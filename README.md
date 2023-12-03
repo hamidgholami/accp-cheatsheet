@@ -542,9 +542,9 @@ AWS Scaling **horizontally**:
 
 ### AWS Auto Scaling Group
 - **Scaling Policy** determine when, if, and how the ASG scales and shrinks:
-	- **on-demand**(dynamic scaling)
-	- **cyclic**(scheduled scaling)
-- **Scaling Plan** define the triggers and when instances should be provisioned/de-provisioned
+	- **on-demand** (dynamic scaling).
+	- **cyclic** (scheduled scaling).
+- **Scaling Plan** define the triggers and when instances should be provisioned / deprovisioned.
 
 ### AWS CloudHSM
 - Is a **cloud-based hardware security module**(HSM) that allows you to easily <ins>add secure key storage</ins> and <ins>high performance crypto operations</ins> to your AWS applications.
