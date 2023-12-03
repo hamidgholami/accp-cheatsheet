@@ -286,11 +286,7 @@ AWS Scaling **horizontally**:
 - "**Compute Hardware**" and "**Data Center Security**" should be included in a TCO analysis comparing on-premise to AWS Cloud.
 
 ### Amazon Elastic Block Store (EBS)
-- EBS Volume type
-	- **Provisioned IOPS SSD**: supports **up to 50 IOPS** *per GiB* with **up to 32,000 IOPS** *per volume*.
-	- **General Purpose SSD**: supports 3 IOPS per GiB and can burst up to 3000 IOPS (volumes > 334GB), and a maximum of **10,000** *per volume*.
-	- Throughput Optimized HDD:
-	- Cold HDD:
+- [EBS volumes types](#amazon-ebs-volumes-types)
 - The **easiest** way to store a backup of an EBS volume on Amazon S3: Create a **snapshot** of the volume.
 - Amazon EBS snapshots are stored on *S3*.
 - EBS volumes must be **in the same AZ** as the instances they are attached to.
