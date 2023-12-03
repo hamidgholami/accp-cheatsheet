@@ -124,7 +124,6 @@ Another profitable resource is the [whitepaper Overview of Amazon Web Services](
  - [AWS Snow family](#aws-snow-family)
  - [Amazon Comprehend](#amazon-comprehend)
  - [Amazon Resource Names (ARNs)](#amazon-resource-names-arns)
- - [Amazon ELB](#amazon-elb)
  - [AWS IoT Core](#aws-iot-core)
  - [AWS Fargate](#aws-fargate)
  - [Amazon Detective](#amazon-detective)
@@ -197,6 +196,15 @@ It helps avoid overprovisioning and underprovisioning, based on your utilization
 - It distributes incoming application traffic across multiple targets, such as Amazon EC2 instances, in multiple Availability Zones.
 - It offers multiple types of load balancers that all feature the high availability, automatic scaling and robust security, necessary to make your applications fault-tolerant.
 - ELB Health Check gets first insights about potential issues.
+- A **listener** is a process that checks for connection requests, using the protocol and port that you configure.
+- Each listener has a default **rule**.
+- Each rule **action** has a type.
+- There are two types of **rule condition**:
+	- Host
+	- Path
+- The primary **benefits** of using AWS ELB:
+	- High availability
+	- Elasticity
 
 ### Amazon Load Balancers
 - Application Load Balancers (ALB)
@@ -789,17 +797,6 @@ AWS Scaling **horizontally**:
 
 ### Amazon Resource Names (ARNs)
 - It is used to **uniquely identify AWS resources**.
-
-### Amazon ELB
-- A **listener** is a process that checks for connection requests, using the protocol and port that you configure.
-- Each listener has a default **rule**.
-- Each rule **action** has a type.
-- There are two types of **rule condition**:
-	- Host
-	- Path
-- The primary **benefits** of using AWS ELB:
-	- High availability
-	- Elasticity
 
 ### AWS IoT Core
 - It lets **connected devices** *easily* and *securely* interact with cloud applications and other devices.
