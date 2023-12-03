@@ -405,7 +405,7 @@ AWS Scaling **horizontally**:
 - You are also not charged for what you use, <ins>IAM is free to use</ins>.
 - You can share access to your AWS account.
 - Identity federation.
-- PCI DSS complince.
+- PCI DSS compliance.
 - AWS recommended **best practices**:
 	- Create individual IAM users
 	- Least privilege principle: granting only the permissions that are needed to perform specific tasks
