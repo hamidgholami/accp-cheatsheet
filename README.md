@@ -109,7 +109,6 @@ Another profitable resource is the [whitepaper Overview of Amazon Web Services](
  - [Amazon Elastic Transcoder](#amazon-elastic-transcoder)
  - [AWS Glue](#aws-glue)
  - [AWS Artifact](#aws-artifact)
- - [AWS WAF](#aws-waf)
  - [AWS Shield](#aws-shield)
  - [AWS Service Catalog](#aws-service-catalog)
  - [AWS Managed Services](#aws-managed-services)
@@ -345,7 +344,7 @@ AWS Scaling **horizontally**:
 - Cost optimization
 
 ### AWS WAF
-- AWS Web Application Firewall creates custom rules that block <ins>common attack patterns</ins>, such as:
+- AWS Web Application Firewall creates custom rules that block <ins>common attack patterns</ins>, to protect against **common exploits** that could compromise application availability and security or consume excessive resources, such as:
 	- SQL injection.
 	- Cross-site scripting.
 	- Rules that are designed for your specific application
@@ -709,9 +708,6 @@ AWS Scaling **horizontally**:
 - You can use **AWS Artifact Reports** to download AWS security and compliance documents, such as <ins>AWS ISO certifications</ins>, <ins>Payment Card Industry (PCI)</ins>, and <ins>System and Organization Control (SOC) reports</ins>.
 - It is **online**, self-service portal that AWS provides to enable customers to *view reports* and, such as *PCI reports*, and *accept agreements*.
 - It is your **go-to**, central resource for compliance-related information that matters to you.
-
-### AWS WAF
--  Is a **web application firewall** that protects against **common exploits** that could compromise application availability, compromise security or consume excessive resources.
 
 ### AWS Service Catalog
 - It can be used to <ins>create and manage a selection of AWS services</ins> that are approved for use on AWS.
