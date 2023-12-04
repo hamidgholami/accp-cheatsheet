@@ -54,7 +54,7 @@ Another profitable resource is the [whitepaper Overview of Amazon Web Services](
  - [AWS Personal Health Dashboard](#aws-personal-health-dashboard)
  - [AWS X-Ray](#aws-x-ray)
  - [AWS TCO Calculator](#aws-tco-calculator)
- - [AWS EBS](#aws-ebs)
+ - [Amazon Elastic Block Store (EBS)](#amazon-elastic-block-store-ebs)
  - [Amazon SageMaker](#amazon-sagemaker)
  - [Amazon Kinesis](#amazon-kinesis)
  - [Cloud Computing](#cloud-computing)
@@ -67,6 +67,7 @@ Another profitable resource is the [whitepaper Overview of Amazon Web Services](
  - [AWS Simple AD](#aws-simple-ad)
  - [Amazon Elastic Container Service for Kubernetes (EKS)](#amazon-elastic-container-service-for-kubernetes-eks)
  - [Amazon Elastic Container Service (ECS)](#amazon-elastic-container-service-ecs)
+ - [Amazon Elastic Container Registry (ECR)](#amazon-elastic-container-registry-ecr)
  - [Virtual Private Gateway](#virtual-private-gateway)
  - [VPC peering connection](#vpc-peering-connection)
  - [AWS support plans](#aws-support-plans)
@@ -75,6 +76,7 @@ Another profitable resource is the [whitepaper Overview of Amazon Web Services](
  - [AWS Organizations](#aws-organizations)
  - [Popular HTTTP code](#popular-htttp-code)
  - [AWS CloudTrail](#aws-cloudtrail)
+ - [Amazon CloudWatch](#amazon-cloudwatch)
  - [Amazon DynamoDB](#amazon-dynamodb)
  - [AWS Database SQL type](#aws-database-sql-type)
  - [AWS Device Farm](#aws-device-farm)
@@ -82,8 +84,8 @@ Another profitable resource is the [whitepaper Overview of Amazon Web Services](
  - [AWS Shared Responsibility Model](#aws-shared-responsibility-model)
  - [Amazon RDS](#amazon-rds)
  - [AWS Auto Scaling Group](#aws-auto-scaling-group)
- - [AWS CloudHSM](#aws-cloudhsm)
  - [AWS Auto Scaling](#aws-auto-scaling)
+ - [AWS CloudHSM](#aws-cloudhsm)
  - [AWS Glacier](#aws-glacier)
  - [AWS Storage Gateway Volume Gateway](#aws-storage-gateway-volume-gateway)
  - [AWS Step Functions](#aws-step-functions)
@@ -107,7 +109,6 @@ Another profitable resource is the [whitepaper Overview of Amazon Web Services](
  - [Amazon Elastic Transcoder](#amazon-elastic-transcoder)
  - [AWS Glue](#aws-glue)
  - [AWS Artifact](#aws-artifact)
- - [AWS WAF](#aws-waf)
  - [AWS Shield](#aws-shield)
  - [AWS Service Catalog](#aws-service-catalog)
  - [AWS Managed Services](#aws-managed-services)
@@ -119,12 +120,10 @@ Another profitable resource is the [whitepaper Overview of Amazon Web Services](
  - [Five pillars of the AWS Well-Architected Framework](#five-pillars-of-the-aws-well-architected-framework)
  - [Amazon S3 Transfer Acceleration](#amazon-s3-transfer-acceleration)
  - [Amazon Neptune](#amazon-neptune)
- - [Amazon Elasicsearch](#amazon-elasicsearch)
  - [AWS Direct Connect](#aws-direct-connect)
- - [AWS Snowball](#aws-snowball)
+ - [AWS Snow family](#aws-snow-family)
  - [Amazon Comprehend](#amazon-comprehend)
  - [Amazon Resource Names (ARNs)](#amazon-resource-names-arns)
- - [Amazon ELB](#amazon-elb)
  - [AWS IoT Core](#aws-iot-core)
  - [AWS Fargate](#aws-fargate)
  - [Amazon Detective](#amazon-detective)
@@ -184,15 +183,28 @@ It helps avoid overprovisioning and underprovisioning, based on your utilization
 - AWS Lambda functions.
 
 ### Amazon EBS volumes types
-- **General purpose (gp2)**(SSD): it provides a good balance of price to performance, is suitable for most workloads and can be used as a system boot volume.
-- **Provisioned IOPS (io1)**(SSD): it is a high-performance volume type that is more expensive and should be used for apps that require the higher performance.
-- **Cold HDD (sc1)**: it cannot be used as a boot volume and is good for throughput oriented storage for infrequently accessed data.
-- **Throughput Optimized (st1)**: it is ideal for streaming workloads with fast throughput such as big data and data warehouses.
+- **General purpose (gp2)**(SSD)
+	- it provides a good balance of price to performance, is suitable for most workloads and can be used as a system boot volume.
+- **Provisioned IOPS (io1)**(SSD)
+	- it is a high-performance volume type that is more expensive and should be used for apps that require the higher performance.
+- **Cold HDD (sc1)**
+	- it cannot be used as a boot volume and is good for throughput oriented storage for infrequently accessed data.
+- **Throughput Optimized (st1)**
+	- it is ideal for streaming workloads with fast throughput such as big data and data warehouses.
 
 ### Amazon Elastic Load Balancer (ELB)
 - It distributes incoming application traffic across multiple targets, such as Amazon EC2 instances, in multiple Availability Zones.
 - It offers multiple types of load balancers that all feature the high availability, automatic scaling and robust security, necessary to make your applications fault-tolerant.
 - ELB Health Check gets first insights about potential issues.
+- A **listener** is a process that checks for connection requests, using the protocol and port that you configure.
+- Each listener has a default **rule**.
+- Each rule **action** has a type.
+- There are two types of **rule condition**:
+	- Host
+	- Path
+- The primary **benefits** of using AWS ELB:
+	- High availability
+	- Elasticity
 
 ### Amazon Load Balancers
 - Application Load Balancers (ALB)
@@ -265,7 +277,8 @@ AWS Scaling **horizontally**:
 	- Performance
 	- Service limits
 	- Fault tolerance
-- It can be used to **display current usage and limits**.It offers a Service Limits check (in the *Performance* category) that displays your usage and limits for some aspects of some services
+- It can be used to **display current usage and limits**.
+- It offers a Service Limits check (in the *Performance* category) that displays your usage and limits for some aspects of some services
 - It can be used to provide **real time guidance** on provisioning resources following *AWS best practices*.
 - It can be used to **check service limits** for resources launched within AWS Infrastructure.
 
@@ -280,12 +293,8 @@ AWS Scaling **horizontally**:
 - It can be used to **compare** the *cost of running* your applications in an *on-premises* or colocation environment to *AWS*.
 - "**Compute Hardware**" and "**Data Center Security**" should be included in a TCO analysis comparing on-premise to AWS Cloud.
 
-### AWS EBS
-- EBS Volume type
-	- **Provisioned IOPS SSD**: supports **up to 50 IOPS** *per GiB* with **up to 32,000 IOPS** *per volume*.
-	- **General Purpose SSD**: supports 3 IOPS per GiB and can burst up to 3000 IOPS (volumes > 334GB), and a maximum of **10,000** *per volume*.
-	- Throughput Optimized HDD:
-	- Cold HDD:
+### Amazon Elastic Block Store (EBS)
+- [EBS volumes types](#amazon-ebs-volumes-types)
 - The **easiest** way to store a backup of an EBS volume on Amazon S3: Create a **snapshot** of the volume.
 - Amazon EBS snapshots are stored on *S3*.
 - EBS volumes must be **in the same AZ** as the instances they are attached to.
@@ -342,7 +351,7 @@ AWS Scaling **horizontally**:
 - Cost optimization
 
 ### AWS WAF
-- AWS Web Application Firewall creates custom rules that block <ins>common attack patterns</ins>, such as:
+- AWS Web Application Firewall creates custom rules that block <ins>common attack patterns</ins>, to protect against **common exploits** that could compromise application availability and security or consume excessive resources, such as:
 	- SQL injection.
 	- Cross-site scripting.
 	- Rules that are designed for your specific application
@@ -367,14 +376,17 @@ AWS Scaling **horizontally**:
 ### Amazon Elastic Container Service (ECS)
 - It is used for running Docker containers on <ins>EC2 instances</ins>.
 
+### Amazon Elastic Container Registry (ECR)
+- It is container registry offering high-performance hosting, so you can reliably deploy application images and artifacts anywhere.
+
 ### Virtual Private Gateway
 - It's the VPN concentrator on the **Amazon side** of the <ins>VPN connection</ins>.
--  You create a virtual private gateway and *attach* it to the **VPC** from which you want to create the VPN connection.
--  <ins>NAT devices and firewalls</ins> are **not** required for an *AWS managed VPN*.
--  A **customer gateway** is a physical device or software application on **your side** of the VPN connection.
+- You create a virtual private gateway and *attach* it to the **VPC** from which you want to create the VPN connection.
+- <ins>NAT devices and firewalls</ins> are **not** required for an *AWS managed VPN*.
+- A **customer gateway** is a physical device or software application on **your side** of the VPN connection.
 
 ### VPC peering connection
-- if you have **more than one AWS account**, you can **peer** the VPCs across those accounts to create a <ins>file sharing network</ins>.
+- If you have **more than one AWS account**, you can **peer** the VPCs across those accounts to create a <ins>file sharing network</ins>.
 - You **cannot** peer *subnets*.
 - It is a way of <ins>allowing routing between VPCs</ins> in *different AWS accounts*.
 - It enables you to route traffic via **private IP addresses** between *two* peered VPCs.
@@ -390,8 +402,7 @@ AWS Scaling **horizontally**:
 	- whitepapers
 	- support forums
 - Only the **Enterprise** plan provides a **response time of < 15 minutes** for the failure of a *business-critical system*.
-- Both **Business** and **Enterprise** offer < 1-hour response time for the failure of a production system.
-- Only **business** and **enterprise** plans provide *support via* **email**, **chat** and **phone**.
+- Only **Business** and **Enterprise** plans provide *support via* **email**, **chat** and **phone**.
 - **Enterprise** plan comes with a *Technical Account manager*(**TAM**)
 - **Developer** plan provides **email support** by **cloud support associates** team whereas **business** and **enterprise** provide **email support** by the **cloud support engineers** team.
 - With the **Developer** plan you can open **unlimited** cases.
@@ -401,7 +412,7 @@ AWS Scaling **horizontally**:
 - You are also not charged for what you use, <ins>IAM is free to use</ins>.
 - You can share access to your AWS account.
 - Identity federation.
-- PCI DSS complince.
+- PCI DSS compliance.
 - AWS recommended **best practices**:
 	- Create individual IAM users
 	- Least privilege principle: granting only the permissions that are needed to perform specific tasks
@@ -452,6 +463,11 @@ AWS Scaling **horizontally**:
 	- The request parameters.
 	- The response elements returned by the AWS service.
 
+### Amazon CloudWatch
+- It is a service that enables you to monitor and manage various metrics and configure alarm actions based on data from those metrics. If metrics are above or under a threshold, a CloudWatch Alert can be triggered
+- A repository for metrics and logs.
+- CloudWatch Dashboard is a single location that allows to access all resources metrics
+
 ### Amazon DynamoDB
 - It's a fully managed **NoSQL** database service. (schema-less)
 - You can scale the DB at any time **without incurring downtime**.
@@ -480,14 +496,23 @@ AWS Scaling **horizontally**:
 -  It can be used to **retrieve configuration** changes made to AWS resources causing *operational issues*.
 
 ### AWS Shared Responsibility Model
-- Customers are responsible for *networking traffic protection*.
-- AWS are responsible for networking **infrastructure**.
-- AWS are responsible for **compute infrastructure**.
-- Customers are responsible for *network and firewall configuration*.
-- **AWS** are responsible for **edge locations**.
-- **Shared Controls**: Apply to both the *infrastructure layer* and *customer layers*
-	- Patch Management: AWS -> Infra patches | Customer -> OS/Applications patches
-	- Configuration Management: AWS -> Configuration of its infra devices | Customer -> Configuration their OS, Apps, DBs.
+- AWS is responsible for:
+	- Software: Compute, storage, database, networking **infrastructures**.
+ 	- Hardware: Regions, Availability Zones, Edge Locations.
+  	- Infrastructure patches and configuration (shared responsibility)
+
+- Customers are responsible for:
+	- *Networking traffic protection*.
+	- *Network and firewall configuration*.
+ 	- Data
+	- Platform, Applications, Identity and Access Management (IAM)
+	- Operating systems
+	- Client-side data encryption, server-side data encryption
+  	- OS / Applications / Database patches and configuration (shared responsibility)
+
+- Shared responsibilities:
+	- Patch Management.
+	- Configuration Management.
 
 ### Amazon RDS
 - Read replicas are used for **offloading read traffic** from the primary RDS database.
@@ -523,15 +548,9 @@ AWS Scaling **horizontally**:
 
 ### AWS Auto Scaling Group
 - **Scaling Policy** determine when, if, and how the ASG scales and shrinks:
-	- **on-demand**(dynamic scaling)
-	- **cyclic**(scheduled scaling)
-- **Scaling Plan** define the triggers and when instances should be provisioned/de-provisioned
-
-### AWS CloudHSM
-- Is a **cloud-based hardware security module**(HSM) that allows you to easily <ins>add secure key storage</ins> and <ins>high performance crypto operations</ins> to your AWS applications.
-- CloudHSM has **no upfront costs** and provides the ability to *start* and *stop* HSMs **on-demand**, allowing you to provision cpacity when and where it is needed quickly and cost-effectively.
-- CloudHSM is a managed service that **automates** <ins>time-consuming administrative tasks</ins>, such as hardware provisioning, **software patching**, **high availability**, and **backups**.
-- It uses a highly secure *hardware storage device* to **store encryption keys**
+	- **on-demand** (dynamic scaling).
+	- **cyclic** (scheduled scaling).
+- **Scaling Plan** define the triggers and when instances should be provisioned / deprovisioned.
 
 ### AWS Auto Scaling
 - The **scaling policies** include:
@@ -542,14 +561,20 @@ AWS Scaling **horizontally**:
 - vertical scaling -> scaling-up
 - horizontal scaling -> scaling-out
 
+### AWS CloudHSM
+- Is a **cloud-based hardware security module** (HSM) that allows you to easily <ins>add secure key storage</ins> and <ins>high performance crypto operations</ins> to your AWS applications.
+- CloudHSM has **no upfront costs** and provides the ability to *start* and *stop* HSMs **on-demand**, allowing you to provision cpacity when and where it is needed quickly and cost-effectively.
+- CloudHSM is a managed service that **automates** <ins>time-consuming administrative tasks</ins>, such as hardware provisioning, **software patching**, **high availability**, and **backups**.
+- It uses a highly secure *hardware storage device* to **store encryption keys**
+
 ### AWS Glacier
 - Data access option **retrieves** data:
 	- **Standard**: takes 3-5 hours
 	- **Expedited**: within 1-5 minutes
-- That is accessed though  S3
-- You *pay* for <ins>storage on a per GB/month</ins> basis, <ins>retrival requests</ins> and <ins>quantity</ins> (based on expedited, standard or bulk)
-- For **interacting** with AWS **Glacier** require that you use the **AWS CLI** or write code(Using **REST API**)
-- Only Amazon Glacier has **a minimum storage** duration charge of **90** days
+- That is accessed though  S3.
+- You *pay* for <ins>storage on a per GB/month</ins> basis, <ins>retrival requests</ins> and <ins>quantity</ins> (based on expedited, standard or bulk).
+- For **interacting** with AWS **Glacier** require that you use the **AWS CLI** or write code (using **REST API**).
+- Only Amazon Glacier has **a minimum storage** duration charge of **90** days.
 
 ### AWS Storage Gateway Volume Gateway
 - The volume gateway represents the family of gateways that *support* **block-based volumes**, previously referred to as gateway-cached and gateway-stored modes. it allows you to <ins>use block-based volumes on-premise</ins> that are then **asynchronously** backed up to Amazon **S3**.
@@ -580,14 +605,14 @@ AWS Scaling **horizontally**:
 	- application monitoring
 	- log analytics
 	- clickstream analytics
-- It allows you to search, explore, filter, aggrigate and visualize your data in near real-time.
+- It allows you to search, explore, filter, aggregate and visualize your data in near real-time.
 
 ### Amazon Athena
-- For interactive analysis
-- analyze data directly in **S3** and **Glacier** using <ins>standard SQL queries</ins>
+- For interactive analysis.
+- Analyze data directly in **S3** and **Glacier** using <ins>standard SQL queries</ins>.
 
 ### Amazon QuickSight
-- For dashboards and visualizations
+- For dashboards and visualizations.
 
 ### Amazon CodeStar
 - It enables you to **quickly develop**, **build**, and **deploy** applications on AWS. AWS CodeStar provides a **unified user interface**, enabling you to easily manage your software development activities <ins>in one place</ins>.
@@ -601,38 +626,38 @@ AWS Scaling **horizontally**:
 ### Amazon Route 53
 - It has a **global scope**.
 - Both **CNAME** records and **Alias** records can be used to <ins>map a domain name to a target domain name</ins>. However, only a **CNAME** record can be used to map to a target domain **external** to AWS.
-- You can transfer domains to Route 53 only if the Top Level Domain (**TLD**) is supported
-- Amazon **Route 53 health checks** monitor the health and performance of your web applications, web servers, and other resources
+- You can transfer domains to Route 53 only if the Top Level Domain (**TLD**) is supported.
+- Amazon **Route 53 health checks** monitors the health and performance of your web applications, web servers, and other resources.
 - It offers the following *functions*:
-	- Domain Name registry
-	- DNS resolution
-	- Health checking of resources
+	- Domain Name registry.
+	- DNS resolution.
+	- Health checking of resources.
 - **Routing policies** include:
-	- simple
-	- Weighted
-	- Latency-based
-	- Failover
-	- Geo-Location
+	- Simple.
+	- Weighted.
+	- Latency-based.
+	- Failover.
+	- Geolocation.
 
 ### Amazon CloudFront
 - It has a **global scope**.
-- It is a content delivery network (**CDN**) that allows you to store (cache) your content at “**edge locations**” located around the world.
+- It is a content delivery network (**CDN**) that allows you to store (cache) your content at "**edge locations**" located around the world.
 - This allows customers to access content **more quickly** and provides security against **DDoS attacks**.
 - It can be used for **data**, **videos**, **applications**, and **APIs**.
 - Routing policies:
-	- simple
-	- weighted
-	- latency based
-	- failover
-	- geo-location
-	- geo-proximity
-	- multi-value
-	- traffic flow
+	- Simple.
+	- Weighted.
+	- Latency-based.
+	- Failover.
+	- Geolocation.
+	- Geoproximity.
+	- Multi-value.
+	- Traffic flow.
 - It supports below **origins**:
-	- S3 Bucket
-	- EC2 instance
-	- Elastic Load Balancer
-	- Route 53
+	- S3 Bucket.
+	- EC2 instance.
+	- Elastic Load Balancer.
+	- Route 53.
 
 ### Amazon Lightsail
 - It provides developers compute, storage, and networking capacity and capabilities to deploy and manage websites, web applications, and databases in the cloud. Also it provides **preconfigured VPS** that inclouds **everything required to deploy** or create a **DB**.
@@ -665,15 +690,15 @@ AWS Scaling **horizontally**:
 	- **Scheduled RIs**: These are available to launch within the time windows you reserve. This option allows you to match your capacity reservation to a predictable recurring schedule that only requires a **fraction of a day, a week, or a month**.
 	- Payment options for reserverd instances include All Upfront, Partial Upfront, and NoUpfront.
 - With EC2 you are billed either by the **second**, for some Linux instances or by **hour**.
-- with "**Inter-Region VPC Peering**" a company can connect their EC2 instances in <ins>*one region*</ins> with EC2 instances in <ins>*another region*</ins> using **private IP** addresses.
+- With "**Inter-Region VPC Peering**" a company can connect their EC2 instances in <ins>*one region*</ins> with EC2 instances in <ins>*another region*</ins> using **private IP** addresses.
 
 ### AWS pricing policies
-- pay-as-you-go
-- save when you reserve
-- pay less by using more
+- Pay-as-you-go
+- Save when you reserve
+- Pay less by using more
 
 ### AWS Cost Explorer
--  It is a free tool that allows you to **view charts** of your costs. You can view cost data for the **past 13 months** and **forecast** how much you are likely to spend over the **next three months**. Cost Explorer can be used to **discover patterns** in how much you spend on AWS resources over time and to **identify cost problem** area.
+-  It is a free tool that allows you to **view charts** of your costs. You can view cost data for the **past 13 months** and **forecast** how much you are likely to spend over the **next 3 months**. Cost Explorer can be used to **discover patterns** in how much you spend on AWS resources over time and to **identify cost problem** area.
 
 ### AWS Cost Anomaly Detection
 - Reduce cost surprises and enhance control without slowing innovation.
@@ -690,9 +715,6 @@ AWS Scaling **horizontally**:
 - You can use **AWS Artifact Reports** to download AWS security and compliance documents, such as <ins>AWS ISO certifications</ins>, <ins>Payment Card Industry (PCI)</ins>, and <ins>System and Organization Control (SOC) reports</ins>.
 - It is **online**, self-service portal that AWS provides to enable customers to *view reports* and, such as *PCI reports*, and *accept agreements*.
 - It is your **go-to**, central resource for compliance-related information that matters to you.
-
-### AWS WAF
--  Is a **web application firewall** that protects against **common exploits** that could compromise application availability, compromise security or consume excessive resources.
 
 ### AWS Service Catalog
 - It can be used to <ins>create and manage a selection of AWS services</ins> that are approved for use on AWS.
@@ -750,9 +772,6 @@ AWS Scaling **horizontally**:
 ### Amazon Neptune
 - Amazon Neptune is a fast, reliable, fully-managed **graph database** service that makes it easy to build and run applications that work with highly connected datasets.
 
-### Amazon Elasicsearch
-- It is a fully managed Amazon search service b**ased on open source** software.
-
 ### AWS Direct Connect
 - Benefits:
 	- Reduce cost when using large volumes of traffic
@@ -766,25 +785,18 @@ AWS Scaling **horizontally**:
 	- You can connect to public services in **remote regions**.
 - You can use **AWS Direct Connect Gateway** for connecting a company from their on-premises network to VPCs in **multiple regions** using **private connections**
 
-### AWS Snowball
-- It is a **petabyte-scale** <ins>data transport</ins> solution that uses devices designed to be secure to transfer large amounts of data **into and out of** the AWS Cloud.
+### AWS Snow family
+- AWS Snowcone is a small, rugged, and secure edge computing and data transfer device. It features 2 CPUs, 4 GB of memory, and up to 14 TB of usable storage.
+- AWS Snowball is a **petabyte-scale** <ins>data transport</ins> solution that uses devices designed to be secure to transfer large amounts of data **into and out of** the AWS Cloud.
+	- Snowball Edge Storage Optimized devices are well suited for large-scale data migrations and recurring transfer workflows.
+ 	- Snowball Edge Compute Optimized provides powerful computing resources for use cases such as machine learning, full motion video analysis, analytics, and local computing stacks.
+- AWS Snowmobile is an exabyte-scale data transfer service used to move large amounts of data to AWS, up to 100 petabytes of data, a 45-foot long ruggedized shipping container, pulled by a semi trailer truck.
 
 ### Amazon Comprehend
 - Amazon Comprehend is a natural language processing (**NLP**) service that uses **machine learning** to find insights and relationships in **text**.
 
 ### Amazon Resource Names (ARNs)
 - It is used to **uniquely identify AWS resources**.
-
-### Amazon ELB
-- A **listener** is a process that checks for connection requests, using the protocol and port that you configure.
-- Each listener has a default **rule**.
-- Each rule **action** has a type.
-- There are two types of **rule condition**:
-	- Host
-	- Path
-- The primary **benefits** of using AWS ELB:
-	- High availability
-	- Elasticity
 
 ### AWS IoT Core
 - It lets **connected devices** *easily* and *securely* interact with cloud applications and other devices.
