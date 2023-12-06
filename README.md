@@ -729,6 +729,7 @@ AWS Scaling **horizontally**:
 	- AWS Marketplace AMIs
 	- My AMIs
 - It stores the **information** that defines an **EC2 instance** such as the template for the *root volume*, *launch permissions* and *block device mappings*.
+- A Golden AMI can create an exact copy of a resource in another region.
 
 ### Five design principles for performance efficiency in the cloud
 1. Democratize advanced technologies
