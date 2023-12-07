@@ -867,51 +867,51 @@ AWS Scaling **horizontally**:
 
 ***
 ### Notes
-- **Loose Coupling**: A desirable attribute of an IT system is that it can be broken into smaller, loosly coupled components.
+- **Loose Coupling**: a desirable attribute of an IT system is that it can be broken into smaller, loosly coupled components.
 - Amazon VPC is a **free of charge** service.
-- Network ACLs operate at the **subnet** level NOT AZ level. It provides a firewall/security layer at the subnet level
+- Network ACLs operate at the **subnet** level NOT AZ level. It provides a firewall / security layer at the subnet level.
 - Network ACLs are **stateless** so you must create rules in both directions to allow traffic through.
 - **Bootstrapping** and **Infrastructure as code** are two echniques for using automated, repeatable processes that are fast and avoid human error.
-- **Golden Image Instances**: A golden image is a snapshot of a particular state for that resource. (e.g. EC2 instances, RDS instances, EBS volumes)
+- **Golden Image Instances**: a golden image is a snapshot of a particular state for that resource (e.g. EC2 instances, RDS instances, EBS volumes).
 - "**Direct Connect**" and "**VPN CloudHub**" are two ways of connecting to an *Amazon VPC* from an *on-premise* data center.
 - If you have **multiple VPN connections**, you can provide secure communication **between sites** using the **AWS VPN CloudHub**.
 - Health Insurance Portability and Accountability Act of 1996 (**HIPAA**) is used for **secure AWS environment** to process, maintain and store protected health information.
 - "**File Gateway**" and "**Gateway Virtual Tape Library**" are types of <ins>AWS storage gateway</ins>.
-- "**virtual gateway**" on the <ins>VPC side</ins> and a **customer gateway** on <ins>the on-premise network side</ins> are need to connect VPC with a VPN connection (Those are <ins>parts of Amazon Managed VPN connection</ins>).
-- *AWS Managed VPN* uses **internet connection**
-- **Resource groups** make it easy to group resources using the tags that are assigned to them. You can group resources that share one or more tags
+- "**Virtual Gateway**" on the <ins>VPC side</ins> and a **Customer Gateway** on <ins>the on-premise network side</ins> need to connect VPC with a VPN connection (those are <ins>parts of Amazon Managed VPN connection</ins>).
+- *AWS Managed VPN* uses **internet connection**.
+- **Resource groups** make it easy to group resources using the tags that are assigned to them. You can group resources that share one or more tags.
 - "**PCI DSS**" is an **information security standard** applies to entities that store, process or transmit credit **cardholder data**.
-- With the public cloud the consumer organization typically incurs **OPEX costs for usage**
-- You **cannot detach** a primary network interface (**eth0**) from an instance. You can create and attach **additional** network interfaces.[elastic network interface(**ENI**)]
-- **NAT instances** are managed by **you** and they must be **scaled manually** and <ins>do not privide HA</ins>. They can be used as **bastion** hosts and can be *assigned to security groups*.
-- **NAT Gateway** are managed for you by **AWS**. They can **scale automatically** and they are **not** *associated with any security groups*. They are highly available in **each AZ**.
-- You can use **DynamoDB** and **SWF** for create a "stateless" application
+- With the public cloud the consumer organization typically incurs **OPEX costs for usage**.
+- You **cannot detach** a primary network interface (**eth0**) from an instance. You can create and attach **additional** network interfaces.[elastic network interface(**ENI**)].
+- **NAT Instances** are managed by **you** and they must be **scaled manually** and <ins>do not privide HA</ins>. They can be used as **bastion** hosts and can be *assigned to security groups*.
+- **NAT Gateway** is managed for you by **AWS**. They can **scale automatically** and they are **not** *associated with any security groups*. They are highly available in **each AZ**.
+- You can use **DynamoDB** and **SWF** for create "stateless" applications.
 - These are valid use cases for using AWS services to implement **real-time auditing**:
-	- Use Amazon Inspector to monitor for compliance
-	- Use AWS Lambda to scan log files
+	- Use Amazon Inspector to monitor for compliance.
+	- Use AWS Lambda to scan log files.
 - The options available in the **VPC Wizard** are:
-	- VPC with a Single Public Subnet
-	- VPC with Public and Private Subnets
-	- VPC with Public and Private Subnets and Hardware VPN Access
-	- VPC with a Private Subnet Only and Hardware VPN Access
-- Only the **Memcached** and **Redis** database engines can be used with **ElastiCache**
+	- VPC with a Single Public Subnet.
+	- VPC with Public and Private Subnets.
+	- VPC with Public and Private Subnets and Hardware VPN Access.
+	- VPC with a Private Subnet Only and Hardware VPN Access.
+- Only the **Memcached** and **Redis** database engines can be used with **ElastiCache**.
 - **AWS Migration Hub** provides a **single location** to <ins>track the progress of application migrations</ins> across multiple AWS and partner solutions.
 - Amazon **CloudWatch**:
-	- **Basic** monitoring: collects metrics **every 5 minutes**
-	- **Detailed** monitoring: collects metrics **every 1 minute**
-- Your payment model in cloud is operational (**OPEX**)
+	- **Basic** monitoring: collects metrics **every 5 minutes**.
+	- **Detailed** monitoring: collects metrics **every 1 minute**.
+- Your payment model in cloud is operational (**OPEX**).
 - "**AWS Concierge**" is available to support customers on an **Enterprise** support plan.
-- You use a **key pair** to decrypt the Administrator password through the console or using the CLI (For Amazon EC2 **Windows** instance)
+- You use a **key pair** to decrypt the Administrator password through the console or using the CLI (For Amazon EC2 **Windows** instance).
 - An **RTMP** distribution (It is a type of Amazon CloudFront distribution) is used to distribute streaming media files using **Adobe Flash** Media Server’s RTMP protocol.
 - The **public cloud** is offered under a purely **pay as you go** model, and allows companies to completely **avoid** *CAPEX costs*.
 - **SQL** stands for *Structured Query Language*.
 - AWS **Lambda** and Amazon **API Gateway** are both **app-facing** components of the AWS Serverless infrastructure.
-- Amazon **DynamoDB** and **EFS** are *database and storage* services of the serverless infrastructure
+- Amazon **DynamoDB** and **EFS** are *database and storage* services of the serverless infrastructure.
 - The *EC2 container registry* (**ECR**) is a managed AWS Docker registry service for storing, managing and deploying Docker images.
 - **Amazon Aurora Multi-Master** can scale out **write** performance for their Amazon Aurora database across *multiple* availability zones.
 - **Placement groups** are a logical grouping of instances in one of the following configurations:
-	- A **Cluster**: It's a logical grouping on intances **within a single AZ**. Cluster placement groups are recommended for **applications** that benefit from **low network latency**, **high network throughput**, or both, and if the majority of the network traffic is between the instances in the group
-	- A **spread**:  that are each placed on **distinct** underlying hardware. Spread placement groups are recommended for **applications** that have **a small number of critical instances** that should be kept separate from each other
+	- A **Cluster**: It's a logical grouping on intances **within a single AZ**. Cluster placement groups are recommended for **applications** that benefit from **low network latency**, **high network throughput**, or both, and if the majority of the network traffic is between the instances in the group.
+	- A **spread**:  that are each placed on **distinct** underlying hardware. Spread placement groups are recommended for **applications** that have **a small number of critical instances** that should be kept separate from each other.
 - With "**EC2**, **Auto Scaling** and **E**lastic **L**oad **B**alancing" combination of AWS services could be used to deploy a **stateless** web application that can automatically and elastically scale.
 - With the AWS cloud you get **fine-grained** billing and can **turn off resources** you are not using easily and not have to pay for them.
 - To install a **PCI-compliant** workload on AWS:
