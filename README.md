@@ -78,7 +78,7 @@ Another profitable resource is the [whitepaper Overview of Amazon Web Services](
  - [Amazon IAM](#amazon-iam)
  - [Amazon Cognito](#amazon-cognito)
  - [AWS Organizations](#aws-organizations)
- - [Popular HTTTP code](#popular-htttp-code)
+ - [Popular HTTP code](#popular-http-code)
  - [AWS CloudTrail](#aws-cloudtrail)
  - [Amazon CloudWatch](#amazon-cloudwatch)
  - [Amazon DynamoDB](#amazon-dynamodb)
@@ -450,7 +450,7 @@ AWS Scaling **horizontally**:
 	-  "Setup consolidated billing between the accounts"
 - Volume pricing discounts applied **across multiple accounts**.
 
-### Popular HTTTP code
+### Popular HTTP code
 - A HTTP 200 codes: successful
 - A HTTP 300 codes: redirection
 - A HTTP 400 codes: client error
