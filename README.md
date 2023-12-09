@@ -837,7 +837,7 @@ AWS Scaling **horizontally**:
 ### Geographical Services
 - Global level
 	- AWS Route 53
-	- AWS Cloud Front
+	- AWS CloudFront
 	- AWS Direct Connect Gateway
 	- AWS Global Accelerator
 	- S3 (but data Regional)
