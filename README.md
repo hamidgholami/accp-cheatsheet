@@ -121,7 +121,7 @@ Another profitable resource is the [whitepaper Overview of Amazon Web Services](
  - [Five design principles for cost optimization in the cloud](#five-design-principles-for-cost-optimization-in-the-cloud)
  - [Five design principles for reliability in the cloud](#five-design-principles-for-reliability-in-the-cloud)
  - [Six design principles for security in the cloud](#six-design-principles-for-security-in-the-cloud)
- - [Five pillars of the AWS Well-Architected Framework](#five-pillars-of-the-aws-well-architected-framework)
+ - [Six pillars of the AWS Well-Architected Framework](#six-pillars-of-the-aws-well-architected-framework)
  - [Amazon S3 Transfer Acceleration](#amazon-s3-transfer-acceleration)
  - [Amazon Neptune](#amazon-neptune)
  - [AWS Direct Connect](#aws-direct-connect)
@@ -769,12 +769,13 @@ AWS Scaling **horizontally**:
 5. Protect data in transit and at rest
 6. Prepare for security events
 
-### Five pillars of the AWS Well-Architected Framework
+### Six pillars of the AWS Well-Architected Framework
 1. Operational excellence
 2. Security
 3. Reliability
-4. Performance efficiency
-5. Cost optimization
+4. Performance Efficiency
+5. Cost Optimization
+6. Sustainability
 
 ### Amazon S3 Transfer Acceleration
 - It enables fast, easy, and secure **transfers** of files **over long distances** between your client and your Amazon S3 bucket.
