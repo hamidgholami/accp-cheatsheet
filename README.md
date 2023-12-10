@@ -123,6 +123,7 @@ Another profitable resource is the [whitepaper Overview of Amazon Web Services](
  - [Six design principles for security in the cloud](#six-design-principles-for-security-in-the-cloud)
  - [Six pillars of the AWS Well-Architected Framework](#six-pillars-of-the-aws-well-architected-framework)
  - [Six perspectives of the AWS Cloud Adoption Framework](#six-perspectives-of-the-aws-cloud-adoption-framework)
+ - [Four cloud transformation phases of the AWS Cloud Adoption Framework](#four-cloud-transformation-phases-of-the-aws-cloud-adoption-framework)
  - [Amazon S3 Transfer Acceleration](#amazon-s3-transfer-acceleration)
  - [Amazon Neptune](#amazon-neptune)
  - [AWS Direct Connect](#aws-direct-connect)
@@ -785,6 +786,12 @@ AWS Scaling **horizontally**:
 4. Platform
 5. Security
 6. Operations
+
+### Four cloud transformation phases of the AWS Cloud Adoption Framework
+1. Align
+2. Envision
+3. Launch
+4. Scale
 
 ### Amazon S3 Transfer Acceleration
 - It enables fast, easy, and secure **transfers** of files **over long distances** between your client and your Amazon S3 bucket.
