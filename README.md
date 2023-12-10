@@ -40,7 +40,7 @@ Another profitable resource is the [whitepaper Overview of Amazon Web Services](
 
 * * *
 
-### Table of contents
+## Table of contents
  - [Amazon S3](#amazon-s3)
  - [Six advantages of Amazon Cloud (Benefits)](#six-advantages-of-amazon-cloud-benefits)
  - [AWS Compute Optimizer](#aws-compute-optimizer)
@@ -78,7 +78,7 @@ Another profitable resource is the [whitepaper Overview of Amazon Web Services](
  - [Amazon IAM](#amazon-iam)
  - [Amazon Cognito](#amazon-cognito)
  - [AWS Organizations](#aws-organizations)
- - [Popular HTTTP code](#popular-htttp-code)
+ - [Popular HTTP code](#popular-http-code)
  - [AWS CloudTrail](#aws-cloudtrail)
  - [Amazon CloudWatch](#amazon-cloudwatch)
  - [Amazon DynamoDB](#amazon-dynamodb)
@@ -117,11 +117,6 @@ Another profitable resource is the [whitepaper Overview of Amazon Web Services](
  - [AWS Service Catalog](#aws-service-catalog)
  - [AWS Managed Services](#aws-managed-services)
  - [Amazon Machine Image (AMI)](#amazon-machine-image-ami)
- - [Five design principles for performance efficiency in the cloud](#five-design-principles-for-performance-efficiency-in-the-cloud)
- - [Five design principles for cost optimization in the cloud](#five-design-principles-for-cost-optimization-in-the-cloud)
- - [Five design principles for reliability in the cloud](#five-design-principles-for-reliability-in-the-cloud)
- - [Six design principles for security in the cloud](#six-design-principles-for-security-in-the-cloud)
- - [Five pillars of the AWS Well-Architected Framework](#five-pillars-of-the-aws-well-architected-framework)
  - [Amazon S3 Transfer Acceleration](#amazon-s3-transfer-acceleration)
  - [Amazon Neptune](#amazon-neptune)
  - [AWS Direct Connect](#aws-direct-connect)
@@ -137,8 +132,21 @@ Another profitable resource is the [whitepaper Overview of Amazon Web Services](
  - [Amazon GuardDuty](#amazon-guardduty)
  - [Amazon Macie](#amazon-macie)
  - [AWS OpsWorks](#aws-opsworks)
+ - [Five design principles for performance efficiency in the cloud](#five-design-principles-for-performance-efficiency-in-the-cloud)
+ - [Five design principles for cost optimization in the cloud](#five-design-principles-for-cost-optimization-in-the-cloud)
+ - [Five design principles for reliability in the cloud](#five-design-principles-for-reliability-in-the-cloud)
+ - [Six design principles for security in the cloud](#six-design-principles-for-security-in-the-cloud)
+ - [Six pillars of the AWS Well-Architected Framework](#six-pillars-of-the-aws-well-architected-framework)
+ - [Six perspectives of the AWS Cloud Adoption Framework](#six-perspectives-of-the-aws-cloud-adoption-framework)
+ - [Four cloud transformation phases of the AWS Cloud Adoption Framework](#four-cloud-transformation-phases-of-the-aws-cloud-adoption-framework)
  - [Geographical Services](#geographical-services)
  - [Notes](#notes)
+
+## Appendices
+
+ - [Amazon EC2 Instances](./README-EC2-INSTANCES.md)
+ - [AWS CAF (Cloud Adoption Framework)](./README-CAF.md)
+ - [AWS Well-Architected Framework](./README-WAF.md)
 
 ***
 ### Amazon S3
@@ -170,7 +178,7 @@ copying of objects across buckets in different AWS Regions.
 	- Metadata
 - **Object lifecycle management** can be used with objects so that they are stored cost effectively throughout their lifecycle. Objects can be transitioned to another storage class or expired. It enables you to **set rules** to **automatically transfer** objects between different storage classes at defined time intervals.
 - **Standard-IA** and **One Zone-IA** both have a minimum storage duration charge of **30** days
-	
+
 ### Six advantages of Amazon Cloud (Benefits)
 - Trade capital expense for variable expense.
 - Benefit from massive economies of scale.
@@ -245,7 +253,7 @@ It helps avoid overprovisioning and underprovisioning, based on your utilization
 - It operates on VPC level
 
 ### AWS Scalability
-AWS Scaling **vertically**: 
+AWS Scaling **vertically**:
 - increasing the instance size, CPU, RAM, DISK
 
 AWS Scaling **horizontally**:
@@ -311,7 +319,7 @@ AWS Scaling **horizontally**:
 - Both non-root and root if launched from an **encrypted** AMI.
 
 ### Amazon SageMaker
-- That enables developers and data scientists to quickly and easily **build**, **train**, and **deploy** <ins>machine learning models</ins> at any scale. 
+- That enables developers and data scientists to quickly and easily **build**, **train**, and **deploy** <ins>machine learning models</ins> at any scale.
 
 ### Amazon Kinesis
 - There are four **types** of Kinesis services:
@@ -450,7 +458,7 @@ AWS Scaling **horizontally**:
 	-  "Setup consolidated billing between the accounts"
 - Volume pricing discounts applied **across multiple accounts**.
 
-### Popular HTTTP code
+### Popular HTTP code
 - A HTTP 200 codes: successful
 - A HTTP 300 codes: redirection
 - A HTTP 400 codes: client error
@@ -735,42 +743,6 @@ AWS Scaling **horizontally**:
 - It stores the **information** that defines an **EC2 instance** such as the template for the *root volume*, *launch permissions* and *block device mappings*.
 - A Golden AMI can create an exact copy of a resource in another region.
 
-### Five design principles for performance efficiency in the cloud
-1. Democratize advanced technologies
-2. Go global in minutes
-3. Use serverless architectures
-4. Experiment more often
-5. Mechanical sympathy
-
-### Five design principles for cost optimization in the cloud
-1. Adopt a consumption model
-2. Measure overall efficiency
-3. Stop spending money on data center operations
-4. Analyze and attribute expenditure
-5. Use managed services to reduce cost of ownership
-
-### Five design principles for reliability in the cloud
-1. Test recovery procedures
-2. Automatically recover from failure
-3. Scale horizontally to increase aggregate system availability
-4. Stop guessing capacity
-5. Manage change in automation
-
-### Six design principles for security in the cloud
-1. Implement a strong identity foundation
-2. Enable traceability
-3. Apply security at all layers
-4. Automate security best practices
-5. Protect data in transit and at rest
-6. Prepare for security events
-
-### Five pillars of the AWS Well-Architected Framework
-1. Operational excellence
-2. Security
-3. Reliability
-4. Performance efficiency
-5. Cost optimization
-
 ### Amazon S3 Transfer Acceleration
 - It enables fast, easy, and secure **transfers** of files **over long distances** between your client and your Amazon S3 bucket.
 
@@ -834,10 +806,61 @@ AWS Scaling **horizontally**:
 ### AWS OpsWorks
 - It is a service that allows you to host your own Puppet Enterprise infrastructure.
 
+### Five design principles for performance efficiency in the cloud
+1. Democratize advanced technologies
+2. Go global in minutes
+3. Use serverless architectures
+4. Experiment more often
+5. Mechanical sympathy
+
+### Five design principles for cost optimization in the cloud
+1. Adopt a consumption model
+2. Measure overall efficiency
+3. Stop spending money on data center operations
+4. Analyze and attribute expenditure
+5. Use managed services to reduce cost of ownership
+
+### Five design principles for reliability in the cloud
+1. Test recovery procedures
+2. Automatically recover from failure
+3. Scale horizontally to increase aggregate system availability
+4. Stop guessing capacity
+5. Manage change in automation
+
+### Six design principles for security in the cloud
+1. Implement a strong identity foundation
+2. Enable traceability
+3. Apply security at all layers
+4. Automate security best practices
+5. Protect data in transit and at rest
+6. Prepare for security events
+
+### Six pillars of the AWS Well-Architected Framework
+1. Operational excellence
+2. Security
+3. Reliability
+4. Performance Efficiency
+5. Cost Optimization
+6. Sustainability
+
+### Six perspectives of the AWS Cloud Adoption Framework
+1. Business
+2. People
+3. Governance
+4. Platform
+5. Security
+6. Operations
+
+### Four cloud transformation phases of the AWS Cloud Adoption Framework
+1. Align
+2. Envision
+3. Launch
+4. Scale
+
 ### Geographical Services
 - Global level
 	- AWS Route 53
-	- AWS Cloud Front
+	- AWS CloudFront
 	- AWS Direct Connect Gateway
 	- AWS Global Accelerator
 	- S3 (but data Regional)
@@ -848,7 +871,7 @@ AWS Scaling **horizontally**:
 	- VPC
 	- Security Groups
 	- Resource Identifiers
- 	- EFS	
+ 	- EFS
 	- ECS
 	- ECR
 	- Amazon GuardDuty
