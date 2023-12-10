@@ -40,7 +40,7 @@ Another profitable resource is the [whitepaper Overview of Amazon Web Services](
 
 * * *
 
-### Table of contents
+## Table of contents
  - [Amazon S3](#amazon-s3)
  - [Six advantages of Amazon Cloud (Benefits)](#six-advantages-of-amazon-cloud-benefits)
  - [AWS Compute Optimizer](#aws-compute-optimizer)
@@ -140,6 +140,11 @@ Another profitable resource is the [whitepaper Overview of Amazon Web Services](
  - [Geographical Services](#geographical-services)
  - [Notes](#notes)
 
+## Appendices
+
+ - [AWS CAF (Cloud Adoption Framework)](./README-CAF.md)
+ - [AWS Well-Architected Framework](./README-WAF.md)
+
 ***
 ### Amazon S3
 - **CRR** (Cross-region replication): enables automatic, asynchronous
@@ -170,7 +175,7 @@ copying of objects across buckets in different AWS Regions.
 	- Metadata
 - **Object lifecycle management** can be used with objects so that they are stored cost effectively throughout their lifecycle. Objects can be transitioned to another storage class or expired. It enables you to **set rules** to **automatically transfer** objects between different storage classes at defined time intervals.
 - **Standard-IA** and **One Zone-IA** both have a minimum storage duration charge of **30** days
-	
+
 ### Six advantages of Amazon Cloud (Benefits)
 - Trade capital expense for variable expense.
 - Benefit from massive economies of scale.
@@ -245,7 +250,7 @@ It helps avoid overprovisioning and underprovisioning, based on your utilization
 - It operates on VPC level
 
 ### AWS Scalability
-AWS Scaling **vertically**: 
+AWS Scaling **vertically**:
 - increasing the instance size, CPU, RAM, DISK
 
 AWS Scaling **horizontally**:
@@ -311,7 +316,7 @@ AWS Scaling **horizontally**:
 - Both non-root and root if launched from an **encrypted** AMI.
 
 ### Amazon SageMaker
-- That enables developers and data scientists to quickly and easily **build**, **train**, and **deploy** <ins>machine learning models</ins> at any scale. 
+- That enables developers and data scientists to quickly and easily **build**, **train**, and **deploy** <ins>machine learning models</ins> at any scale.
 
 ### Amazon Kinesis
 - There are four **types** of Kinesis services:
@@ -848,7 +853,7 @@ AWS Scaling **horizontally**:
 	- VPC
 	- Security Groups
 	- Resource Identifiers
- 	- EFS	
+ 	- EFS
 	- ECS
 	- ECR
 	- Amazon GuardDuty
