@@ -144,6 +144,7 @@ Another profitable resource is the [whitepaper Overview of Amazon Web Services](
 
 ## Appendices
 
+ - [Amazon EC2 Instances](./README-EC2-INSTANCES.md)
  - [AWS CAF (Cloud Adoption Framework)](./README-CAF.md)
  - [AWS Well-Architected Framework](./README-WAF.md)
 
