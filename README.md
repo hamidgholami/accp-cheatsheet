@@ -420,7 +420,7 @@ AWS Scaling **horizontally**:
 	- support forums
 - Only the **Enterprise** plan provides a **response time of < 15 minutes** for the failure of a *business-critical system*.
 - Only **Business** and **Enterprise** plans provide *support via* **email**, **chat** and **phone**.
-- **Enterprise** plan comes with a *Technical Account manager*(**TAM**)
+- **Enterprise** plan comes with a *Technical Account manager* (**TAM**)
 - **Developer** plan provides **email support** by **cloud support associates** team whereas **business** and **enterprise** provide **email support** by the **cloud support engineers** team.
 - With the **Developer** plan you can open **unlimited** cases.
 
