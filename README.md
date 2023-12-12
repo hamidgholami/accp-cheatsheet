@@ -53,6 +53,7 @@ Another profitable resource is the [whitepaper Overview of Amazon Web Services](
  - [AWS Scalability](#aws-scalability)
  - [Amazon Simple Notification Service (SNS)](#amazon-simple-notification-service-sns)
  - [Amazon Simple Queue Service (SQS)](#amazon-simple-queue-service-sqs)
+ - [Amazon Simple Email Service (SES)](#amazon-simple-email-service-ses)
  - [AWS Inspector](#aws-inspector)
  - [AWS Trusted Advisor](#aws-trusted-advisor)
  - [AWS Personal Health Dashboard](#aws-personal-health-dashboard)
@@ -276,6 +277,9 @@ AWS Scaling **horizontally**:
 - **Use case**: *Decoupling application* components to ensure that there is no dependency on the availability of a single component.
 - It can be used to ensure the **persistence** of **in-flight** *transactions independently* of any single application component.
 - It is a message queue used for **decoupling** application components
+
+### Amazon Simple Email Service (SES)
+- It is a highly scalable and cost-effective service for sending and receiving emails.
 
 ### AWS Inspector
 - Inspector is an *automated security assessment* service that helps improve the security and compliance of applications deployed on AWS.
