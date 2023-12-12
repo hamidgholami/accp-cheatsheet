@@ -846,7 +846,7 @@ AWS Scaling **horizontally**:
 6. Prepare for security events
 
 ### Six pillars of the AWS Well-Architected Framework
-1. Operational excellence
+1. Operational Excellence
 2. Security
 3. Reliability
 4. Performance Efficiency
