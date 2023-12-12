@@ -132,6 +132,7 @@ Another profitable resource is the [whitepaper Overview of Amazon Web Services](
  - [Amazon GuardDuty](#amazon-guardduty)
  - [Amazon Macie](#amazon-macie)
  - [AWS OpsWorks](#aws-opsworks)
+ - [AWS Partner Network (APN)](#aws-partner-network-apn)
  - [Five design principles for performance efficiency in the cloud](#five-design-principles-for-performance-efficiency-in-the-cloud)
  - [Five design principles for cost optimization in the cloud](#five-design-principles-for-cost-optimization-in-the-cloud)
  - [Five design principles for reliability in the cloud](#five-design-principles-for-reliability-in-the-cloud)
@@ -805,6 +806,11 @@ AWS Scaling **horizontally**:
 
 ### AWS OpsWorks
 - It is a service that allows you to host your own Puppet Enterprise infrastructure.
+
+### AWS Partner Network (APN)
+- It is a global community of partners that leverages programs, expertise, and resources to build, market, and sell customer offerings.
+- The **Consulting Partners** are focused on helping partners build successful AWS-based businesses to drive superb customer experiences.
+- The **Technology Partners** provide software solutions that are either hosted on or integrated with the AWS platform.
 
 ### Five design principles for performance efficiency in the cloud
 1. Democratize advanced technologies
