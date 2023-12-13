@@ -53,6 +53,7 @@ Another profitable resource is the [whitepaper Overview of Amazon Web Services](
  - [AWS Scalability](#aws-scalability)
  - [Amazon Simple Notification Service (SNS)](#amazon-simple-notification-service-sns)
  - [Amazon Simple Queue Service (SQS)](#amazon-simple-queue-service-sqs)
+ - [Amazon Simple Email Service (SES)](#amazon-simple-email-service-ses)
  - [AWS Inspector](#aws-inspector)
  - [AWS Trusted Advisor](#aws-trusted-advisor)
  - [AWS Personal Health Dashboard](#aws-personal-health-dashboard)
@@ -132,6 +133,7 @@ Another profitable resource is the [whitepaper Overview of Amazon Web Services](
  - [Amazon GuardDuty](#amazon-guardduty)
  - [Amazon Macie](#amazon-macie)
  - [AWS OpsWorks](#aws-opsworks)
+ - [AWS Partner Network (APN)](#aws-partner-network-apn)
  - [Five design principles for performance efficiency in the cloud](#five-design-principles-for-performance-efficiency-in-the-cloud)
  - [Five design principles for cost optimization in the cloud](#five-design-principles-for-cost-optimization-in-the-cloud)
  - [Five design principles for reliability in the cloud](#five-design-principles-for-reliability-in-the-cloud)
@@ -276,6 +278,9 @@ AWS Scaling **horizontally**:
 - It can be used to ensure the **persistence** of **in-flight** *transactions independently* of any single application component.
 - It is a message queue used for **decoupling** application components
 
+### Amazon Simple Email Service (SES)
+- It is a highly scalable and cost-effective service for sending and receiving emails.
+
 ### AWS Inspector
 - Inspector is an *automated security assessment* service that helps improve the security and compliance of applications deployed on AWS.
 - It uses an **agent** installed in EC2 instances and assesses applications for *vulnerabilities* and *deviations* from best practices.
@@ -415,7 +420,7 @@ AWS Scaling **horizontally**:
 	- support forums
 - Only the **Enterprise** plan provides a **response time of < 15 minutes** for the failure of a *business-critical system*.
 - Only **Business** and **Enterprise** plans provide *support via* **email**, **chat** and **phone**.
-- **Enterprise** plan comes with a *Technical Account manager*(**TAM**)
+- **Enterprise** plan comes with a *Technical Account manager* (**TAM**)
 - **Developer** plan provides **email support** by **cloud support associates** team whereas **business** and **enterprise** provide **email support** by the **cloud support engineers** team.
 - With the **Developer** plan you can open **unlimited** cases.
 
@@ -806,6 +811,11 @@ AWS Scaling **horizontally**:
 ### AWS OpsWorks
 - It is a service that allows you to host your own Puppet Enterprise infrastructure.
 
+### AWS Partner Network (APN)
+- It is a global community of partners that leverages programs, expertise, and resources to build, market, and sell customer offerings.
+- The **Consulting Partners** are focused on helping partners build successful AWS-based businesses to drive superb customer experiences.
+- The **Technology Partners** provide software solutions that are either hosted on or integrated with the AWS platform.
+
 ### Five design principles for performance efficiency in the cloud
 1. Democratize advanced technologies
 2. Go global in minutes
@@ -836,7 +846,7 @@ AWS Scaling **horizontally**:
 6. Prepare for security events
 
 ### Six pillars of the AWS Well-Architected Framework
-1. Operational excellence
+1. Operational Excellence
 2. Security
 3. Reliability
 4. Performance Efficiency
