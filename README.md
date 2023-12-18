@@ -76,6 +76,7 @@ Another profitable resource is the [whitepaper Overview of Amazon Web Services](
  - [Virtual Private Gateway](#virtual-private-gateway)
  - [VPC peering connection](#vpc-peering-connection)
  - [AWS Site-to-Site VPN](#aws-site-to-site-vpn)
+ - [AWS App Mesh](#aws-app-mesh)
  - [AWS support plans](#aws-support-plans)
  - [Amazon IAM](#amazon-iam)
  - [Amazon Cognito](#amazon-cognito)
@@ -411,6 +412,9 @@ AWS Scaling **horizontally**:
 
 ### AWS Site-to-Site VPN
 - It creates a secure connection between your data center or branch office and your AWS cloud resources.
+
+### AWS App Mesh
+- It provides application-level networking so your services can communicate across multiple types of compute infrastructure.
 
 ### AWS support plans
 - **Basic**: Does not provide any <ins>*technical support*</ins>.
