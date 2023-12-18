@@ -75,6 +75,7 @@ Another profitable resource is the [whitepaper Overview of Amazon Web Services](
  - [Amazon Elastic Container Registry (ECR)](#amazon-elastic-container-registry-ecr)
  - [Virtual Private Gateway](#virtual-private-gateway)
  - [VPC peering connection](#vpc-peering-connection)
+ - [AWS Site-to-Site VPN](#aws-site-to-site-vpn)
  - [AWS support plans](#aws-support-plans)
  - [Amazon IAM](#amazon-iam)
  - [Amazon Cognito](#amazon-cognito)
@@ -407,6 +408,9 @@ AWS Scaling **horizontally**:
 - You **cannot** peer *subnets*.
 - It is a way of <ins>allowing routing between VPCs</ins> in *different AWS accounts*.
 - It enables you to route traffic via **private IP addresses** between *two* peered VPCs.
+
+### AWS Site-to-Site VPN
+- It creates a secure connection between your data center or branch office and your AWS cloud resources.
 
 ### AWS support plans
 - **Basic**: Does not provide any <ins>*technical support*</ins>.
