@@ -140,6 +140,7 @@ Another profitable resource is the [whitepaper Overview of Amazon Web Services](
  - [Five design principles for cost optimization in the cloud](#five-design-principles-for-cost-optimization-in-the-cloud)
  - [Five design principles for reliability in the cloud](#five-design-principles-for-reliability-in-the-cloud)
  - [Six design principles for security in the cloud](#six-design-principles-for-security-in-the-cloud)
+ - [Five categories of Trusted Advisor](#five-categories-of-trusted-advisor)
  - [Six pillars of the AWS Well-Architected Framework](#six-pillars-of-the-aws-well-architected-framework)
  - [Six perspectives of the AWS Cloud Adoption Framework](#six-perspectives-of-the-aws-cloud-adoption-framework)
  - [Four cloud transformation phases of the AWS Cloud Adoption Framework](#four-cloud-transformation-phases-of-the-aws-cloud-adoption-framework)
@@ -852,6 +853,13 @@ AWS Scaling **horizontally**:
 4. Automate security best practices
 5. Protect data in transit and at rest
 6. Prepare for security events
+
+### Five categories of Trusted Advisor
+1. Cost optimization
+2. Security
+3. Performance
+4. Service limits
+5. Fault tolerance
 
 ### Six pillars of the AWS Well-Architected Framework
 1. Operational Excellence
