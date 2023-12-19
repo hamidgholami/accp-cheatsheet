@@ -43,10 +43,10 @@ It organizes guidance into six areas of focus, called Perspectives.
 
 The AWS CAF recommends four iterative and incremental cloud transformation phases:
 
-**Align**: to identify capability gaps across the six AWS CAF perspectives, identifying cross-organizational dependencies, and surfacing stakeholder concerns and challenges.
+**Align**: to identify capability gaps across the six AWS CAF perspectives, understanding cross-organizational dependencies, and surfacing stakeholder concerns and challenges.
 
 **Envision**: to identify measurable business outcomes that will help the business progress during the transformation journey.
 
-**Launch**: to delivering pilots in production and demonstrating incremental business value rather than identifying capability gaps.
+**Launch**: to deliver pilots in production and demonstrate incremental business value rather than identify capability gaps.
 
-**Scale**: to expand pilots and business value to the desired scale of your company, as well as ensuring the realization and sustainability of cloud-related business benefits.
+**Scale**: to expand pilots and business value to the desired scale of your company, as well as ensure the realization and sustainability of cloud-related business benefits.
