@@ -893,6 +893,7 @@ AWS Scaling **horizontally**:
 	- IAM
 	- WAF
 	- AWS SNS
+ 	- AWS Security Token Service
 - Regional level
 	- VPC
 	- Security Groups
