@@ -328,7 +328,7 @@ AWS Scaling **horizontally**:
 - Both non-root and root if launched from an **encrypted** AMI.
 
 ### Amazon SageMaker
-- That enables developers and data scientists to quickly and easily **build**, **train**, and **deploy** <ins>machine learning models</ins> at any scale.
+- It enables developers and data scientists to quickly and easily **build**, **train**, and **deploy** <ins>machine learning models</ins> at any scale.
 
 ### Amazon Kinesis
 - There are four **types** of Kinesis services:
