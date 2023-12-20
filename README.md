@@ -144,6 +144,7 @@ Another profitable resource is the [whitepaper Overview of Amazon Web Services](
  - [Six pillars of the AWS Well-Architected Framework](#six-pillars-of-the-aws-well-architected-framework)
  - [Six perspectives of the AWS Cloud Adoption Framework](#six-perspectives-of-the-aws-cloud-adoption-framework)
  - [Four cloud transformation phases of the AWS Cloud Adoption Framework](#four-cloud-transformation-phases-of-the-aws-cloud-adoption-framework)
+ - [Six Rs strategies for migration](#six-rs-strategies-for-migration)
  - [Geographical Services](#geographical-services)
  - [Notes](#notes)
 
@@ -882,6 +883,14 @@ AWS Scaling **horizontally**:
 2. Envision
 3. Launch
 4. Scale
+
+### Six Rs strategies for migration
+1. Rehosting
+2. Replatforming
+3. Retiring
+4. Retaining
+5. Repurchasing
+6. Refactoring
 
 ### Geographical Services
 - Global level
