@@ -613,7 +613,7 @@ AWS Scaling **horizontally**:
 - It lets you build **visual** *workflows*.
 
 ### Amazon Simple Workflow Service (SWF)
-- helps developers build, run, and scale background jobs that have parallel or sequential steps.
+- It helps developers build, run, and scale background jobs that have parallel or sequential steps.
 - SWF is **not** a <ins>*visual*</ins> workflow tool.
 - It can assist with **coordinating tasks** across *distributed application* components.
 
