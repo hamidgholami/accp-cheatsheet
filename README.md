@@ -75,6 +75,8 @@ Another profitable resource is the [whitepaper Overview of Amazon Web Services](
  - [Amazon Elastic Container Registry (ECR)](#amazon-elastic-container-registry-ecr)
  - [Virtual Private Gateway](#virtual-private-gateway)
  - [VPC peering connection](#vpc-peering-connection)
+ - [AWS Site-to-Site VPN](#aws-site-to-site-vpn)
+ - [AWS App Mesh](#aws-app-mesh)
  - [AWS support plans](#aws-support-plans)
  - [Amazon IAM](#amazon-iam)
  - [Amazon Cognito](#amazon-cognito)
@@ -138,9 +140,11 @@ Another profitable resource is the [whitepaper Overview of Amazon Web Services](
  - [Five design principles for cost optimization in the cloud](#five-design-principles-for-cost-optimization-in-the-cloud)
  - [Five design principles for reliability in the cloud](#five-design-principles-for-reliability-in-the-cloud)
  - [Six design principles for security in the cloud](#six-design-principles-for-security-in-the-cloud)
+ - [Five categories of Trusted Advisor](#five-categories-of-trusted-advisor)
  - [Six pillars of the AWS Well-Architected Framework](#six-pillars-of-the-aws-well-architected-framework)
  - [Six perspectives of the AWS Cloud Adoption Framework](#six-perspectives-of-the-aws-cloud-adoption-framework)
  - [Four cloud transformation phases of the AWS Cloud Adoption Framework](#four-cloud-transformation-phases-of-the-aws-cloud-adoption-framework)
+ - [Six Rs strategies for migration](#six-rs-strategies-for-migration)
  - [Geographical Services](#geographical-services)
  - [Notes](#notes)
 
@@ -324,7 +328,7 @@ AWS Scaling **horizontally**:
 - Both non-root and root if launched from an **encrypted** AMI.
 
 ### Amazon SageMaker
-- That enables developers and data scientists to quickly and easily **build**, **train**, and **deploy** <ins>machine learning models</ins> at any scale.
+- It enables developers and data scientists to quickly and easily **build**, **train**, and **deploy** <ins>machine learning models</ins> at any scale.
 
 ### Amazon Kinesis
 - There are four **types** of Kinesis services:
@@ -407,6 +411,12 @@ AWS Scaling **horizontally**:
 - You **cannot** peer *subnets*.
 - It is a way of <ins>allowing routing between VPCs</ins> in *different AWS accounts*.
 - It enables you to route traffic via **private IP addresses** between *two* peered VPCs.
+
+### AWS Site-to-Site VPN
+- It creates a secure connection between your data center or branch office and your AWS cloud resources.
+
+### AWS App Mesh
+- It provides application-level networking so your services can communicate across multiple types of compute infrastructure.
 
 ### AWS support plans
 - **Basic**: Does not provide any <ins>*technical support*</ins>.
@@ -603,7 +613,7 @@ AWS Scaling **horizontally**:
 - It lets you build **visual** *workflows*.
 
 ### Amazon Simple Workflow Service (SWF)
-- helps developers build, run, and scale background jobs that have parallel or sequential steps.
+- It helps developers build, run, and scale background jobs that have parallel or sequential steps.
 - SWF is **not** a <ins>*visual*</ins> workflow tool.
 - It can assist with **coordinating tasks** across *distributed application* components.
 
@@ -845,6 +855,13 @@ AWS Scaling **horizontally**:
 5. Protect data in transit and at rest
 6. Prepare for security events
 
+### Five categories of Trusted Advisor
+1. Cost optimization
+2. Security
+3. Performance
+4. Service limits
+5. Fault tolerance
+
 ### Six pillars of the AWS Well-Architected Framework
 1. Operational Excellence
 2. Security
@@ -867,6 +884,14 @@ AWS Scaling **horizontally**:
 3. Launch
 4. Scale
 
+### Six Rs strategies for migration
+1. Rehosting
+2. Replatforming
+3. Retiring
+4. Retaining
+5. Repurchasing
+6. Refactoring
+
 ### Geographical Services
 - Global level
 	- AWS Route 53
@@ -877,6 +902,7 @@ AWS Scaling **horizontally**:
 	- IAM
 	- WAF
 	- AWS SNS
+ 	- AWS Security Token Service
 - Regional level
 	- VPC
 	- Security Groups
