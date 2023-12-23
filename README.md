@@ -15,7 +15,7 @@ These are notes regarding ACCP exam which were gradually completed while studyin
 
 > Who should take this exam?<br>
 >
->[The AWS Certified Cloud Practitioner](https://aws.amazon.com/certification/certified-cloud-practitioner/) (*CLF-C01*) exam is intended for individuals<br>who can effectively demonstrate an overall knowledge of the AWS Cloud<br>independent of a specific job role.
+>[The AWS Certified Cloud Practitioner](https://aws.amazon.com/certification/certified-cloud-practitioner/) (*CLF-C02*) exam is intended for individuals<br>who can effectively demonstrate an overall knowledge of the AWS Cloud<br>independent of a specific job role.
 
 You can find every updated information in this [link](https://aws.amazon.com/certification/certified-cloud-practitioner/) which is the official and reputable information.
 
@@ -24,13 +24,13 @@ The following table lists the main content domains and their weightings.<br>
 
 <div align="center">
 
-| Domain                            | % of Exam |
-|:-----------------------------------|:-----------:|
-| Domain 1: Cloud Concepts          | 26%       |
-| Domain 2: Security and Compliance | 25%       |
-| Domain 3: Technology              | 33%       |
-| Domain 4: Billing and Pricing     | 16%       |
-| **Total**                             | **100%**      |
+| Domain                                   | % of Exam |
+|:-----------------------------------------|:---------:|
+| Domain 1: Cloud Concepts                 | 24%       |
+| Domain 2: Security and Compliance        | 30%       |
+| Domain 3: Cloud Technology and Services  | 34%       |
+| Domain 4: Billing, Pricing and Support   | 12%       |
+| **Total**                                | **100%**  |
 
 </div>
 
